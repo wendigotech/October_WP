@@ -319,6 +319,7 @@ endif;
  */
 /* Pinegrow generated Include Resources Begin */
 require_once "inc/bootstrap/wp_bootstrap4_navwalker.php";
+require_once "inc/wp_smart_navwalker.php";
 
     /* Pinegrow generated Include Resources End */
 

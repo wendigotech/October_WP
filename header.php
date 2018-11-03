@@ -32,13 +32,16 @@
                             <div class="collapse navbar-collapse" id="navbarToggler6"> 
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                     <ul class="navbar-nav mt-2 mt-lg-0 ml-auto grid-nav">
-                                        <?php wp_nav_menu( array(
+                                        <?php
+                                            PG_Smart_Walker_Nav_Menu::$options['template'] = '<li class="nav-item active nav-item1 {CLASSES}" id="{ID}"> 
+                                                                                    <a class="nav-link" {ATTRS}>{TITLE}<span class="sr-only">(current)</span></a> 
+                                                                                </li>';
+                                            wp_nav_menu( array(
                                                 'menu' => 'primary',
-                                                'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto grid-nav',
                                                 'container' => '',
                                                 'depth' => '2',
-                                                'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
-                                                'walker' => new wp_bootstrap4_navwalker()
+                                                'items_wrap' => '<ul class="navbar-nav mt-2 mt-lg-0 ml-auto grid-nav %2$s" id="%1$s">%3$s</ul>',
+                                                'walker' => new PG_Smart_Walker_Nav_Menu()
                                         ) ); ?>
                                     </ul>
                                 <?php endif; ?> 
