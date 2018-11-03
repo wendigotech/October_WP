@@ -17,10 +17,10 @@
             <header> 
                 <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar"> 
                     <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'october' ); ?></a> 
-                    <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
+                    <nav class="navbar bg-primary navbar-dark navbar-expand-lg fixed-top"> 
                         <div class="container"> 
                             <?php if ( ! has_custom_logo() ) : ?>
-                                <div> 
+                                <div style="grid-area: 1 / 2 / 2 / 3; justify-content: center; display: flex;"> 
                                     <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
                                 </div>                                 
                             <?php else : ?>
@@ -29,7 +29,7 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
                                 <span class="navbar-toggler-icon"></span> 
                             </button>                             
-                            <div class="collapse navbar-collapse" id="navbarToggler6"> 
+                            <div class="collapse navbar-collapse" id="navbarToggler6" style="grid-area: 1 / 1 / 2 / 4;"> 
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                     <?php wp_nav_menu( array(
                                             'menu' => 'primary',
