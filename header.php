@@ -20,7 +20,7 @@
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg fixed-top"> 
                         <div class="container"> 
                             <?php if ( ! has_custom_logo() ) : ?>
-                                <div style="grid-area: 1 / 2 / 2 / 3; justify-content: center; display: flex;"> 
+                                <div class="logo"> 
                                     <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
                                 </div>                                 
                             <?php else : ?>
@@ -29,11 +29,11 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
                                 <span class="navbar-toggler-icon"></span> 
                             </button>                             
-                            <div class="collapse navbar-collapse" id="navbarToggler6" style="grid-area: 1 / 1 / 2 / 4;"> 
+                            <div class="collapse navbar-collapse" id="navbarToggler6"> 
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                     <?php wp_nav_menu( array(
                                             'menu' => 'primary',
-                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto ',
+                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto grid-nav',
                                             'container' => '',
                                             'depth' => '2',
                                             'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
