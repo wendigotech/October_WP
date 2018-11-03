@@ -75,3 +75,9 @@ figure,
         grid-template-rows: 40px;
     }
 }
+
+@media (min-width: 992px) {
+    .nav-item1 {
+        grid-area: 1 / 1 / 2 / 1;
+    }
+}

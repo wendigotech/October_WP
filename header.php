@@ -31,14 +31,16 @@
                             </button>                             
                             <div class="collapse navbar-collapse" id="navbarToggler6"> 
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
-                                    <?php wp_nav_menu( array(
-                                            'menu' => 'primary',
-                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto grid-nav',
-                                            'container' => '',
-                                            'depth' => '2',
-                                            'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
-                                            'walker' => new wp_bootstrap4_navwalker()
-                                    ) ); ?>
+                                    <ul class="navbar-nav mt-2 mt-lg-0 ml-auto grid-nav">
+                                        <?php wp_nav_menu( array(
+                                                'menu' => 'primary',
+                                                'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto grid-nav',
+                                                'container' => '',
+                                                'depth' => '2',
+                                                'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                                'walker' => new wp_bootstrap4_navwalker()
+                                        ) ); ?>
+                                    </ul>
                                 <?php endif; ?> 
                             </div>                             
                         </div>                         
