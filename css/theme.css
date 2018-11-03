@@ -26,3 +26,19 @@ figure,
 #page {
     word-wrap: break-word;
 }
+
+@media only screen and (min-width: 992px) {
+    .navbar-expand-lg div.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 40px;
+    }
+
+    .grid-logo {
+        grid-area: 1 / 2 / 2 / 3;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        display: grid;
+    }
+}
