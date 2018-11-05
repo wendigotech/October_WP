@@ -43,7 +43,7 @@ figure,
     }
 }
 
-@media only screen and (min-width:992px) and (max-width:1198.98px) {
+@media only screen and (min-width:992px) {
     ul.navbar-nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -52,18 +52,7 @@ figure,
         text-align: center;
         align-items: center;
         margin-right: auto;
-    }
-}
-
-@media only screen and (min-width:1199.98px) {
-    ul.navbar-nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 40px;
-        grid-gap: 45px;
-        text-align: center;
-        align-items: center;
-        margin-right: auto;
+        grid-auto-columns: fit-content(40%);
     }
 }
 
