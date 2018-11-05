@@ -53,6 +53,21 @@ figure,
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 1199.98px) {
+    ul.navbar-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 40px;
+        grid-gap: 45px;
+        text-align: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: auto;
     }
 }
 
