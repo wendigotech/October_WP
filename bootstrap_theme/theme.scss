@@ -32,34 +32,23 @@ figure,
 @media only screen and (min-width:992px) {
     .navbar-expand-lg div.container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
         grid-template-rows: 40px;
     }
 
     .grid-logo {
-        grid-area: 1 / 2 / 2 / 3;
+        grid-area: 1 / 2 / 2 / 5;
         justify-content: center;
         display: grid;
     }
 }
 
-@media only screen and (min-width:1199.98px) {
-    ul.navbar-nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
-        grid-template-rows: 40px;
-        grid-gap: 46px;
-        text-align: center;
-        align-items: center;
-    }
-}
-
-@media only screen and (min-width:992px) and (max-width:1198.98px) {
+@media only screen and (min-width:992px) {
     ul.navbar-nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
         grid-template-rows: 40px;
-        grid-gap: 14px;
+        grid-gap: 20px;
         text-align: center;
         align-items: center;
     }
