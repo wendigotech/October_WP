@@ -26,10 +26,10 @@
                             <?php else : ?>
                                 <?php the_custom_logo(); ?>
                             <?php endif; ?> 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" style="grid-area: 1 / 1 / 2 / 8;"> 
                                 <span class="navbar-toggler-icon"></span> 
                             </button>                             
-                            <div class="collapse navbar-collapse" id="navbarToggler6" style="grid-area:1 / 1 / 2 / 8;"> 
+                            <div class="collapse navbar-collapse" id="navbarToggler6" style="grid-area: 1 / 1 / 2 / 8;"> 
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                     <?php wp_nav_menu( array(
                                             'menu' => 'primary',
