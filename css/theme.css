@@ -2,59 +2,65 @@ img.wp-post-image,
 article img,
 figure,
 #secondary img {
-  margin-bottom: 10px;
-  pg-id: 1; }
+    margin-bottom: 10px;
+}
 
 .wp-caption-text {
-  margin-bottom: 10px;
-  pg-id: 2; }
+    margin-bottom: 10px;
+}
 
 .widget-area aside {
-  padding-bottom: 10px;
-  padding-top: 10px;
-  pg-id: 3; }
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
 
 .size-auto,
 .size-full,
 .size-large,
 .size-medium,
 .size-thumbnail {
-  max-width: 100%;
-  height: auto;
-  pg-id: 4; }
+    max-width: 100%;
+    height: auto;
+}
 
 #page {
-  word-wrap: break-word;
-  pg-id: 5; }
+    word-wrap: break-word;
+}
 
 @media only screen and (min-width: 992px) {
-  .navbar-expand-lg div.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 40px;
-    pg-id: 6; }
-  .grid-logo {
-    grid-area: 1 / 2 / 2 / 3;
-    justify-content: center;
-    display: grid;
-    pg-id: 7; }
-  ul.navbar-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
-    grid-template-rows: 100px;
-    grid-gap: 44px;
-    text-align: center;
-    align-items: center;
-    pg-id: 8; } }
+    .navbar-expand-lg div.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 40px;
+    }
+
+    .grid-logo {
+        grid-area: 1 / 2 / 2 / 3;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        display: grid;
+    }
+
+    ul.navbar-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px;
+        grid-gap: 46px;
+        text-align: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
 
 nav.navbar {
-  background-color: #BEB1A0;
-  pg-id: 9; }
+    background-color: #BEB1A0;
+    top: 25px;
+}
 
 .navbar-nav a.nav-link {
-  color: #382B49;
-  font-family: Playfair Display;
-  font-weight: 900;
-  pg-id: 10; }
-
-/*# sourceMappingURL=theme.css.map */
+    color: #382B49;
+    font-family: Playfair Display;
+    font-weight: 900;
+}
