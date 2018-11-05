@@ -43,12 +43,12 @@ figure,
     }
 }
 
-@media only screen and (min-width:992px) {
+@media only screen and (min-width:992px) and (max-width:1198.98px) {
     ul.navbar-nav {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 40px;
-        grid-gap: 20px;
+        grid-gap: 45px;
         text-align: center;
         align-items: center;
     }
