@@ -46,8 +46,18 @@ figure,
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
         grid-template-rows: 100px;
-        grid-gap: 20px;
+        grid-gap: 44px;
         text-align: center;
         align-items: center;
     }
+}
+
+nav.navbar {
+    background-color: #BEB1A0;
+}
+
+.navbar-nav a.nav-link {
+    color: #382B49;
+    font-family: Playfair Display;
+    font-weight: 900;
 }

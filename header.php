@@ -17,7 +17,7 @@
             <header> 
                 <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar"> 
                     <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'october' ); ?></a> 
-                    <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
+                    <nav class="navbar navbar-expand-lg fixed-top"> 
                         <div class="container"> 
                             <?php if ( ! has_custom_logo() ) : ?>
                                 <div class="grid-logo"> 
@@ -43,47 +43,6 @@
                             </div>                             
                         </div>                         
                     </nav>                     
-                </div>                 
-                <?php if ( get_theme_mod( 'show_jumbotron' ) ) : ?>
-                    <div> 
-                        <div class="jumbotron" style="background-color:<?php echo get_theme_mod( 'jumbotron_bg_color' ); ?>;background-image:<?php echo 'url('.wp_get_attachment_image_url( get_theme_mod( 'jumbotron_bg_image' ), 'full' ).')' ?>;"> 
-                            <div class="container"> 
-                                <h1 class="display-3" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Starter Theme', 'october' ); ?> <b><?php _e( '2', 'october' ); ?></b></h1> 
-                                <p class="lead" style="color:<?php echo get_theme_mod( 'jumbotron_text_color' ); ?>;"><?php _e( 'Powered by Bootstrap 4 and SASS.', 'october' ); ?></p> 
-                            </div>                             
-                        </div>                         
-                    </div>
-                <?php endif; ?> 
-                <?php if ( is_active_sidebar( 'hero' ) ) : ?>
-                    <div class="wrapper container-fluid" id="wrapper-hero"> 
-                        <div id="HeroCarouselControls" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="hover"> 
-                            <div class="carousel-inner"> 
-                                <?php if ( is_active_sidebar( 'hero' ) ) : ?>
-                                    <?php dynamic_sidebar( 'hero' ); ?>
-                                <?php endif; ?>                                  
-                            </div>                             
-                            <a class="carousel-control-prev" href="#HeroCarouselControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'october' ); ?></span> </a> 
-                            <a class="carousel-control-next" href="#HeroCarouselControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'october' ); ?></span> </a> 
-                        </div>                         
-                    </div>
-                <?php endif; ?> 
-                <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?>
-                    <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?>
-                        <div class="wrapper container-fluid" id="wrapper-hero">
-                            <?php dynamic_sidebar( 'herocanvas' ); ?>
-                        </div>
-                    <?php endif; ?>
-                <?php endif; ?> 
-                <?php if ( is_active_sidebar( 'statichero' ) ) : ?>
-                    <div class="wrapper" id="wrapper-static-hero"> 
-                        <div id="wrapper-static-content" tabindex="-1" class="container"> 
-                            <div class="row"> 
-                                <?php if ( is_active_sidebar( 'statichero' ) ) : ?>
-                                    <?php dynamic_sidebar( 'statichero' ); ?>
-                                <?php endif; ?>                                  
-                            </div>                             
-                        </div>                         
-                    </div>
-                <?php endif; ?> 
+                </div>                                                                                     
             </header>             
             <div>
