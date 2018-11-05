@@ -20,16 +20,18 @@
                     <nav class="navbar navbar-expand-lg fixed-top"> 
                         <div class="container"> 
                             <?php if ( ! has_custom_logo() ) : ?>
-                                <div class="grid-logo" style="grid-area:1 / 4 / 2 / 5;"> 
-                                    <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
+                                <div class="grid-logo"> 
+                                    <a rel="home" class="navbar-brand grid-logo" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
                                 </div>                                 
                             <?php else : ?>
-                                <?php the_custom_logo(); ?>
+                                <div class="grid-logo">
+                                    <?php the_custom_logo(); ?>
+                                </div>
                             <?php endif; ?> 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" style="grid-area: 1 / 1 / 2 / 8;"> 
-                                <span class="navbar-toggler-icon"></span> 
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">                                  
+                                <i class="fas fa-lg fa-align-justify text-black-50"></i>
                             </button>                             
-                            <div class="collapse navbar-collapse" id="navbarToggler6" style="grid-area: 1 / 1 / 2 / 8;"> 
+                            <div class="collapse navbar-collapse" id="navbarToggler6" style="grid-area:1 / 1 / 2 / 7;"> 
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                     <?php wp_nav_menu( array(
                                             'menu' => 'primary',

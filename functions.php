@@ -227,6 +227,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_deregister_style( 'style-2' );
     wp_enqueue_style( 'style-2', 'https://fonts.googleapis.com/css?family=Roboto', false, null, 'all');
 
+    wp_deregister_style( 'all' );
+    wp_enqueue_style( 'all', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css', false, null, 'all');
+
     /* Pinegrow generated Enqueue Styles End */
 
     }
