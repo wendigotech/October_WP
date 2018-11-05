@@ -29,42 +29,16 @@ figure,
     word-wrap: break-word;
 }
 
-@media only screen and (min-width:992px) {
-    .navbar-expand-lg div.container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 30px;
-    }
-}
+$nth-nav-item-that-needs-margin-right     : 3;
+$width-of-navbar-brand-or-logo-in-px      : 160px;
+$padding-x-for-navbar-brand-or-logo-in-px : 16px;
 
-nav.navbar {
-    background-color: #BEB1A0;
-    margin-top: 30px;
-}
-
-.navbar-nav a.nav-link {
-    color: #382B49;
-    font-family: Playfair Display;
-    font-weight: 700;
-    text-align: center;
-}
-
-@media (min-width:992px) {
-    .grid-logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        grid-area: 1 / 3 / 1 / 5;
-        z-index: 1;
-    }
-}
-
-@media only screen and (min-width:992px) {
-    .grid-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 20px;
-        width: 100%;
-        align-items: center;
-    }
+@media (min-width: 768px) {
+	
+	.position-md-absolute {
+		position: absolute;
+	}
+	.navbar-nav .nav-item:nth-child(#{$nth-nav-item-that-needs-margin-right}) {
+		margin-right: $width-of-navbar-brand-or-logo-in-px + ($padding-x-for-navbar-brand-or-logo-in-px * 2);
+	}
 }

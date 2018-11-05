@@ -90,6 +90,36 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
+        'name' => __( 'Hero Slider', 'october' ),
+        'id' => 'hero',
+        'description' => 'Hero slider area. Place two or more widgets here and they will slide!',
+        'before_widget' => '<div class="carousel-item">',
+        'after_widget' => '</div>',
+        'before_title' => ' ',
+        'after_title' => ' '
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Hero Canvas', 'october' ),
+        'id' => 'herocanvas',
+        'description' => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => ''
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Top Full', 'october' ),
+        'id' => 'statichero',
+        'description' => 'Full top widget with dynamic grid',
+        'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s '. st2_slbd_count_widgets( 'statichero' ) .'">',
+        'after_widget' => '</div><!-- .static-hero-widget -->',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
         'name' => __( 'Left Sidebar', 'october' ),
         'id' => 'left-sidebar',
         'description' => 'Left Sidebar widget area',
@@ -151,6 +181,63 @@ function st2_customize_register( $wp_customize ) {
         'priority' => '0'
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
+
+    $wp_customize->add_setting( 'show_jumbotron', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'show_jumbotron', array(
+        'label' => __( 'Show Jumbotron', 'october' ),
+        'description' => __( 'Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.', 'october' ),
+        'type' => 'checkbox',
+        'section' => 'header_settings'
+    ));
+
+    $wp_customize->add_setting( 'jumbotron_bg_color', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_bg_color', array(
+        'label' => __( 'Jumbotron Background color', 'october' ),
+        'type' => 'color',
+        'section' => 'header_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'jumbotron_bg_image', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'jumbotron_bg_image', array(
+        'label' => __( 'Jumbotron Background image', 'october' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'header_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'jumbotron_heading_color', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_heading_color', array(
+        'label' => __( 'Jumbotron Heading Color', 'october' ),
+        'type' => 'color',
+        'section' => 'header_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'jumbotron_text_color', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_text_color', array(
+        'label' => __( 'Jumbotron Paragraph Color', 'october' ),
+        'type' => 'color',
+        'section' => 'header_settings'
+    ) ) );
 
     $wp_customize->add_setting( 'show_left_sidebar', array(
         'type' => 'theme_mod',
@@ -220,15 +307,6 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_deregister_style( 'woocommerce' );
     wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
-
-    wp_deregister_style( 'style-1' );
-    wp_enqueue_style( 'style-1', 'https://fonts.googleapis.com/css?family=Playfair+Display', false, null, 'all');
-
-    wp_deregister_style( 'style-2' );
-    wp_enqueue_style( 'style-2', 'https://fonts.googleapis.com/css?family=Roboto', false, null, 'all');
-
-    wp_deregister_style( 'all' );
-    wp_enqueue_style( 'all', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 

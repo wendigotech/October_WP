@@ -17,34 +17,71 @@
             <header> 
                 <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar"> 
                     <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'october' ); ?></a> 
-                    <nav class="navbar navbar-expand-lg fixed-top"> 
-                        <div class="container"> 
-                            <?php if ( ! has_custom_logo() ) : ?>
-                                <div class="grid-logo"> 
-                                    <a rel="home" class="navbar-brand grid-logo" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
-                                </div>                                 
-                            <?php else : ?>
-                                <div class="grid-logo">
-                                    <?php the_custom_logo(); ?>
-                                </div>
-                            <?php endif; ?> 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">                                  
-                                <i class="fas fa-lg fa-align-justify text-black-50"></i>
-                            </button>                             
-                            <div class="collapse navbar-collapse" id="navbarToggler6" style="grid-area:1 / 1 / 2 / 7;"> 
-                                <?php if ( has_nav_menu( 'primary' ) ) : ?>
-                                    <?php wp_nav_menu( array(
-                                            'menu' => 'primary',
-                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto grid-list',
-                                            'container' => '',
-                                            'depth' => '2',
-                                            'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
-                                            'walker' => new wp_bootstrap4_navwalker()
-                                    ) ); ?>
-                                <?php endif; ?> 
-                            </div>                             
-                        </div>                         
+                    <nav class="navbar navbar-expand-md flex-column fixed-top navbar-dark bg-dark">
+                        <?php if ( ! has_custom_logo() ) : ?>
+                            <div class="navbar-brand align-self-center mb-0 pb-3 position-md-absolute pb-md-0"> 
+                                <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
+                            </div>
+                        <?php else : ?>
+                            <?php the_custom_logo(); ?>
+                        <?php endif; ?>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-md-center w-100" id="navbarNav">
+                            <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                                <?php wp_nav_menu( array(
+                                        'menu' => 'primary',
+                                        'menu_class' => 'navbar-nav text-center',
+                                        'container' => '',
+                                        'depth' => '2',
+                                        'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                        'walker' => new wp_bootstrap4_navwalker()
+                                ) ); ?>
+                            <?php endif; ?>
+                        </div>
                     </nav>                     
                 </div>                 
+                <?php if ( get_theme_mod( 'show_jumbotron' ) ) : ?>
+                    <div> 
+                        <div class="jumbotron" style="background-color:<?php echo get_theme_mod( 'jumbotron_bg_color' ); ?>;background-image:<?php echo 'url('.wp_get_attachment_image_url( get_theme_mod( 'jumbotron_bg_image' ), 'full' ).')' ?>;"> 
+                            <div class="container"> 
+                                <h1 class="display-3" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Starter Theme', 'october' ); ?> <b><?php _e( '2', 'october' ); ?></b></h1> 
+                                <p class="lead" style="color:<?php echo get_theme_mod( 'jumbotron_text_color' ); ?>;"><?php _e( 'Powered by Bootstrap 4 and SASS.', 'october' ); ?></p> 
+                            </div>                             
+                        </div>                         
+                    </div>
+                <?php endif; ?> 
+                <?php if ( is_active_sidebar( 'hero' ) ) : ?>
+                    <div class="wrapper container-fluid" id="wrapper-hero"> 
+                        <div id="HeroCarouselControls" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="hover"> 
+                            <div class="carousel-inner"> 
+                                <?php if ( is_active_sidebar( 'hero' ) ) : ?>
+                                    <?php dynamic_sidebar( 'hero' ); ?>
+                                <?php endif; ?>                                  
+                            </div>                             
+                            <a class="carousel-control-prev" href="#HeroCarouselControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'october' ); ?></span> </a> 
+                            <a class="carousel-control-next" href="#HeroCarouselControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'october' ); ?></span> </a> 
+                        </div>                         
+                    </div>
+                <?php endif; ?> 
+                <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?>
+                    <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?>
+                        <div class="wrapper container-fluid" id="wrapper-hero">
+                            <?php dynamic_sidebar( 'herocanvas' ); ?>
+                        </div>
+                    <?php endif; ?>
+                <?php endif; ?> 
+                <?php if ( is_active_sidebar( 'statichero' ) ) : ?>
+                    <div class="wrapper" id="wrapper-static-hero"> 
+                        <div id="wrapper-static-content" tabindex="-1" class="container"> 
+                            <div class="row"> 
+                                <?php if ( is_active_sidebar( 'statichero' ) ) : ?>
+                                    <?php dynamic_sidebar( 'statichero' ); ?>
+                                <?php endif; ?>                                  
+                            </div>                             
+                        </div>                         
+                    </div>
+                <?php endif; ?> 
             </header>             
             <div>

@@ -27,50 +27,12 @@ figure,
     word-wrap: break-word;
 }
 
-@media only screen and (min-width: 992px) {
-    .navbar-expand-lg div.container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 30px;
+@media (min-width: 768px) {
+    .position-md-absolute {
+        position: absolute;
     }
-}
 
-nav.navbar {
-    background-color: #BEB1A0;
-    margin-top: 30px;
-}
-
-.navbar-nav a.nav-link {
-    color: #382B49;
-    font-family: Playfair Display;
-    font-weight: 700;
-    text-align: center;
-}
-
-@media (min-width: 992px) {
-    .grid-logo {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        grid-area: 1 / 3 / 1 / 5;
-        z-index: 1;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .grid-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 20px;
-        width: 100%;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+    .navbar-nav .nav-item:nth-child(3) {
+        margin-right: 192px;
     }
 }
