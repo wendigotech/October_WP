@@ -44,9 +44,9 @@ figure,
 
     ul.navbar-nav {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 100px;
-        grid-gap: 44px;
+        grid-gap: 46px;
         text-align: center;
         align-items: center;
     }
@@ -54,6 +54,7 @@ figure,
 
 nav.navbar {
     background-color: #BEB1A0;
+    top: 25px;
 }
 
 .navbar-nav a.nav-link {
