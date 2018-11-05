@@ -37,7 +37,7 @@ figure,
     }
 
     .grid-logo {
-        grid-area: 1 / 4 / 2 / 5;
+        grid-area: 1 / 2 / 2 / 5;
         justify-content: center;
         display: grid;
     }
@@ -46,13 +46,12 @@ figure,
 @media only screen and (min-width:992px) {
     ul.navbar-nav {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 40px;
-        grid-gap: 45px;
+        grid-gap: 28px;
         text-align: center;
         align-items: center;
         margin-right: auto;
-        grid-auto-columns: fit-content(40%);
     }
 }
 

@@ -20,7 +20,7 @@
                     <nav class="navbar navbar-expand-lg fixed-top"> 
                         <div class="container"> 
                             <?php if ( ! has_custom_logo() ) : ?>
-                                <div class="grid-logo d-lg-none d-xl-none" style="grid-area:1 / 4 / 2 / 5;"> 
+                                <div class="grid-logo" style="grid-area:1 / 4 / 2 / 5;"> 
                                     <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
                                 </div>                                 
                             <?php else : ?>
@@ -33,7 +33,7 @@
                                 <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                     <?php wp_nav_menu( array(
                                             'menu' => 'primary',
-                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto ',
+                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto',
                                             'container' => '',
                                             'depth' => '2',
                                             'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
