@@ -17,10 +17,10 @@
             <header> 
                 <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar"> 
                     <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'october' ); ?></a> 
-                    <nav class="navbar navbar-expand-md flex-column fixed-top navbar-dark bg-dark">
+                    <nav class="navbar navbar-expand-md flex-column fixed-top navbar-light">
                         <?php if ( ! has_custom_logo() ) : ?>
-                            <div class="navbar-brand align-self-center mb-0 pb-3 position-md-absolute pb-md-0"> 
-                                <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
+                            <div class="navbar-brand align-self-center mb-0 position-md-absolute pb-md-0"> 
+                                <a rel="home" class="navbar-brand pb-md-0 align-self-center " href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
                             </div>
                         <?php else : ?>
                             <?php the_custom_logo(); ?>
@@ -42,16 +42,14 @@
                         </div>
                     </nav>                     
                 </div>                 
-                <?php if ( get_theme_mod( 'show_jumbotron' ) ) : ?>
-                    <div> 
-                        <div class="jumbotron" style="background-color:<?php echo get_theme_mod( 'jumbotron_bg_color' ); ?>;background-image:<?php echo 'url('.wp_get_attachment_image_url( get_theme_mod( 'jumbotron_bg_image' ), 'full' ).')' ?>;"> 
-                            <div class="container"> 
-                                <h1 class="display-3" style="color:<?php echo get_theme_mod( 'jumbotron_heading_color' ); ?> !important;"><?php _e( 'Starter Theme', 'october' ); ?> <b><?php _e( '2', 'october' ); ?></b></h1> 
-                                <p class="lead" style="color:<?php echo get_theme_mod( 'jumbotron_text_color' ); ?>;"><?php _e( 'Powered by Bootstrap 4 and SASS.', 'october' ); ?></p> 
-                            </div>                             
+                <div> 
+                    <div class="jumbotron"> 
+                        <div class="container"> 
+                            <h1 class="display-3"><?php _e( 'Starter Theme', 'october' ); ?> <b><?php _e( '2', 'october' ); ?></b></h1> 
+                            <p class="lead"><?php _e( 'Powered by Bootstrap 4 and SASS.', 'october' ); ?></p> 
                         </div>                         
-                    </div>
-                <?php endif; ?> 
+                    </div>                     
+                </div>                 
                 <?php if ( is_active_sidebar( 'hero' ) ) : ?>
                     <div class="wrapper container-fluid" id="wrapper-hero"> 
                         <div id="HeroCarouselControls" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="hover"> 

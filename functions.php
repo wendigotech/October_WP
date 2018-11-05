@@ -182,63 +182,6 @@ function st2_customize_register( $wp_customize ) {
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
-    $wp_customize->add_setting( 'show_jumbotron', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'show_jumbotron', array(
-        'label' => __( 'Show Jumbotron', 'october' ),
-        'description' => __( 'Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.', 'october' ),
-        'type' => 'checkbox',
-        'section' => 'header_settings'
-    ));
-
-    $wp_customize->add_setting( 'jumbotron_bg_color', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_bg_color', array(
-        'label' => __( 'Jumbotron Background color', 'october' ),
-        'type' => 'color',
-        'section' => 'header_settings'
-    ) ) );
-
-    $wp_customize->add_setting( 'jumbotron_bg_image', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'jumbotron_bg_image', array(
-        'label' => __( 'Jumbotron Background image', 'october' ),
-        'type' => 'media',
-        'mime_type' => 'image',
-        'section' => 'header_settings'
-    ) ) );
-
-    $wp_customize->add_setting( 'jumbotron_heading_color', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_heading_color', array(
-        'label' => __( 'Jumbotron Heading Color', 'october' ),
-        'type' => 'color',
-        'section' => 'header_settings'
-    ) ) );
-
-    $wp_customize->add_setting( 'jumbotron_text_color', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_text_color', array(
-        'label' => __( 'Jumbotron Paragraph Color', 'october' ),
-        'type' => 'color',
-        'section' => 'header_settings'
-    ) ) );
-
     $wp_customize->add_setting( 'show_left_sidebar', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
@@ -307,6 +250,12 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_deregister_style( 'woocommerce' );
     wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
+
+    wp_deregister_style( 'style-1' );
+    wp_enqueue_style( 'style-1', 'https://fonts.googleapis.com/css?family=Playfair+Display', false, null, 'all');
+
+    wp_deregister_style( 'style-2' );
+    wp_enqueue_style( 'style-2', 'https://fonts.googleapis.com/css?family=Roboto', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 

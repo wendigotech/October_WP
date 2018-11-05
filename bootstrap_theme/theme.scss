@@ -29,16 +29,23 @@ figure,
     word-wrap: break-word;
 }
 
-$nth-nav-item-that-needs-margin-right     : 3;
-$width-of-navbar-brand-or-logo-in-px      : 160px;
-$padding-x-for-navbar-brand-or-logo-in-px : 16px;
+$nth-nav-item-that-needs-margin-right: 3;
+$width-of-navbar-brand-or-logo-in-px: 130px;
+$padding-x-for-navbar-brand-or-logo-in-px: 20px;
 
 @media (min-width: 768px) {
-	
-	.position-md-absolute {
-		position: absolute;
-	}
-	.navbar-nav .nav-item:nth-child(#{$nth-nav-item-that-needs-margin-right}) {
-		margin-right: $width-of-navbar-brand-or-logo-in-px + ($padding-x-for-navbar-brand-or-logo-in-px * 2);
-	}
+    .position-md-absolute {
+        position: absolute;
+    }
+
+    .navbar-nav .nav-item:nth-child(#{$nth-nav-item-that-needs-margin-right}) {
+        margin-right: $width-of-navbar-brand-or-logo-in-px + ($padding-x-for-navbar-brand-or-logo-in-px * 2);
+    }
+}
+
+nav.navbar {
+    background-color: #beb1a0;
+    margin-top: 25px;
+    font-family: Playfair Display;
+    font-weight: 600;
 }

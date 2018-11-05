@@ -33,6 +33,13 @@ figure,
     }
 
     .navbar-nav .nav-item:nth-child(3) {
-        margin-right: 192px;
+        margin-right: 170px;
     }
+}
+
+nav.navbar {
+    background-color: #beb1a0;
+    margin-top: 25px;
+    font-family: Playfair Display;
+    font-weight: 600;
 }
