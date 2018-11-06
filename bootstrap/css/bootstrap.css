@@ -7247,6 +7247,8 @@ input[type="button"].btn-block {
 
 .navbar-light .navbar-brand {
     color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    margin-right: 3rem;
 }
 
 .navbar-light .navbar-brand:hover,
@@ -13010,8 +13012,6 @@ a.skip-link {
 
 .navbar-light .navbar-brand a {
     color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    margin-right: 3rem;
 }
 
 .navbar-light .navbar-brand a:hover,
