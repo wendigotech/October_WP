@@ -19,7 +19,7 @@
                     <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'october' ); ?></a> 
                     <nav class="navbar navbar-expand-md flex-column fixed-top navbar-light">
                         <?php if ( ! has_custom_logo() ) : ?>
-                            <div class="navbar-brand align-self-center mb-0 pb-md-0 position-md-absolute"> 
+                            <div class="navbar-brand mb-0 pb-md-0 position-md-absolute align-self-center"> 
                                 <a rel="home" class="navbar-brand pb-md-0 align-self-center" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
                             </div>
                         <?php else : ?>
