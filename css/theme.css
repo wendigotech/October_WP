@@ -43,3 +43,12 @@ nav.navbar {
     font-family: Playfair Display;
     font-weight: 600;
 }
+
+li.nav-item.dropdown:hover div.dropdown-menu.show {
+}
+
+.show:hover {
+}
+
+.dropdown-menu.show:hover {
+}
