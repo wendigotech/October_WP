@@ -127,6 +127,8 @@ a.skip-link {
 
 .navbar-light .navbar-brand a {
     color: $navbar-light-active-color;
+    position: absolute;
+    margin-right: 3rem;
 
     @include hover-focus {
         color: $navbar-light-active-color;

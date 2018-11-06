@@ -13010,6 +13010,8 @@ a.skip-link {
 
 .navbar-light .navbar-brand a {
     color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    margin-right: 3rem;
 }
 
 .navbar-light .navbar-brand a:hover,
