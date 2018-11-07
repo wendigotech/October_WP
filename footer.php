@@ -29,6 +29,11 @@
                 <!-- container end -->                 
             </div>             
         </div>                                                      
+        <script>
+    jQuery(function() {
+    jQuery('[data-toggle="tooltip"]').tooltip();
+})
+</script>
         <?php wp_footer(); ?>
     </body>     
 </html>

@@ -43,11 +43,28 @@
                     </nav>                     
                 </div>                 
                 <div> 
-                    <div class="jumbotron"> 
-                        <div class="container"> 
-                            <h1 class="display-3"><?php _e( 'Starter Theme', 'october' ); ?> <b><?php _e( '2', 'october' ); ?></b></h1> 
-                            <p class="lead"><?php _e( 'Powered by Bootstrap 4 and SASS.', 'october' ); ?></p> 
-                        </div>                         
+                    <div class="jumbotron">
+                        <div class="container">
+                            <div class="grid">
+                                <figure class="effect-ruby">
+                                    <a href="#" style="position: relative; overflow: hidden;">
+                                        <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
+                                    </a>
+                                    <figcaption>
+                                        <h2><?php _e( 'Glowing', 'october' ); ?> <span><?php _e( 'Ruby', 'october' ); ?></span></h2>
+                                        <p><a class="btn btn-light" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
+                                    </figcaption>                                     
+                                </figure>
+                                <figure class="effect-ruby">
+                                    <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img14">
+                                    <figcaption>
+                                        <h2><?php _e( 'Glowing', 'october' ); ?> <span><?php _e( 'Ruby', 'october' ); ?></span></h2>
+                                        <p><?php _e( 'Ruby did not need any help. Everybody knew that.', 'october' ); ?></p>
+                                        <a href="#"><?php _e( 'View more', 'october' ); ?></a>
+                                    </figcaption>                                     
+                                </figure>
+                            </div>
+                        </div>                                                  
                     </div>                     
                 </div>                 
                 <?php if ( is_active_sidebar( 'hero' ) ) : ?>
