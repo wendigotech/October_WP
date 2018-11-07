@@ -7267,7 +7267,7 @@ input[type="button"].btn-block {
 .navbar-light .navbar-brand {
     color: #40324C;
     position: absolute;
-    margin-right: 3rem;
+    padding-right: 70px;
 }
 
 .navbar-light .navbar-brand:hover,

@@ -29,9 +29,9 @@ figure,
     word-wrap: break-word;
 }
 
-$nth-nav-item-that-needs-margin-right: 3;
-$width-of-navbar-brand-or-logo-in-px: 130px;
-$padding-x-for-navbar-brand-or-logo-in-px: 20px;
+$nth-nav-item-that-needs-margin-right: 3 ;
+$width-of-navbar-brand-or-logo-in-px: 120px ;
+$padding-x-for-navbar-brand-or-logo-in-px: 20px ;
 
 @media (min-width: 768px) {
     .position-md-absolute {
@@ -68,7 +68,4 @@ nav.navbar {
         margin-left: 80%;
         margin-right: 20%;
     }
-}
-
-.dropdown-item:first {
 }
