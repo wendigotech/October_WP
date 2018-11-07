@@ -45,8 +45,8 @@
                 <div> 
                     <div class="jumbotron">
                         <div class="container">
-                            <div class="grid" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr; grid-gap: 10px;">
-                                <figure class="effect-ruby">
+                            <div class="grid" style="   display:grid;grid-template-columns:2fr 1fr 2fr;grid-template-rows:255px 300px;grid-gap:10px;">
+                                <figure class="effect-ruby effect-ruby-1">
                                     <a href="#" style="position: relative; overflow: hidden;">
                                         <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
                                     </a>
@@ -73,7 +73,7 @@
                                         <p><a class="btn btn-light" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
                                     </figcaption>                                     
                                 </figure>
-                                <figure class="effect-ruby">
+                                <figure class="effect-ruby" style="grid-area:2 / 2 / 3 / 4;">
                                     <a href="#" style="position: relative; overflow: hidden;">
                                         <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
                                     </a>
