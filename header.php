@@ -48,11 +48,11 @@
                             <div class="grid" style="   display:grid;grid-template-columns:2fr 1fr 2fr;grid-template-rows:255px 300px;grid-gap:10px;">
                                 <figure class="effect-ruby effect-ruby-1">
                                     <a href="#" style="position: relative; overflow: hidden;">
-                                        <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
+                                        <img src="http://logodust.com/img/free/logo44.png" alt="img13">
                                     </a>
                                     <figcaption>
-                                        <h2><?php _e( 'Glowing', 'october' ); ?> <span><?php _e( 'Ruby', 'october' ); ?></span></h2>
-                                        <p><a class="btn btn-light" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
+                                        <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
+                                        <p><a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
                                     </figcaption>                                     
                                 </figure>
                                 <figure class="effect-ruby">
@@ -61,7 +61,7 @@
                                     </a>
                                     <figcaption>
                                         <h2><?php _e( 'Glowing', 'october' ); ?> <span><?php _e( 'Ruby', 'october' ); ?></span></h2>
-                                        <p><a class="btn btn-light" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
+                                        <p><a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
                                     </figcaption>                                     
                                 </figure>
                                 <figure class="effect-ruby">
@@ -70,7 +70,7 @@
                                     </a>
                                     <figcaption>
                                         <h2><?php _e( 'Glowing', 'october' ); ?> <span><?php _e( 'Ruby', 'october' ); ?></span></h2>
-                                        <p><a class="btn btn-light" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
+                                        <p><a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
                                     </figcaption>                                     
                                 </figure>
                                 <figure class="effect-ruby" style="grid-area:2 / 2 / 3 / 4;">
@@ -79,43 +79,12 @@
                                     </a>
                                     <figcaption>
                                         <h2><?php _e( 'Glowing', 'october' ); ?> <span><?php _e( 'Ruby', 'october' ); ?></span></h2>
-                                        <p><a class="btn btn-light" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
+                                        <p><a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
                                     </figcaption>                                     
                                 </figure>
                             </div>
                         </div>                         
                     </div>                     
-                </div>                 
-                <?php if ( is_active_sidebar( 'hero' ) ) : ?>
-                    <div class="wrapper container-fluid" id="wrapper-hero"> 
-                        <div id="HeroCarouselControls" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="hover"> 
-                            <div class="carousel-inner"> 
-                                <?php if ( is_active_sidebar( 'hero' ) ) : ?>
-                                    <?php dynamic_sidebar( 'hero' ); ?>
-                                <?php endif; ?>                                  
-                            </div>                             
-                            <a class="carousel-control-prev" href="#HeroCarouselControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'october' ); ?></span> </a> 
-                            <a class="carousel-control-next" href="#HeroCarouselControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'october' ); ?></span> </a> 
-                        </div>                         
-                    </div>
-                <?php endif; ?> 
-                <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?>
-                    <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?>
-                        <div class="wrapper container-fluid" id="wrapper-hero">
-                            <?php dynamic_sidebar( 'herocanvas' ); ?>
-                        </div>
-                    <?php endif; ?>
-                <?php endif; ?> 
-                <?php if ( is_active_sidebar( 'statichero' ) ) : ?>
-                    <div class="wrapper" id="wrapper-static-hero"> 
-                        <div id="wrapper-static-content" tabindex="-1" class="container"> 
-                            <div class="row"> 
-                                <?php if ( is_active_sidebar( 'statichero' ) ) : ?>
-                                    <?php dynamic_sidebar( 'statichero' ); ?>
-                                <?php endif; ?>                                  
-                            </div>                             
-                        </div>                         
-                    </div>
-                <?php endif; ?> 
+                </div>                                                                    
             </header>             
             <div>

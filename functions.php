@@ -90,36 +90,6 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'Hero Slider', 'october' ),
-        'id' => 'hero',
-        'description' => 'Hero slider area. Place two or more widgets here and they will slide!',
-        'before_widget' => '<div class="carousel-item">',
-        'after_widget' => '</div>',
-        'before_title' => ' ',
-        'after_title' => ' '
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Hero Canvas', 'october' ),
-        'id' => 'herocanvas',
-        'description' => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '',
-        'after_title' => ''
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Top Full', 'october' ),
-        'id' => 'statichero',
-        'description' => 'Full top widget with dynamic grid',
-        'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s '. st2_slbd_count_widgets( 'statichero' ) .'">',
-        'after_widget' => '</div><!-- .static-hero-widget -->',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Left Sidebar', 'october' ),
         'id' => 'left-sidebar',
         'description' => 'Left Sidebar widget area',
@@ -135,16 +105,6 @@ function st2_widgets_init() {
         'description' => 'Right Sidebar widget area',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Bottom Full', 'october' ),
-        'id' => 'footerfull',
-        'description' => 'Full bottom widget with dynamic grid',
-        'before_widget' => '<div id="%1$s" class="footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'">',
-        'after_widget' => '</div><!-- .footer-widget -->',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>'
     ) );
@@ -182,6 +142,18 @@ function st2_customize_register( $wp_customize ) {
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
+        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Content', 'october' ),
+        'type' => 'textarea',
+        'section' => 'footer_settings'
+    ));
+
     $wp_customize->add_setting( 'show_left_sidebar', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
@@ -204,18 +176,6 @@ function st2_customize_register( $wp_customize ) {
         'description' => __( 'Activate the Right Sidebar', 'october' ),
         'type' => 'checkbox',
         'section' => 'theme_settings'
-    ));
-
-    $wp_customize->add_setting( 'footer_text', array(
-        'type' => 'theme_mod',
-        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Content', 'october' ),
-        'type' => 'textarea',
-        'section' => 'footer_settings'
     ));
 
     /* Pinegrow generated Customizer Controls End */
@@ -259,6 +219,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_deregister_style( 'custom' );
     wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
+
+    wp_deregister_style( 'all' );
+    wp_enqueue_style( 'all', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
