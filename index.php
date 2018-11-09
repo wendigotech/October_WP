@@ -3,9 +3,9 @@ get_header(); ?>
 
 <div class="wrapper" id="index-wrapper"> 
     <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
-        <div class="row">                                                                                        
+        <div class="row"> 
             <div class="col-md-12">
-                <h2><?php _e( 'Column title', 'october' ); ?></h2>                                  
+                <h3><?php _e( 'Column title', 'october' ); ?></h3> 
             </div>
         </div>                         
         <div class="row">
@@ -14,8 +14,8 @@ get_header(); ?>
                     <div class="row ">
                         <div class="col-md-6 col-sm-6 col-6">
                             <figure class="snip0077 blue">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45"/>
-                                <figcaption>
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45" class="snip0077"/>
+                                <figcaption class="snip0077">
                                     <p><?php _e( 'Read more', 'october' ); ?></p>
                                 </figcaption>
                             </figure>
@@ -92,9 +92,9 @@ get_header(); ?>
         </div>
     </div>
     <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
-        <div class="row">                                                                                        
+        <div class="row"> 
             <div class="col-md-12">
-                <h2><?php _e( 'Column title', 'october' ); ?></h2>                                  
+                <h3><?php _e( 'Column title', 'october' ); ?></h3> 
             </div>
         </div>                         
         <div class="row">
@@ -177,22 +177,20 @@ get_header(); ?>
         </div>
     </div>
     <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
-        <div class="row">                                                                                        
+        <div class="row"> 
             <div class="col-md-8">
-                <h2><?php _e( 'Column title', 'october' ); ?></h2>                                  
+                <h3><?php _e( 'Column title', 'october' ); ?></h3> 
             </div>
             <div class="col-md-4 d-inline-flex justify-content-center align-items-end">
-                <h6 class="text-center"><?php _e( 'Column title', 'october' ); ?></h6>                                  
+                <h6 class="text-center"><?php _e( 'Column title', 'october' ); ?></h6> 
             </div>
         </div>                         
         <div class="row" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 2fr;grid-template-rows:100px 50px 150px 150px;grid-gap:5px;">
-            <div id="carousel1" class="carousel slide" data-ride="carousel" style="grid-area:1 / 1 / 6 / 5;">                                  
-
+            <div id="carousel1" class="carousel slide" data-ride="carousel" style="grid-area:1 / 1 / 6 / 5;"> 
                 <div class="carousel-inner"> 
                     <div class="carousel-item active"> 
-                        <img class="d-block w-100" src="http://pinegrow.com/placeholders/img10.jpg" alt="First slide">                                          
+                        <img class="d-block w-100" src="http://pinegrow.com/placeholders/img10.jpg" alt="First slide"> 
                     </div>                                     
-
                     <div class="carousel-item"> 
                         <img class="d-block w-100" src="http://pinegrow.com/placeholders/img13.jpg" alt="Second slide"> 
                         <div class="carousel-caption d-none d-md-block"> 
@@ -200,9 +198,8 @@ get_header(); ?>
                             <p><?php _e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'october' ); ?></p> 
                         </div>                                         
                     </div>                                     
-
                     <div class="carousel-item"> 
-                        <img class="d-block w-100" src="http://pinegrow.com/placeholders/img14.jpg" alt="Third slide">                                          
+                        <img class="d-block w-100" src="http://pinegrow.com/placeholders/img14.jpg" alt="Third slide"> 
                     </div>                                     
                 </div>
                 <ol class="carousel-indicators justify-content-between "> 
@@ -214,8 +211,8 @@ get_header(); ?>
                     </button>
                     <button class="btn btn-primary" data-target="#carousel1" aria-expanded="false" aria-controls="collapseExample" data-slide-to="2" type="button">
                         <?php _e( 'Button', 'october' ); ?>
-                    </button>                                                                                                               
-                </ol>                                                                                                   
+                    </button>                                     
+                </ol>                                 
             </div>
             <figure class="effect-ruby" style="grid-area:1 / 5 / 3 / 6;">
                 <a href="#" style="position: relative; overflow: hidden;">
@@ -223,7 +220,10 @@ get_header(); ?>
                 </a>
                 <figcaption>
                     <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
-                    <p><a class="btn btn-light btn-sm" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light btn-sm" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
+                    <div>
+                        <a class="btn btn-light btn-sm btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                        <a class="btn btn-light btn-sm" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                    </div>
                 </figcaption>                                 
             </figure>
             <figure class="effect-ruby" style="grid-area:4 / 5 / 5 / 6;">
@@ -232,7 +232,10 @@ get_header(); ?>
                 </a>
                 <figcaption>
                     <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
-                    <p><a class="btn btn-light" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
+                    <div>
+                        <a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                        <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                    </div>
                 </figcaption>                                 
             </figure>
             <figure class="effect-ruby" style="grid-area:3 / 5 / 4 / 6;">
@@ -241,7 +244,10 @@ get_header(); ?>
                 </a>
                 <figcaption>
                     <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
-                    <p><a class="btn btn-light" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a><a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a></p>
+                    <div>
+                        <a class="btn btn-light btn-visit btn-sm" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                        <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                    </div>
                 </figcaption>                                 
             </figure>
         </div>

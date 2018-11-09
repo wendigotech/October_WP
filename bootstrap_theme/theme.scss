@@ -32,6 +32,7 @@ figure,
 $nth-nav-item-that-needs-margin-right: 3 ;
 $width-of-navbar-brand-or-logo-in-px: 120px ;
 $padding-x-for-navbar-brand-or-logo-in-px: 20px ;
+$custom-color-gold: #beb1a0 ;
 
 @media (min-width: 768px) {
     .position-md-absolute {
@@ -54,7 +55,7 @@ $padding-x-for-navbar-brand-or-logo-in-px: 20px ;
 }
 
 nav.navbar {
-    background-color: #beb1a0;
+    background-color: $custom-color-gold;
     margin-top: 25px;
     font-family: Playfair Display;
     font-weight: 600;
@@ -67,5 +68,11 @@ nav.navbar {
     .navbar-toggler {
         margin-left: 80%;
         margin-right: 20%;
+    }
+}
+
+@media (min-width:768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
     }
 }
