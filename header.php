@@ -31,7 +31,7 @@
                             <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'primary',
-                                        'menu_class' => 'navbar-nav text-center',
+                                        'menu_class' => 'navbar-nav text-center text-sm-center float-right float-sm-right',
                                         'container' => '',
                                         'depth' => '2',
                                         'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
@@ -44,8 +44,7 @@
                 <div> 
                     <div class="jumbotron">
                         <div class="container">
-                            <div id="carousel1" class="carousel slide" data-ride="carousel">                                  
-
+                            <div id="carousel1" class="carousel slide" data-ride="carousel"> 
                                 <div class="carousel-inner"> 
                                     <div class="carousel-item active">
                                         <div class="grid" style="   display:grid;grid-template-columns:2fr 1fr 2fr;grid-template-rows:255px 300px;grid-gap:10px;">
@@ -97,9 +96,8 @@
                                                     </div>
                                                 </figcaption>                                                 
                                             </figure>
-                                        </div>                                                                                                                           
+                                        </div>                                         
                                     </div>                                     
-
                                     <div class="carousel-item">
                                         <div class="grid" style="   display:grid;grid-template-columns:2fr 1fr 2fr;grid-template-rows:255px 300px;grid-gap:10px;">
                                             <figure class="effect-ruby effect-ruby-1">
@@ -150,9 +148,8 @@
                                                     </div>
                                                 </figcaption>                                                 
                                             </figure>
-                                        </div>                                                                                                                           
+                                        </div>                                         
                                     </div>                                     
-
                                     <div class="carousel-item">
                                         <div class="grid" style="   display:grid;grid-template-columns:2fr 1fr 2fr;grid-template-rows:255px 300px;grid-gap:10px;">
                                             <figure class="effect-ruby effect-ruby-1">
@@ -203,14 +200,13 @@
                                                     </div>
                                                 </figcaption>                                                 
                                             </figure>
-                                        </div>                                                                                                                           
+                                        </div>                                         
                                     </div>                                     
-                                </div>                                                                                                   
+                                </div>                                 
                             </div>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-left: 1px; margin-right: 1px; margin-top: 23px;">                                          
-
+                                    <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-left: 1px; margin-right: 1px; margin-top: 23px;"> 
                                         <a class="btn btn-light btn-outline-warning active" data-target="#carousel1" href="#" data-slide-to="0"><?php _e( 'Label', 'october' ); ?></a>
                                         <a class="btn btn-light btn-outline-warning" data-target="#carousel1" href="#" data-slide-to="1"><?php _e( 'Label', 'october' ); ?></a>
                                         <a class="btn btn-light btn-outline-warning" data-target="#carousel1" href="#" data-slide-to="2"><?php _e( 'Label', 'october' ); ?></a>
