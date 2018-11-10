@@ -7005,6 +7005,8 @@ input[type="button"].btn-block {
         background-color: #beb1a0;
         border-radius: 4px;
         border-color: rgba(0, 0, 0, 0.46);
+        -webkit-box-shadow: inset 1px 2px 6px;
+        box-shadow: inset 1px 2px 6px;
     }
 
     .navbar-expand-sm .navbar-nav .nav-link {
@@ -7065,6 +7067,8 @@ input[type="button"].btn-block {
         background-color: #beb1a0;
         border-radius: 4px;
         border-color: rgba(0, 0, 0, 0.46);
+        -webkit-box-shadow: inset 1px 2px 6px;
+        box-shadow: inset 1px 2px 6px;
     }
 
     .navbar-expand-md .navbar-nav .nav-link {
@@ -7125,6 +7129,8 @@ input[type="button"].btn-block {
         background-color: #beb1a0;
         border-radius: 4px;
         border-color: rgba(0, 0, 0, 0.46);
+        -webkit-box-shadow: inset 1px 2px 6px;
+        box-shadow: inset 1px 2px 6px;
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -7185,6 +7191,8 @@ input[type="button"].btn-block {
         background-color: #beb1a0;
         border-radius: 4px;
         border-color: rgba(0, 0, 0, 0.46);
+        -webkit-box-shadow: inset 1px 2px 6px;
+        box-shadow: inset 1px 2px 6px;
     }
 
     .navbar-expand-xl .navbar-nav .nav-link {
@@ -7239,6 +7247,8 @@ input[type="button"].btn-block {
     background-color: #beb1a0;
     border-radius: 4px;
     border-color: rgba(0, 0, 0, 0.46);
+    -webkit-box-shadow: inset 1px 2px 6px;
+    box-shadow: inset 1px 2px 6px;
 }
 
 .navbar-expand .navbar-nav .nav-link {
