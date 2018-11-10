@@ -74,5 +74,20 @@ nav.navbar {
 @media (min-width:768px) {
     .dropdown:hover .dropdown-menu {
         display: block;
+        animation: puff-in-hor .5s cubic-bezier(.47,0.000,.745,.715) both;
+
+        @keyframes puff-in-hor{
+            0% {
+                transform: scaleX(2);
+                filter: blur(2px);
+                opacity: 0
+            }
+
+            100% {
+                transform: scaleX(1);
+                filter: blur(0);
+                opacity: 1
+            }
+        }
     }
 }
