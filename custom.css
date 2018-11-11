@@ -35,16 +35,13 @@ figure.effect-ruby h2 {
     font-family: Roboto;
     color: #40324c;
     font-size: 1.3vw;
-    margin-top: -223px;
-    font-weight: 600;
-    transform: rotate(-90deg);
-    width: 12em;
+    font-weight: 700;
     text-align: center;
-    padding-bottom: 8em;
+    margin-top: -238px;
+    width: 50%;
 }
 
 figure.effect-ruby div {
-    margin: 5em 0 0;
     padding: inherit;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -53,6 +50,7 @@ figure.effect-ruby div {
     transform: translate3d(0,20px,0) scale(1.1);
     display: flex;
     justify-content: space-around;
+    margin: 20% 0 0;
 }
 
 figure.effect-ruby:hover h2 {
@@ -212,6 +210,7 @@ figure.snip0077.hover:after {
 div#content.container {
     background-color: #e2e2eb;
     border-radius: 4px;
+    width: 90%;
 }
 
 div#content-columns {
@@ -370,6 +369,7 @@ div#content figure.effect-ruby figcaption p {
     margin-right: 1em;
     color: #382b49;
     width: 10rem;
+    border-radius: 4px;
 }
 
 .effect-ruby-1:nth-of-type(1) {

@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <div class="wrapper" id="index-wrapper"> 
-    <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
+    <div class="mt-5 mb-5 container" id="content" tabindex="-1"> 
         <div class="row"> 
             <div class="col-md-12">
                 <h3><?php _e( 'Column title', 'october' ); ?></h3> 
@@ -101,7 +101,7 @@ get_header(); ?>
             <div class="container py-3 col-lg-3 col-md-6">
                 <div class="card card-transparent">
                     <div class="row ">
-                        <div class="col-md-12 col-lg-12">
+                        <div class="col-md-12 col-lg-12 col-sm-6">
                             <figure class="snip0077 blue">
                                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45"/>
                                 <figcaption>
@@ -109,7 +109,7 @@ get_header(); ?>
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="px-3 col-md-12">
+                        <div class="px-3 col-md-12 col-sm-6">
                             <div class="card-block px-3">
                                 <p class="card-text"><?php _e( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m', 'october' ); ?></p>
                             </div>
