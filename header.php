@@ -50,7 +50,7 @@
                                         <?php
                                             $best_bonus_args = array(
                                                 'category_name' => 'casino',
-                                                'tag' => 'best-bonuses',
+                                                'tag' => 'best-bonus',
                                                 'order' => 'DESC'
                                             )
                                         ?>
