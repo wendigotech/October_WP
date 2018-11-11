@@ -47,20 +47,19 @@
                             <div id="carousel1" class="carousel slide" data-ride="carousel" data-pause="hover"> 
                                 <div class="carousel-inner"> 
                                     <div class="carousel-item">
-                                        <div class="grid" style="   display:grid;grid-template-columns:2fr 1fr 2fr;grid-template-rows:255px 300px;grid-gap:10px;">
-                                            <?php
-                                                $best_bonuses_args = array(
-                                                    'category_name' => 'casino',
-                                                    'tag' => 'best-bonus',
-                                                    'order' => 'ASC',
-                                                    'orderby' => 'date'
-                                                )
-                                            ?>
-                                            <?php $best_bonuses = new WP_Query( $best_bonuses_args ); ?>
-                                            <?php if ( $best_bonuses->have_posts() ) : ?>
+                                        <?php
+                                            $best_bonuses_args = array(
+                                                'category_name' => 'casino',
+                                                'tag' => 'best-bonuses',
+                                                'order' => 'DESC'
+                                            )
+                                        ?>
+                                        <?php $best_bonuses = new WP_Query( $best_bonuses_args ); ?>
+                                        <?php if ( $best_bonuses->have_posts() ) : ?>
+                                            <div style="   display:grid;grid-template-columns:4fr 1fr 2fr 4fr;grid-template-rows:255px 300px;grid-gap:10px;" <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
                                                 <?php $best_bonuses_item_number = 0; ?>
-                                                <?php while ( $best_bonuses->have_posts() && $best_bonuses_item_number++ < 1 ) : $best_bonuses->the_post(); ?>
-                                                    <figure <?php post_class( 'effect-ruby effect-ruby-1' ); ?> id="post-<?php the_ID(); ?>">
+                                                <?php while ( $best_bonuses->have_posts() && $best_bonuses_item_number++ < 4 ) : $best_bonuses->the_post(); ?>
+                                                    <figure class="effect-ruby effect-ruby-1" style="grid-column-end: span 3;">
                                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
                                                         <figcaption>
                                                             <h2><?php the_excerpt( ); ?></h2>
@@ -72,46 +71,10 @@
                                                     </figure>
                                                 <?php endwhile; ?>
                                                 <?php wp_reset_postdata(); ?>
-                                            <?php else : ?>
-                                                <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                                            <?php endif; ?>
-                                            <figure class="effect-ruby">
-                                                <a href="#" style="position: relative; overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
-                                                </a>
-                                                <figcaption>
-                                                    <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
-                                                    <div>
-                                                        <a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                        <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                    </div>
-                                                </figcaption>                                                 
-                                            </figure>
-                                            <figure class="effect-ruby">
-                                                <a href="#" style="position: relative; overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
-                                                </a>
-                                                <figcaption>
-                                                    <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
-                                                    <div>
-                                                        <a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                        <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                    </div>
-                                                </figcaption>                                                 
-                                            </figure>
-                                            <figure class="effect-ruby" style="grid-area:2 / 2 / 3 / 4;">
-                                                <a href="#" style="position: relative; overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
-                                                </a>
-                                                <figcaption>
-                                                    <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
-                                                    <div>
-                                                        <a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                        <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                    </div>
-                                                </figcaption>                                                 
-                                            </figure>
-                                        </div>                                         
+                                            </div>
+                                        <?php else : ?>
+                                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
+                                        <?php endif; ?> 
                                     </div>                                     
                                 </div>                                 
                             </div>

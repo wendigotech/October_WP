@@ -32,12 +32,12 @@ figure.effect-ruby h2 {
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,20px,0);
-    transform: translate3d(0,20px,0);
     font-family: Roboto;
     color: #40324c;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     margin-top: -240px;
     font-weight: 600;
+    transform: rotate(-18deg);
 }
 
 figure.effect-ruby div {
@@ -61,10 +61,6 @@ figure.effect-ruby:hover div {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0) scale(1);
     transform: translate3d(0,0,0) scale(1);
-}
-
-figure.effect-ruby-1 {
-    grid-area: 1 / 1 / 2 / 3;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
