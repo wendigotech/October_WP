@@ -56,59 +56,21 @@
                                     <?php $best_bonus = new WP_Query( $best_bonus_args ); ?>
                                     <?php if ( $best_bonus->have_posts() ) : ?>
                                         <div class="carousel-item">
-                                            <?php while ( $best_bonus->have_posts() ) : $best_bonus->the_post(); ?>
-                                                <div class="grid" style="   display:grid;grid-template-columns:2fr 1fr 2fr;grid-template-rows:255px 300px;grid-gap:10px;">
+                                            <div class="grid" style="   display:grid;grid-template-columns:2fr 1fr 2fr;grid-template-rows:255px 300px;grid-gap:10px;">
+                                                <?php while ( $best_bonus->have_posts() ) : $best_bonus->the_post(); ?>
                                                     <figure class="effect-ruby effect-ruby-1">
-                                                        <a href="#" style="position: relative; overflow: hidden;">
-                                                            <img src="http://logodust.com/img/free/logo44.png" alt="img13">
-                                                        </a>
+                                                        <a href="<?php echo get_field( 'link1' ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                                         <figcaption>
-                                                            <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
+                                                            <?php the_excerpt( ); ?>
                                                             <div>
-                                                                <a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                                <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                                                <a class="btn btn-light btn-visit" href="<?php echo get_field( 'link1' ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                                                <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_field( 't&c' ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
                                                             </div>
                                                         </figcaption>                                                         
                                                     </figure>
-                                                    <figure class="effect-ruby">
-                                                        <a href="#" style="position: relative; overflow: hidden;">
-                                                            <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
-                                                        </a>
-                                                        <figcaption>
-                                                            <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
-                                                            <div>
-                                                                <a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                                <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                            </div>
-                                                        </figcaption>                                                         
-                                                    </figure>
-                                                    <figure class="effect-ruby">
-                                                        <a href="#" style="position: relative; overflow: hidden;">
-                                                            <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
-                                                        </a>
-                                                        <figcaption>
-                                                            <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
-                                                            <div>
-                                                                <a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                                <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                            </div>
-                                                        </figcaption>                                                         
-                                                    </figure>
-                                                    <figure class="effect-ruby" style="grid-area:2 / 2 / 3 / 4;">
-                                                        <a href="#" style="position: relative; overflow: hidden;">
-                                                            <img src="https://images.unsplash.com/photo-1494119023197-238489d8dce3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjIwOTIyfQ&s=d960e07ad7b81180215edea3a1071268" alt="img13">
-                                                        </a>
-                                                        <figcaption>
-                                                            <h2><?php _e( 'Glowing', 'october' ); ?> </h2>
-                                                            <div>
-                                                                <a class="btn btn-light btn-visit" href="#"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                                <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="abc"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                            </div>
-                                                        </figcaption>                                                         
-                                                    </figure>
-                                                </div>
-                                            <?php endwhile; ?>
-                                            <?php wp_reset_postdata(); ?> 
+                                                <?php endwhile; ?>
+                                                <?php wp_reset_postdata(); ?>
+                                            </div>                                             
                                         </div>
                                     <?php else : ?>
                                         <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>

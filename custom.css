@@ -35,8 +35,7 @@ figure.effect-ruby h2 {
     transform: translate3d(0,20px,0);
     font-family: Roboto;
     color: #40324c;
-    text-align: center;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     margin-top: -240px;
     font-weight: 600;
 }
@@ -366,15 +365,10 @@ div#content figure.effect-ruby figcaption p {
 
 .carousel-indicators a.btn {
     background-color: #e2e2eb;
-    width: 10em;
     font-family: Roboto;
-    font-size: 2vw;
+    font-size: 1.5vw;
     margin-left: 1em;
     margin-right: 1em;
     color: #382b49;
-}
-
-.carousel-indicators a.btn.active {
-    color: white;
-    background-color: main-red;
+    width: 10rem;
 }

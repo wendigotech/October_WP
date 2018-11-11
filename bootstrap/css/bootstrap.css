@@ -9220,6 +9220,7 @@ button.close {
     margin-right: 15%;
     margin-left: 15%;
     list-style: none;
+    top: 16px;
 }
 
 .carousel-indicators li {
