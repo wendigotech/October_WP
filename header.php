@@ -65,16 +65,16 @@
                                                             if ( has_post_thumbnail() ) {
                                                                 the_post_thumbnail( 'normal' );
                                                             }
-                                                         ?>
-                                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;">
-                                                            <figcaption>
+                                                         ?> 
+                                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" class="a1">
+                                                            <figcaption style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 340; margin: 24px;">
                                                                 <?php the_excerpt( ); ?>
                                                                 <div>
                                                                     <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                                                     <a class="btn btn-light" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
                                                                 </div>
                                                             </figcaption>
-                                                        </a>                                                         
+                                                        </a>
                                                     </figure>
                                                 <?php endwhile; ?>
                                                 <?php wp_reset_postdata(); ?>
