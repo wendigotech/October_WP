@@ -59,7 +59,7 @@
                                             <div style="   display:grid;grid-template-columns:4fr 1fr 2fr 4fr;grid-template-rows:255px 300px;grid-gap:10px;" <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
                                                 <?php $best_bonus_item_number = 0; ?>
                                                 <?php while ( $best_bonus->have_posts() && $best_bonus_item_number++ < 4 ) : $best_bonus->the_post(); ?>
-                                                    <figure class="effect-ruby effect-ruby-1" style="grid-column-end: span 3;">
+                                                    <figure class="effect-ruby effect-ruby-1">
                                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
                                                         <figcaption>
                                                             <h2><?php the_excerpt( ); ?></h2>

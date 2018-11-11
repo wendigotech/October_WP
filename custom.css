@@ -368,3 +368,11 @@ div#content figure.effect-ruby figcaption p {
     color: #382b49;
     width: 10rem;
 }
+
+.effect-ruby-1:nth-of-type(1) {
+    grid-column-end: span 3;
+}
+
+.effect-ruby-1:nth-of-type(4) {
+    grid-column-end: span 3;
+}
