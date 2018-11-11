@@ -35,9 +35,12 @@ figure.effect-ruby h2 {
     font-family: Roboto;
     color: #40324c;
     font-size: 1.3vw;
-    margin-top: -240px;
+    margin-top: -223px;
     font-weight: 600;
-    transform: rotate(-18deg);
+    transform: rotate(-90deg);
+    width: 12em;
+    text-align: center;
+    padding-bottom: 8em;
 }
 
 figure.effect-ruby div {
@@ -373,6 +376,10 @@ div#content figure.effect-ruby figcaption p {
     grid-column-end: span 3;
 }
 
+.effect-ruby-1:nth-of-type(3) {
+    grid-column-end: span 2;
+}
+
 .effect-ruby-1:nth-of-type(4) {
-    grid-column-end: span 3;
+    grid-column-end: span 2;
 }
