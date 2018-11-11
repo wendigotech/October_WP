@@ -65,8 +65,8 @@
                                                         <figcaption>
                                                             <h2><?php the_excerpt( ); ?></h2>
                                                             <div>
-                                                                <a class="btn btn-light btn-visit" href="<?php echo get_field( 'link1' ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                                <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_field( 't&c' ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                                                <a class="btn btn-light btn-visit" href="#"><?php echo get_field( 'link3' ); ?></a>
+                                                                <a class="btn btn-light" href="#" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_field( 't&cs' ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
                                                             </div>
                                                         </figcaption>
                                                     </figure>
