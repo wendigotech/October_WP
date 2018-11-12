@@ -7450,7 +7450,12 @@ input[type="button"].btn-block {
 .card-text:last-child {
     margin-bottom: 0;
     font-family: Roboto;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
+    height: 9em;
+    overflow: hidden;
+    word-break: normal;
+    white-space: pre-wrap;
+    color: #382b49;
 }
 
 .card-link {

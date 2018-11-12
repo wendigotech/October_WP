@@ -37,8 +37,9 @@ figure.effect-ruby h2 {
     font-size: 1.3vw;
     font-weight: 700;
     text-align: center;
-    margin-top: -238px;
+    margin-top: -15rem;
     width: 50%;
+    text-shadow: 0px 1px 3px;
 }
 
 figure.effect-ruby div {
@@ -100,6 +101,7 @@ figure.snip0077 figcaption {
     position: absolute;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 figure.snip0077 figcaption h2,
@@ -382,4 +384,28 @@ div#content figure.effect-ruby figcaption p {
 
 .effect-ruby-1:nth-of-type(4) {
     grid-column-end: span 2;
+}
+
+.effect-ruby-2:nth-of-type(1) {
+    grid-column-end: span 2;
+}
+
+.effect-ruby-2:nth-of-type(2) {
+    grid-column-end: span 2;
+}
+
+.effect-ruby-2:nth-of-type() {
+    grid-column-end: span 2;
+}
+
+.effect-ruby-2:nth-of-type(4) {
+    grid-column-end: span 3;
+}
+
+.card-block h6 {
+    font-family: Playfair Display;
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: #382b49;
+    text-decoration: underline;
 }

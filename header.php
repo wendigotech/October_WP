@@ -89,7 +89,7 @@
                                             <div style="   display:grid;grid-template-columns:4fr 1fr 2fr 4fr;grid-template-rows:255px 300px;grid-gap:10px;" <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
                                                 <?php $best_casino_item_number = 0; ?>
                                                 <?php while ( $best_casino->have_posts() && $best_casino_item_number++ < 4 ) : $best_casino->the_post(); ?>
-                                                    <figure class="effect-ruby effect-ruby-1">
+                                                    <figure class="effect-ruby effect-ruby-2">
                                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
                                                         <figcaption>
                                                             <h2><?php the_excerpt( ); ?></h2>
@@ -171,10 +171,10 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around mt-5" style="margin-left: 1px; margin-right: 1px; margin-top: 23px;"> 
-                                        <a class="btn active" data-target="#carousel1" href="#" data-slide-to="0" data-toggle="button"><?php _e( 'Label', 'october' ); ?></a>
-                                        <a data-target="#carousel1" href="#" data-slide-to="1" class="btn"><?php _e( 'Label', 'october' ); ?></a>
-                                        <a data-target="#carousel1" href="#" data-slide-to="2" class="btn"><?php _e( 'Label', 'october' ); ?></a>
-                                        <a data-target="#carousel1" href="#" data-slide-to="3" class="btn"><?php _e( 'Label', 'october' ); ?></a>
+                                        <a class="btn active" data-target="#carousel1" href="#" data-slide-to="0" data-toggle="button"><?php _e( 'Best bonus', 'october' ); ?></a>
+                                        <a data-target="#carousel1" href="#" data-slide-to="1" class="btn"><?php _e( 'Best casino', 'october' ); ?></a>
+                                        <a data-target="#carousel1" href="#" data-slide-to="2" class="btn"><?php _e( 'New casino', 'october' ); ?></a>
+                                        <a data-target="#carousel1" href="#" data-slide-to="3" class="btn"><?php _e( 'Most visited', 'october' ); ?></a>
                                     </div>
                                 </div>
                             </div>

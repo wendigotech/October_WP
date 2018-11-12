@@ -2,180 +2,147 @@
 get_header(); ?>
 
 <div class="wrapper" id="index-wrapper"> 
-    <div class="mt-5 mb-5 container" id="content" tabindex="-1"> 
-        <div class="row"> 
-            <div class="col-md-12">
-                <h3><?php _e( 'Column title', 'october' ); ?></h3> 
-            </div>
-        </div>                         
-        <div class="row">
-            <div class="container py-3 col-lg-6 col-md-6">
-                <div class="card card-transparent">
-                    <div class="row ">
-                        <div class="col-md-6 col-sm-6 col-6">
-                            <figure class="snip0077 blue">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45" class="snip0077"/>
-                                <figcaption class="snip0077">
-                                    <p><?php _e( 'Read more', 'october' ); ?></p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="px-3 col-md-6 col-sm-6 col-6">
-                            <div class="card-block px-3">
-                                <h6 class="card-title text-center"><?php _e( 'Lorem ipsum dolor sit amet', 'october' ); ?></h6>
-                                <p class="card-text"><?php _e( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m', 'october' ); ?></p>
+    <?php
+        $info_args = array(
+            'category_name' => 'info',
+            'order' => 'DESC'
+        )
+    ?>
+    <?php $info = new WP_Query( $info_args ); ?>
+    <?php if ( $info->have_posts() ) : ?>
+        <div id="post-<?php the_ID(); ?>" tabindex="-1" <?php post_class( 'mt-5 mb-5 container' ); ?>> 
+            <div class="row"> 
+                <div class="col-md-12">
+                    <h3><?php _e( 'Usefull information', 'october' ); ?></h3> 
+                </div>
+            </div>                             
+            <div class="row">
+                <?php $info_item_number = 0; ?>
+                <?php while ( $info->have_posts() && $info_item_number++ < 4 ) : $info->the_post(); ?>
+                    <div class="container py-3 col-lg-6 col-md-6">
+                        <div class="card card-transparent">
+                            <div class="row ">
+                                <div class="col-md-6 col-sm-6 col-6">
+                                    <figure class="snip0077 blue">
+                                        <?php
+                                            if ( has_post_thumbnail() ) {
+                                                the_post_thumbnail( 'normal', array(
+                                                'class' => 'snip0077'
+                                            ) );
+                                            }
+                                         ?>
+                                        <a href="<?php echo esc_url( get_permalink() ); ?>">
+                                            <?php if ( is_singular() ) : ?>
+                                                <figcaption class="snip0077">
+                                                    <p><?php _e( 'Read more', 'october' ); ?></p>
+                                                </figcaption>
+                                            <?php else : ?>
+                                                <figcaption class="snip0077">
+                                                    <a href="<?php echo esc_url( get_permalink() ); ?>"><p><?php _e( 'Read more', 'october' ); ?></p></a>
+                                                </figcaption>
+                                            <?php endif; ?>
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="px-3 col-md-6 col-sm-6 col-6">
+                                    <div class="card-block px-3">
+                                        <a href="<?php echo esc_url( get_permalink() ); ?>">  <?php if ( is_singular() ) : ?><h6 class="card-title text-center"><?php the_title(); ?></h6><?php else : ?><h6 class="card-title text-center"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h6><?php endif; ?></a>
+                                        <?php the_content(); ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="container py-3 col-lg-6 col-md-6">
-                <div class="card card-transparent">
-                    <div class="row ">
-                        <div class="col-md-6 col-sm-6 col-6">
-                            <figure class="snip0077 blue">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45" class="snip0077"/>
-                                <figcaption class="snip0077">
-                                    <p><?php _e( 'Read more', 'october' ); ?></p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="px-3 col-md-6 col-sm-6 col-6">
-                            <div class="card-block px-3">
-                                <h6 class="card-title text-center"><?php _e( 'Lorem ipsum dolor sit amet', 'october' ); ?></h6>
-                                <p class="card-text"><?php _e( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m', 'october' ); ?></p>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <div class="container py-3 col-lg-6 col-md-6">
+                    <div class="card card-transparent">
+                        <div class="row ">
+                            <div class="col-md-6 col-sm-6 col-6">
+                                <figure class="snip0077 blue">
+                                    <?php
+                                        if ( has_post_thumbnail() ) {
+                                            the_post_thumbnail( 'normal', array(
+                                            'class' => 'snip0077'
+                                        ) );
+                                        }
+                                     ?>
+                                    <a href="<?php echo esc_url( get_permalink() ); ?>">
+                                        <?php if ( is_singular() ) : ?>
+                                            <figcaption class="snip0077">
+                                                <p><?php _e( 'Read more', 'october' ); ?></p>
+                                            </figcaption>
+                                        <?php else : ?>
+                                            <figcaption class="snip0077">
+                                                <a href="<?php echo esc_url( get_permalink() ); ?>"><p><?php _e( 'Read more', 'october' ); ?></p></a>
+                                            </figcaption>
+                                        <?php endif; ?>
+                                    </a>
+                                </figure>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-3 col-lg-6 col-md-6">
-                <div class="card card-transparent">
-                    <div class="row ">
-                        <div class="col-md-6 col-sm-6 col-6">
-                            <figure class="snip0077 blue">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45" class="snip0077"/>
-                                <figcaption class="snip0077">
-                                    <p><?php _e( 'Read more', 'october' ); ?></p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="px-3 col-md-6 col-sm-6 col-6">
-                            <div class="card-block px-3">
-                                <h6 class="card-title text-center"><?php _e( 'Lorem ipsum dolor sit amet', 'october' ); ?></h6>
-                                <p class="card-text"><?php _e( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m', 'october' ); ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-3 col-lg-6 col-md-6">
-                <div class="card card-transparent">
-                    <div class="row ">
-                        <div class="col-md-6 col-sm-6 col-6">
-                            <figure class="snip0077 blue">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45" class="snip0077"/>
-                                <figcaption class="snip0077">
-                                    <p><?php _e( 'Read more', 'october' ); ?></p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="px-3 col-md-6 col-sm-6 col-6">
-                            <div class="card-block px-3">
-                                <h6 class="card-title text-center"><?php _e( 'Lorem ipsum dolor sit amet', 'october' ); ?></h6>
-                                <p class="card-text"><?php _e( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m', 'october' ); ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
-        <div class="row"> 
-            <div class="col-md-12">
-                <h3><?php _e( 'Column title', 'october' ); ?></h3> 
-            </div>
-        </div>                         
-        <div class="row">
-            <div class="container py-3 col-lg-3 col-md-6">
-                <div class="card card-transparent">
-                    <div class="row ">
-                        <div class="col-md-12 col-lg-12 col-sm-6">
-                            <figure class="snip0077 blue">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45"/>
-                                <figcaption>
-                                    <p><?php _e( 'I propose we leave math to the machines and go play outside.', 'october' ); ?></p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="px-3 col-md-12 col-sm-6">
-                            <div class="card-block px-3">
-                                <p class="card-text"><?php _e( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m', 'october' ); ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-3 col-lg-3 col-md-6">
-                <div class="card card-transparent">
-                    <div class="row ">
-                        <div class="col-md-12 col-lg-12">
-                            <figure class="snip0077 blue">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45"/>
-                                <figcaption>
-                                    <p><?php _e( 'I propose we leave math to the machines and go play outside.', 'october' ); ?></p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="px-3 col-md-12">
-                            <div class="card-block px-3">
-                                <p class="card-text"><?php _e( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m', 'october' ); ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-3 col-lg-3 col-md-6">
-                <div class="card card-transparent">
-                    <div class="row ">
-                        <div class="col-md-12 col-lg-12">
-                            <figure class="snip0077 blue">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45"/>
-                                <figcaption>
-                                    <p><?php _e( 'I propose we leave math to the machines and go play outside.', 'october' ); ?></p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="px-3 col-md-12">
-                            <div class="card-block px-3">
-                                <p class="card-text"><?php _e( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m', 'october' ); ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-3 col-lg-3 col-md-6">
-                <div class="card card-transparent">
-                    <div class="row ">
-                        <div class="col-md-12 col-lg-12">
-                            <figure class="snip0077 blue">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample45.jpg" alt="sampl45"/>
-                                <figcaption>
-                                    <p><?php _e( 'I propose we leave math to the machines and go play outside.', 'october' ); ?></p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="px-3 col-md-12">
-                            <div class="card-block px-3">
-                                <p class="card-text"><?php _e( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m', 'october' ); ?></p>
+                            <div class="px-3 col-md-6 col-sm-6 col-6">
+                                <div class="card-block px-3">
+                                    <a href="<?php echo esc_url( get_permalink() ); ?>">  <?php if ( is_singular() ) : ?><h6 class="card-title text-center"><?php the_title(); ?></h6><?php else : ?><h6 class="card-title text-center"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h6><?php endif; ?></a>
+                                    <?php the_content(); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <?php else : ?>
+        <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
+    <?php endif; ?>
+    <?php
+        $payment_args = array(
+            'category_name' => 'payment',
+            'order' => 'DESC'
+        )
+    ?>
+    <?php $payment = new WP_Query( $payment_args ); ?>
+    <?php if ( $payment->have_posts() ) : ?>
+        <div id="post-<?php the_ID(); ?>" tabindex="-1" <?php post_class( 'container mt-5 mb-5' ); ?>> 
+            <div class="row"> 
+                <div class="col-md-12">
+                    <h3><?php _e( 'Payment methods', 'october' ); ?></h3> 
+                </div>
+            </div>                             
+            <div class="row">
+                <?php $payment_item_number = 0; ?>
+                <?php while ( $payment->have_posts() && $payment_item_number++ < 4 ) : $payment->the_post(); ?>
+                    <div class="container py-3 col-lg-3 col-md-6">
+                        <div class="card card-transparent">
+                            <div class="row ">
+                                <div class="col-md-12 col-lg-12 col-sm-6">
+                                    <figure class="snip0077 blue">
+                                        <?php
+                                            if ( has_post_thumbnail() ) {
+                                                the_post_thumbnail( 'normal' );
+                                            }
+                                         ?>
+                                        <a href="<?php echo esc_url( get_permalink() ); ?>">
+                                            <figcaption>
+                                                <p><?php _e( 'I propose we leave math to the machines and go play outside.', 'october' ); ?></p>
+                                            </figcaption>
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="px-3 col-md-12 col-sm-6">
+                                    <div class="card-block px-3">
+                                        <?php the_content(); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            </div>
+        </div>
+    <?php else : ?>
+        <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
+    <?php endif; ?>
     <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
         <div class="row"> 
             <div class="col-md-8">
