@@ -79,7 +79,7 @@ figure.snip0077 {
     width: 100%;
     background: #000000;
     text-align: center;
-    border-radius: 4;
+    border-radius: 4px;
 }
 
 figure.snip0077 * {
@@ -93,7 +93,6 @@ figure.snip0077 img {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     border-radius: 4px;
-    object-fit: contain;
     height: 100%;
 }
 
@@ -169,7 +168,7 @@ figure.snip0077 a {
     bottom: 0;
     position: absolute;
     z-index: 1;
-    border-radius: 4;
+    border-radius: 4px;
 }
 
 figure.snip0077.blue {
@@ -408,7 +407,7 @@ div#content figure.effect-ruby figcaption p {
 
 .card-block h6 {
     font-family: Playfair Display;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
     font-weight: 600;
     color: #382b49;
     text-decoration: underline;
