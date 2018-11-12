@@ -31,7 +31,7 @@
                             <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'primary',
-                                        'menu_class' => 'navbar-nav text-center text-sm-center float-right float-sm-right pr-5 mr-4',
+                                        'menu_class' => 'navbar-nav text-center text-sm-center float-right float-sm-right',
                                         'container' => '',
                                         'depth' => '2',
                                         'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',

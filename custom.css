@@ -35,7 +35,7 @@ figure.effect-ruby h2 {
     -webkit-transform: translate3d(0,20px,0);
     font-family: Roboto;
     color: #40324c;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     font-weight: 700;
     text-align: center;
     margin-top: -15rem;
@@ -45,7 +45,6 @@ figure.effect-ruby h2 {
 }
 
 figure.effect-ruby div {
-    padding: inherit;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
@@ -53,7 +52,6 @@ figure.effect-ruby div {
     transform: translate3d(0,20px,0) scale(1.1);
     display: flex;
     justify-content: space-around;
-    margin: 28% 0 0;
 }
 
 figure.effect-ruby:hover h2 {
