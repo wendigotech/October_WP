@@ -56,24 +56,18 @@
                                         ?>
                                         <?php $best_bonus = new WP_Query( $best_bonus_args ); ?>
                                         <?php if ( $best_bonus->have_posts() ) : ?>
-                                            <div style="   display:grid;grid-template-columns:4fr 1fr 2fr 4fr;grid-template-rows:255px 300px;grid-gap:10px;" <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
+                                            <div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
                                                 <?php $best_bonus_item_number = 0; ?>
                                                 <?php while ( $best_bonus->have_posts() && $best_bonus_item_number++ < 4 ) : $best_bonus->the_post(); ?>
                                                     <figure class="effect-ruby effect-ruby-1">
-                                                        <?php
-                                                            if ( has_post_thumbnail() ) {
-                                                                the_post_thumbnail( 'normal' );
-                                                            }
-                                                         ?>
-                                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;">
-                                                            <figcaption style="width: 100%; height: 100%;">
-                                                                <h2><?php the_excerpt( ); ?></h2>
-                                                                <div>
-                                                                    <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                                    <a class="btn btn-light" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                                </div>
-                                                            </figcaption>
-                                                        </a>                                                         
+                                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;">  <?php the_post_thumbnail( 'normal' ); ?></a>
+                                                        <figcaption>
+                                                            <h2><?php the_excerpt( ); ?></h2>
+                                                            <div>
+                                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                                                <a class="btn btn-light" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                                            </div>
+                                                        </figcaption>                                                         
                                                     </figure>
                                                 <?php endwhile; ?>
                                                 <?php wp_reset_postdata(); ?>
@@ -92,7 +86,7 @@
                                         ?>
                                         <?php $best_casino = new WP_Query( $best_casino_args ); ?>
                                         <?php if ( $best_casino->have_posts() ) : ?>
-                                            <div style="   display:grid;grid-template-columns:4fr 1fr 2fr 4fr;grid-template-rows:255px 300px;grid-gap:10px;" <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
+                                            <div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
                                                 <?php $best_casino_item_number = 0; ?>
                                                 <?php while ( $best_casino->have_posts() && $best_casino_item_number++ < 4 ) : $best_casino->the_post(); ?>
                                                     <figure class="effect-ruby effect-ruby-2">
@@ -122,7 +116,7 @@
                                         ?>
                                         <?php $new_casino = new WP_Query( $new_casino_args ); ?>
                                         <?php if ( $new_casino->have_posts() ) : ?>
-                                            <div style="   display:grid;grid-template-columns:4fr 1fr 2fr 4fr;grid-template-rows:255px 300px;grid-gap:10px;" <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
+                                            <div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
                                                 <?php $new_casino_item_number = 0; ?>
                                                 <?php while ( $new_casino->have_posts() && $new_casino_item_number++ < 4 ) : $new_casino->the_post(); ?>
                                                     <figure class="effect-ruby effect-ruby-1">
@@ -152,11 +146,11 @@
                                         ?>
                                         <?php $most_visited = new WP_Query( $most_visited_args ); ?>
                                         <?php if ( $most_visited->have_posts() ) : ?>
-                                            <div style="   display:grid;grid-template-columns:4fr 1fr 2fr 4fr;grid-template-rows:255px 300px;grid-gap:10px;" <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
+                                            <div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
                                                 <?php $most_visited_item_number = 0; ?>
                                                 <?php while ( $most_visited->have_posts() && $most_visited_item_number++ < 4 ) : $most_visited->the_post(); ?>
                                                     <figure class="effect-ruby effect-ruby-1">
-                                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
+                                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'thumbnail' ); ?> </a> 
                                                         <figcaption>
                                                             <h2><?php the_excerpt( ); ?></h2>
                                                             <div>

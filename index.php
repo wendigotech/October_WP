@@ -2,24 +2,23 @@
 get_header(); ?>
 
 <div class="wrapper" id="index-wrapper"> 
-    <?php
-        $info_args = array(
-            'category_name' => 'info',
-            'order' => 'DESC'
-        )
-    ?>
-    <?php $info = new WP_Query( $info_args ); ?>
-    <?php if ( $info->have_posts() ) : ?>
-        <div id="post-<?php the_ID(); ?>" tabindex="-1" <?php post_class( 'mt-5 mb-5 container' ); ?>> 
-            <div class="row"> 
-                <div class="col-md-12">
-                    <h3><?php _e( 'Usefull information', 'october' ); ?></h3> 
-                </div>
-            </div>                             
-            <div class="row">
-                <?php $info_item_number = 0; ?>
-                <?php while ( $info->have_posts() && $info_item_number++ < 4 ) : $info->the_post(); ?>
-                    <div class="container py-3 col-lg-6 col-md-6">
+    <div class="mt-5 mb-5 container" id="content" tabindex="-1"> 
+        <div class="row"> 
+            <div class="col-md-12">
+                <h3><?php _e( 'Usefull information', 'october' ); ?></h3> 
+            </div>
+        </div>                         
+        <?php
+            $info_args = array(
+                'category_name' => 'info'
+            )
+        ?>
+        <?php $info = new WP_Query( $info_args ); ?>
+        <?php if ( $info->have_posts() ) : ?>
+            <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
+                <div class="container py-3 col-lg-6 col-md-6">
+                    <?php $info_item_number = 0; ?>
+                    <?php while ( $info->have_posts() && $info_item_number++ < 4 ) : $info->the_post(); ?>
                         <div class="card card-transparent">
                             <div class="row ">
                                 <div class="col-md-6 col-sm-6 col-6">
@@ -46,15 +45,15 @@ get_header(); ?>
                                 </div>
                                 <div class="px-3 col-md-6 col-sm-6 col-6">
                                     <div class="card-block px-3">
-                                        <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php if ( is_singular() ) : ?><h6 class="card-title text-center"><?php the_title(); ?></h6><?php else : ?><h6 class="card-title text-center"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h6><?php endif; ?></a>
+                                        <a href="#"> <?php if ( is_singular() ) : ?><h6 class="card-title text-center"><?php the_title(); ?></h6><?php else : ?><h6 class="card-title text-center"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h6><?php endif; ?></a>
                                         <?php the_content(); ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+                </div>
                 <div class="container py-3 col-lg-6 col-md-6">
                     <div class="card card-transparent">
                         <div class="row ">
@@ -90,10 +89,10 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-        </div>
-    <?php else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-    <?php endif; ?>
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
+        <?php endif; ?>
+    </div>
     <?php
         $payment_args = array(
             'category_name' => 'payment',
