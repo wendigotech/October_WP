@@ -225,7 +225,7 @@ figure {
 }
 
 img {
-    vertical-align: middle;
+    vertical-align: bottom;
     border-style: none;
 }
 
@@ -7450,7 +7450,7 @@ input[type="button"].btn-block {
 .card-text:last-child {
     margin-bottom: 0;
     font-family: Roboto;
-    font-size: 1.2vw;
+    font-size: 1vw;
     height: 9em;
     overflow: hidden;
     word-break: normal;

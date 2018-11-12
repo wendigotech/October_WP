@@ -31,7 +31,7 @@
                             <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                 <?php wp_nav_menu( array(
                                         'menu' => 'primary',
-                                        'menu_class' => 'navbar-nav text-center text-sm-center float-right float-sm-right',
+                                        'menu_class' => 'navbar-nav text-center text-sm-center float-right float-sm-right pr-5 mr-4',
                                         'container' => '',
                                         'depth' => '2',
                                         'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
@@ -60,14 +60,20 @@
                                                 <?php $best_bonus_item_number = 0; ?>
                                                 <?php while ( $best_bonus->have_posts() && $best_bonus_item_number++ < 4 ) : $best_bonus->the_post(); ?>
                                                     <figure class="effect-ruby effect-ruby-1">
-                                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
-                                                        <figcaption>
-                                                            <h2><?php the_excerpt( ); ?></h2>
-                                                            <div>
-                                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                                <a class="btn btn-light" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                            </div>
-                                                        </figcaption>
+                                                        <?php
+                                                            if ( has_post_thumbnail() ) {
+                                                                the_post_thumbnail( 'normal' );
+                                                            }
+                                                         ?>
+                                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;">
+                                                            <figcaption style="width: 100%; height: 100%;">
+                                                                <h2><?php the_excerpt( ); ?></h2>
+                                                                <div>
+                                                                    <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                                                    <a class="btn btn-light" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                                                </div>
+                                                            </figcaption>
+                                                        </a>                                                         
                                                     </figure>
                                                 <?php endwhile; ?>
                                                 <?php wp_reset_postdata(); ?>

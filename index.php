@@ -38,7 +38,7 @@ get_header(); ?>
                                                 </figcaption>
                                             <?php else : ?>
                                                 <figcaption class="snip0077">
-                                                    <a href="<?php echo esc_url( get_permalink() ); ?>"><p><?php _e( 'Read more', 'october' ); ?></p></a>
+                                                    <a href="<?php echo esc_url( get_permalink() ); ?>"> <p><?php _e( 'Read more', 'october' ); ?></p> </a>
                                                 </figcaption>
                                             <?php endif; ?>
                                         </a>
@@ -46,7 +46,7 @@ get_header(); ?>
                                 </div>
                                 <div class="px-3 col-md-6 col-sm-6 col-6">
                                     <div class="card-block px-3">
-                                        <a href="<?php echo esc_url( get_permalink() ); ?>">  <?php if ( is_singular() ) : ?><h6 class="card-title text-center"><?php the_title(); ?></h6><?php else : ?><h6 class="card-title text-center"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h6><?php endif; ?></a>
+                                        <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php if ( is_singular() ) : ?><h6 class="card-title text-center"><?php the_title(); ?></h6><?php else : ?><h6 class="card-title text-center"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h6><?php endif; ?></a>
                                         <?php the_content(); ?>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@ get_header(); ?>
                                             </figcaption>
                                         <?php else : ?>
                                             <figcaption class="snip0077">
-                                                <a href="<?php echo esc_url( get_permalink() ); ?>"><p><?php _e( 'Read more', 'october' ); ?></p></a>
+                                                <a href="<?php echo esc_url( get_permalink() ); ?>"> <p><?php _e( 'Read more', 'october' ); ?></p> </a>
                                             </figcaption>
                                         <?php endif; ?>
                                     </a>
@@ -82,7 +82,7 @@ get_header(); ?>
                             </div>
                             <div class="px-3 col-md-6 col-sm-6 col-6">
                                 <div class="card-block px-3">
-                                    <a href="<?php echo esc_url( get_permalink() ); ?>">  <?php if ( is_singular() ) : ?><h6 class="card-title text-center"><?php the_title(); ?></h6><?php else : ?><h6 class="card-title text-center"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h6><?php endif; ?></a>
+                                    <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php if ( is_singular() ) : ?><h6 class="card-title text-center"><?php the_title(); ?></h6><?php else : ?><h6 class="card-title text-center"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h6><?php endif; ?></a>
                                     <?php the_content(); ?>
                                 </div>
                             </div>
