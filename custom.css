@@ -87,7 +87,7 @@ figure.snip0077 * {
 }
 
 figure.snip0077 img {
-    opacity: 1;
+    opacity: 2;
     width: 100%;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -404,7 +404,7 @@ div#content figure.effect-ruby figcaption p {
 
 .card-block h6 {
     font-family: Playfair Display;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     font-weight: 600;
     color: #382b49;
     text-decoration: underline;
@@ -415,4 +415,8 @@ div.grid {
     grid-template-columns: 4fr 1fr 2fr 4fr;
     grid-template-rows: 255px 255px;
     grid-gap: 10px;
+}
+
+.card-title a {
+    color: #382b49;
 }

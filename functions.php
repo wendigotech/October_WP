@@ -222,14 +222,14 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_deregister_style( 'custom' );
     wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', false, null, 'all');
 
-    wp_deregister_style( 'all' );
-    wp_enqueue_style( 'all', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css', false, null, 'all');
-
     wp_deregister_style( 'style-3' );
     wp_enqueue_style( 'style-3', 'https://fonts.googleapis.com/css?family=Playfair+Display', false, null, 'all');
 
     wp_deregister_style( 'style-4' );
     wp_enqueue_style( 'style-4', 'https://fonts.googleapis.com/css?family=Roboto', false, null, 'all');
+
+    wp_deregister_style( 'all' );
+    wp_enqueue_style( 'all', 'https://use.fontawesome.com/releases/v5.2.0/css/all.css', false, null, 'all');
 
     wp_deregister_style( 'style-5' );
     wp_enqueue_style( 'style-5', 'https://fonts.googleapis.com/css?family=Playfair+Display', false, null, 'all');
