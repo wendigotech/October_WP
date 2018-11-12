@@ -79,6 +79,7 @@ figure.snip0077 {
     width: 100%;
     background: #000000;
     text-align: center;
+    border-radius: 4;
 }
 
 figure.snip0077 * {
@@ -87,11 +88,13 @@ figure.snip0077 * {
 }
 
 figure.snip0077 img {
-    opacity: 2;
+    opacity: 1;
     width: 100%;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     border-radius: 4px;
+    object-fit: contain;
+    height: 100%;
 }
 
 figure.snip0077 figcaption {
@@ -166,6 +169,7 @@ figure.snip0077 a {
     bottom: 0;
     position: absolute;
     z-index: 1;
+    border-radius: 4;
 }
 
 figure.snip0077.blue {
@@ -414,7 +418,7 @@ div.grid {
     display: grid;
     grid-template-columns: 4fr 1fr 2fr 4fr;
     grid-template-rows: 255px 255px;
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 
 .card-title a {

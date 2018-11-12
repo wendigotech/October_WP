@@ -43,7 +43,7 @@
                 </div>                 
                 <div> 
                     <div class="jumbotron">
-                        <div class="container">
+                        <div class="container mt-5">
                             <div id="carousel1" class="carousel slide" data-ride="carousel" data-pause="hover"> 
                                 <div class="carousel-inner"> 
                                     <div class="carousel-item active">
