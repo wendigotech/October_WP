@@ -174,7 +174,7 @@ figure.snip0077 a {
 figure.snip0077.blue {
     background: #0a212f;
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 
 figure.snip0077.red {
@@ -424,4 +424,8 @@ div.grid {
 
 .card-title a {
     color: #382b49;
+}
+
+div.card-block a {
+    font-family: Playfair Display;
 }
