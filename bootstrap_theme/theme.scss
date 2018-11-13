@@ -32,7 +32,7 @@ figure,
 $nth-nav-item-that-needs-margin-right: 3 ;
 $width-of-navbar-brand-or-logo-in-px: 120px ;
 $padding-x-for-navbar-brand-or-logo-in-px: 20px ;
-$custom-color-gold: #c0b3a0 ;
+$scrub: #c0b3a0 ;
 
 @media (min-width: 768px) {
     .position-md-absolute {
@@ -46,7 +46,7 @@ $custom-color-gold: #c0b3a0 ;
 
 @media (min-width:768px) {
     nav.navbar {
-        background-color: $custom-color-gold;
+        background-color: $scrub;
         margin-top: 25px;
         font-family: Playfair Display;
         font-weight: 600;
@@ -55,7 +55,7 @@ $custom-color-gold: #c0b3a0 ;
 }
 
 nav.navbar {
-    background-color: $custom-color-gold;
+    background-color: $scrub;
     margin-top: 25px;
     font-family: Playfair Display;
     font-weight: 600;
@@ -112,7 +112,7 @@ nav.navbar {
     }
 }
 
-$main-purple: #382b49 ;
+$main-purple: #3f3250 ;
 $main-red: #e1455a ;
 
 .carousel-indicators a.btn:hover {

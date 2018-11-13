@@ -74,7 +74,7 @@ figure.snip0077 {
     position: relative;
     overflow: hidden;
     margin: 10px;
-    min-width: 170px;
+    min-width: 142px;
     max-width: 310px;
     max-height: 220px;
     width: 100%;
@@ -234,6 +234,7 @@ div#wrapper-footer.wrapper {
 }
 
 div#content.container figure.effect-ruby {
+    height: 13em;
 }
 
 figure.effect-ruby a.btn {
@@ -380,8 +381,12 @@ div#content figure.effect-ruby figcaption p {
     border-radius: 4px;
 }
 
+.effect-ruby-5:nth-of-type(2) {
+    grid-row-end: span 1;
+    grid-column-end: span 1;
+}
+
 .effect-ruby-1:nth-of-type(1) {
-    grid-column-end: span 3;
 }
 
 .effect-ruby-1:nth-of-type(3) {
@@ -437,7 +442,7 @@ div.grid {
 
 div.card-block a {
     font-family: Playfair Display;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
     color: #382b49;
     font-weight: 700;
     text-shadow: 0px 1px 3px rgba(56, 43, 73, 0.7);
