@@ -7011,8 +7011,8 @@ input[type="button"].btn-block {
     }
 
     .navbar-expand-sm .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
     }
 
     .navbar-expand-sm > .container,
@@ -7073,8 +7073,8 @@ input[type="button"].btn-block {
     }
 
     .navbar-expand-md .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
     }
 
     .navbar-expand-md > .container,
@@ -7135,8 +7135,8 @@ input[type="button"].btn-block {
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
     }
 
     .navbar-expand-lg > .container,
@@ -7197,8 +7197,8 @@ input[type="button"].btn-block {
     }
 
     .navbar-expand-xl .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
     }
 
     .navbar-expand-xl > .container,
@@ -7253,8 +7253,8 @@ input[type="button"].btn-block {
 }
 
 .navbar-expand .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
 }
 
 .navbar-expand > .container,
@@ -7299,7 +7299,7 @@ input[type="button"].btn-block {
     transition: all 1s;
     font-family: Playfair Display;
     font-weight: 600;
-    text-shadow: 1px 1px 4px rgba(64, 50, 76, 0.87);
+    text-shadow: 1px 1px 4px rgba(64, 50, 76, 0.8);
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
