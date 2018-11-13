@@ -5,7 +5,7 @@ get_header(); ?>
     <div class="mt-5 mb-5 container" id="content" tabindex="-1"> 
         <div class="row"> 
             <div class="col-md-12">
-                <h3><?php _e( 'Usefull information', 'october' ); ?></h3> 
+                <h3 class="p-2"><?php _e( 'Usefull information', 'october' ); ?></h3> 
             </div>
         </div>                         
         <?php
