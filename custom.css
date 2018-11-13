@@ -428,7 +428,7 @@ div.grid {
     grid-template-columns: 4fr 1fr 2fr 4fr;
     grid-template-rows: 255px 255px;
     grid-gap: 10px;
-    transition: all;
+    transition: all 1s ease;
 }
 
 .card-title a {
