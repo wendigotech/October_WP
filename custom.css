@@ -177,6 +177,7 @@ figure.snip0077.blue {
     background: #0a212f;
     width: 100%;
     height: 70%;
+    box-shadow: 1px 2px 5px rgba(4, 3, 3, 0.72);
 }
 
 figure.snip0077.red {
@@ -235,7 +236,7 @@ div#wrapper-footer.wrapper {
 }
 
 div#content.container figure.effect-ruby {
-    height: 12em;
+    height: 11em;
 }
 
 figure.effect-ruby a.btn {
@@ -251,7 +252,7 @@ div#content.container figure.effect-ruby figcaption {
 div#content figure.effect-ruby figcaption h2 {
     margin-top: -300px;
     font-family: Roboto;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 div#content figure.effect-ruby figcaption p {
@@ -371,6 +372,17 @@ div#content figure.effect-ruby figcaption p {
     }
 }
 
+.carousel-indicators2 a.btn {
+    background-color: #e2e2eb;
+    font-family: Roboto;
+    font-size: 1vw;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #382b49;
+    width: 15rem;
+    border-radius: 4px;
+}
+
 .carousel-indicators a.btn {
     background-color: #e2e2eb;
     font-family: Roboto;
@@ -446,7 +458,7 @@ div.card-block a {
     font-family: Playfair Display;
     font-size: 1.3vw;
     color: #382b49;
-    font-weight: 700;
+    font-weight: normal;
     text-shadow: 0px 1px 3px rgba(56, 43, 73, 0.7);
     display: flex;
     text-decoration: underline;
