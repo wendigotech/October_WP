@@ -30,7 +30,7 @@
                                 <div class="site-icons d-md-flex mt-3"> 
                                     <div class="col-md-3"> 
                                         <a href="#"> 
-                                            <img class="w-100 img-thumbnail" src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icons', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
+                                            <img class="w-100 img-thumbnail" src="http://pinegrow.com/placeholders/img15.jpg" alt=""> 
                                         </a>                                         
                                     </div>
                                     <div class="col-md-3"> 

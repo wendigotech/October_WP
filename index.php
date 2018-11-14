@@ -211,16 +211,16 @@ get_header(); ?>
                 </div>
             </div>
             <?php
-                $best-offer_args = array(
+                $best_offer_args = array(
                     'category_name' => 'bonus',
                     'tag' => 'best-offer',
                     'order' => 'DESC'
                 )
             ?>
-            <?php $best-offer = new WP_Query( $best-offer_args ); ?>
-            <?php if ( $best-offer->have_posts() ) : ?>
-                <?php $best-offer_item_number = 0; ?>
-                <?php while ( $best-offer->have_posts() && $best-offer_item_number++ < 3 ) : $best-offer->the_post(); ?>
+            <?php $best_offer = new WP_Query( $best_offer_args ); ?>
+            <?php if ( $best_offer->have_posts() ) : ?>
+                <?php $best_offer_item_number = 0; ?>
+                <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>
                     <div <?php post_class( 'bonus-column col-sm-4 col-4 col-md-4 pl-2' ); ?> id="post-<?php the_ID(); ?>"> 
                         <figure class="effect-ruby effect-ruby-1">
                             <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>

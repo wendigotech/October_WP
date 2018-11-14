@@ -154,20 +154,6 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'footer_settings'
     ));
 
-    $wp_customize->add_section( 'october_default_cs', array('title' => 'Default section'));
-
-    $wp_customize->add_setting( 'footer_icons', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icons', array(
-        'label' => __( 'Footer Icons', 'october' ),
-        'type' => 'media',
-        'mime_type' => 'image',
-        'section' => 'october_default_cs'
-    ) ) );
-
     $wp_customize->add_setting( 'show_left_sidebar', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
