@@ -174,7 +174,7 @@ figure.snip0077 a {
 }
 
 figure.snip0077.blue {
-    background: #0a212f;
+    background: rgba(10, 33, 47, 0);
     width: 100%;
     height: 70%;
     box-shadow: 1px 2px 5px rgba(4, 3, 3, 0.72);
