@@ -246,7 +246,7 @@ get_header(); ?>
         </div>                         
         <div class="row">
             <div class="container py-3 col-lg-10 col-md-10">
-                <?php the_content(); ?>
+                <p><?php _e( 'ParagraphLorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.', 'october' ); ?></p>
             </div>
         </div>
     </div>                     
