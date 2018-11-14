@@ -1,15 +1,18 @@
 
             </div>             
             <div class="wrapper" id="wrapper-footer">
+                <button class="btn scroll-top float-right" data-scroll="up" type="button"></button>
                 <div class="container"> 
                     <div class="row"> 
                         <div class="col-md-3 text-center col-sm-12" style="background-color: #e2e2eb; border-radius: 4px; box-shadow: 1px 1px 4px;"> 
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info mt-2"> 
                                     <h4><?php echo get_theme_mod( 'footer_text', __( 'General info', 'october' ) ); ?></h4>
-                                    <a href=""><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
-                                    <a href=""><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
-                                    <a href=""><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
+                                    <div class="pg-empty-placeholder d-flex justify-content-between d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column justify-content-sm-between justify-content-md-between align-items-center align-items-sm-center align-items-md-center">
+                                        <a href=""><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
+                                        <a href=""><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
+                                        <a href=""><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
+                                    </div>
                                 </div>                                 
                                 <!-- .site-info -->                                 
                             </footer>                             
@@ -62,6 +65,25 @@
     jQuery(function() {
     jQuery('[data-toggle="tooltip"]').tooltip();
 })
+</script>
+        <script>
+jQuery(document).ready(function () {
+  jQuery(window).scroll(function () {
+    if (jQuery(this).scrollTop() > 100) {
+      jQuery('.scroll-top').fadeIn();
+    } else {
+      jQuery('.scroll-top').fadeOut();
+    }
+  });
+
+  jQuery('.scroll-top').click(function () {
+    jQuery("html, body").animate({
+      scrollTop: 0
+    }, 100);
+      return false;
+  });
+
+});
 </script>
         <script>
     /**

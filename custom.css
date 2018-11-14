@@ -1,3 +1,12 @@
+width: 75px;
+height: 75px;
+position: fixed;
+bottom: 25px;
+right: 20px;
+display: none;
+border-radius: 12px;
+box-shadow: 0px 1px 6px #44dcfe;
+
 .jumbotron {
     margin-top: 4em;
 }
@@ -498,5 +507,19 @@ div.card-block a {
 #wrapper-footer .nav-item a.nav-link {
     font-family: Roboto;
     color: #382b49;
-    font-weight: normal;
+    font-weight: bold;
+    text-shadow: 0px 1px 7px #382b49;
+}
+
+.scroll-top {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 1px 6px #e1455a;
+    z-index: 1;
+    background-image: url('assets/arrow-circle-up-outline.svg');
+    background-color: #E1455A;
 }
