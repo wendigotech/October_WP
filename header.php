@@ -14,7 +14,7 @@
     </head>     
     <body style="margin-top: -65px; padding-top: 65px;" class="<?php echo implode(' ', get_body_class()); ?>"> 
         <div class="hfeed site" id="page"> 
-            <div id="container">
+            <div id="container" style="position: absolute;">
                 <canvas id="canvas"></canvas>
             </div>
             <header> 
