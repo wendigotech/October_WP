@@ -10,7 +10,7 @@ figure.effect-ruby {
     overflow: hidden;
     border-radius: 4px;
     border: 2px solid #beb1a0;
-    background-color: #e2e2eb;
+    background-color: rgba(254, 254, 255, 0.94);
 }
 
 figure.effect-ruby img {
@@ -95,6 +95,7 @@ figure.snip0077 img {
     transition: all 0.5s;
     border-radius: 4px;
     height: 100%;
+    margin-bottom: 0px;
 }
 
 figure.snip0077 figcaption {
@@ -234,7 +235,7 @@ div#wrapper-footer.wrapper {
 }
 
 div#content.container figure.effect-ruby {
-    height: 13em;
+    height: 12em;
 }
 
 figure.effect-ruby a.btn {
@@ -248,7 +249,7 @@ div#content.container figure.effect-ruby figcaption {
 }
 
 div#content figure.effect-ruby figcaption h2 {
-    margin-top: -236px;
+    margin-top: -300px;
     font-family: Roboto;
     font-size: 2vw;
 }
@@ -387,6 +388,7 @@ div#content figure.effect-ruby figcaption p {
 }
 
 .effect-ruby-1:nth-of-type(1) {
+    grid-column: span 3;
 }
 
 .effect-ruby-1:nth-of-type(3) {
@@ -450,4 +452,16 @@ div.card-block a {
     text-decoration: underline;
     flex-direction: column;
     align-items: center;
+}
+
+#carousel2 .carousel-indicators a.btn:hover {
+    background-color: #e14658;
+    font-family: Roboto;
+    color: #ffffff;
+}
+
+#carousel2 .carousel-indicators a.btn {
+    background-color: #3f3250;
+    font-family: Roboto;
+    color: #ffffff;
 }
