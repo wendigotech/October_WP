@@ -154,6 +154,78 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'footer_settings'
     ));
 
+    $wp_customize->add_setting( 'footer_icon1', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon1', array(
+        'label' => __( 'Footer Icons', 'october' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_icon2', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon2', array(
+        'label' => __( 'Footer Icons', 'october' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_icon3', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon3', array(
+        'label' => __( 'Footer Icons', 'october' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_icon4', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon4', array(
+        'label' => __( 'Footer Icons', 'october' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_icon5', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon5', array(
+        'label' => __( 'Footer Icons', 'october' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_icon6', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon6', array(
+        'label' => __( 'Footer Icons', 'october' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
     $wp_customize->add_setting( 'show_left_sidebar', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize

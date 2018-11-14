@@ -3,7 +3,7 @@
             <div class="wrapper" id="wrapper-footer">
                 <div class="container"> 
                     <div class="row"> 
-                        <div class="col-md-3 text-center" style="background-color: #e2e2eb; border-radius: 4px;"> 
+                        <div class="col-md-3 text-center col-sm-12" style="background-color: #e2e2eb; border-radius: 4px;"> 
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
                                     <h4><?php echo get_theme_mod( 'footer_text', __( 'General info', 'october' ) ); ?></h4>
@@ -27,28 +27,26 @@
                                         ) ); ?>
                                     <?php endif; ?> 
                                 </div>
-                                <div class="site-icons d-md-flex mt-3"> 
-                                    <div class="col-md-3"> 
-                                        <a href="#"> 
-                                            <img class="w-100 img-thumbnail" src="http://pinegrow.com/placeholders/img15.jpg" alt=""> 
-                                        </a>                                         
+                                <row class="site-icons mt-3 d-flex flex-row"> 
+                                    <div class="col-sm-2 col-md-2"> 
+                                        <img class="w-100 img-thumbnail" src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                     </div>
-                                    <div class="col-md-3"> 
-                                        <a href="#"> 
-                                            <img class="w-100 img-thumbnail" src="http://pinegrow.com/placeholders/img15.jpg" alt=""> 
-                                        </a>                                         
+                                    <div class="col-sm-2 col-md-2"> 
+                                        <img class="w-100 img-thumbnail" src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon2', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                     </div>
-                                    <div class="col-md-3"> 
-                                        <a href="#"> 
-                                            <img class="w-100 img-thumbnail" src="http://pinegrow.com/placeholders/img15.jpg" alt=""> 
-                                        </a>                                         
+                                    <div class="col-sm-2 col-md-2"> 
+                                        <img class="w-100 img-thumbnail" src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon3', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                     </div>
-                                    <div class="col-md-3"> 
-                                        <a href="#"> 
-                                            <img class="w-100 img-thumbnail" src="http://pinegrow.com/placeholders/img15.jpg" alt=""> 
-                                        </a>                                         
+                                    <div class="col-sm-2 col-md-2"> 
+                                        <img class="w-100 img-thumbnail" src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon4', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                     </div>
-                                </div>                                 
+                                    <div class="col-sm-2 col-md-2"> 
+                                        <img class="w-100 img-thumbnail" src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon5', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
+                                    </div>
+                                    <div class="col-sm-2 col-md-2"> 
+                                        <img class="w-100 img-thumbnail" src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon6', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
+                                    </div>
+                                </row>                                 
                                 <!-- .site-info -->                                 
                             </footer>                             
                             <!-- #colophon -->                             
