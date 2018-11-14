@@ -12,8 +12,9 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">                                     
         <?php wp_head(); ?>
     </head>     
-    <body class="<?php echo implode(' ', get_body_class()); ?>"> 
+    <body style="margin-top: -65px; padding-top: 65px;" class="<?php echo implode(' ', get_body_class()); ?>"> 
         <div class="hfeed site" id="page"> 
+            <canvas id="canvas" style="position: absolute; width: 100%;"></canvas>
             <header> 
                 <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar"> 
                     <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'october' ); ?></a> 
@@ -182,5 +183,5 @@
                         </div>                         
                     </div>                     
                 </div>                 
-            </header>             
+            </header>
             <div>

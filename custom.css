@@ -232,7 +232,8 @@ div#content-columns {
 }
 
 div#wrapper-footer.wrapper {
-    background-color: #beb1a0;
+    background-color: #c0b3a0;
+    box-shadow: inset 0px 2px 8px 3px #30343c;
 }
 
 div#content.container figure.effect-ruby {
