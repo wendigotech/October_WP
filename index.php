@@ -18,7 +18,7 @@ get_header(); ?>
                             <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
                                 <?php $info_item_number = 0; ?>
                                 <?php while ( $info->have_posts() && $info_item_number++ < 4 ) : $info->the_post(); ?>
-                                    <div class="container py-3 col-lg-6 col-md-6">
+                                    <div class="container col-lg-6 col-md-6 mb-2">
                                         <div class="card card-transparent">
                                             <div class="row ">
                                                 <div class="col-md-6 col-sm-6 col-6">
@@ -48,6 +48,90 @@ get_header(); ?>
                                     </div>
                                 <?php endwhile; ?>
                                 <?php wp_reset_postdata(); ?>
+                                <div class="container col-lg-6 col-md-6">
+                                    <div class="card card-transparent">
+                                        <div class="row ">
+                                            <div class="col-md-6 col-sm-6 col-6">
+                                                <figure class="snip0077 blue">
+                                                    <?php
+                                                        if ( has_post_thumbnail() ) {
+                                                            the_post_thumbnail( 'normal', array(
+                                                            'class' => 'snip0077'
+                                                        ) );
+                                                        }
+                                                     ?>
+                                                    <a href="<?php echo esc_url( get_permalink() ); ?>">
+                                                        <figcaption class="snip0077">
+                                                            <p><?php _e( 'Read more', 'october' ); ?></p>
+                                                        </figcaption>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                            <div class="px-3 col-md-6 col-sm-6 col-6">
+                                                <div class="card-block px-3 ">
+                                                    <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+                                                    <p><?php the_content(); ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container col-lg-6 col-md-6">
+                                    <div class="card card-transparent">
+                                        <div class="row ">
+                                            <div class="col-md-6 col-sm-6 col-6">
+                                                <figure class="snip0077 blue">
+                                                    <?php
+                                                        if ( has_post_thumbnail() ) {
+                                                            the_post_thumbnail( 'normal', array(
+                                                            'class' => 'snip0077'
+                                                        ) );
+                                                        }
+                                                     ?>
+                                                    <a href="<?php echo esc_url( get_permalink() ); ?>">
+                                                        <figcaption class="snip0077">
+                                                            <p><?php _e( 'Read more', 'october' ); ?></p>
+                                                        </figcaption>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                            <div class="px-3 col-md-6 col-sm-6 col-6">
+                                                <div class="card-block px-3 ">
+                                                    <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+                                                    <p><?php the_content(); ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container col-lg-6 col-md-6">
+                                    <div class="card card-transparent">
+                                        <div class="row ">
+                                            <div class="col-md-6 col-sm-6 col-6">
+                                                <figure class="snip0077 blue">
+                                                    <?php
+                                                        if ( has_post_thumbnail() ) {
+                                                            the_post_thumbnail( 'normal', array(
+                                                            'class' => 'snip0077'
+                                                        ) );
+                                                        }
+                                                     ?>
+                                                    <a href="<?php echo esc_url( get_permalink() ); ?>">
+                                                        <figcaption class="snip0077">
+                                                            <p><?php _e( 'Read more', 'october' ); ?></p>
+                                                        </figcaption>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                            <div class="px-3 col-md-6 col-sm-6 col-6">
+                                                <div class="card-block px-3 ">
+                                                    <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+                                                    <p><?php the_content(); ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>

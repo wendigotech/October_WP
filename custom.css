@@ -476,7 +476,7 @@ div.card-block a {
     color: #382b49;
     margin-top: 5px;
     margin-bottom: 0;
-    height: 6em;
     overflow: hidden;
     text-shadow: 1px 1px 3px rgba(56, 43, 73, 0.8);
+    max-block-size: 10em;
 }
