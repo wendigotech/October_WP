@@ -7,9 +7,8 @@
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
                                     <h4><?php echo get_theme_mod( 'footer_text', __( 'General info', 'october' ) ); ?></h4>
-                                    <p><?php _e( 'Paragraph', 'october' ); ?></p>
-                                    <p><?php _e( 'Paragraph', 'october' ); ?></p>
-                                    <p><?php _e( 'Paragraph', 'october' ); ?></p> 
+                                    <a href=""><?php _e( 'Link', 'october' ); ?><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
+                                    <a href=""><?php _e( 'Link', 'october' ); ?><p><?php _e( 'Paragraph', 'october' ); ?></p></a> 
                                 </div>                                 
                                 <!-- .site-info -->                                 
                             </footer>                             
@@ -18,25 +17,20 @@
                         <div class="col-md-9"> 
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
-                                    <ul class="nav"> 
-                                        <li class="nav-item"> 
-                                            <a class="nav-link active" href="#"><?php _e( 'Active', 'october' ); ?></a> 
-                                        </li>                                         
-                                        <li class="nav-item"> 
-                                            <a class="nav-link" href="#"><?php _e( 'Longer nav link', 'october' ); ?></a> 
-                                        </li>                                         
-                                        <li class="nav-item"> 
-                                            <a class="nav-link" href="#"><?php _e( 'Link', 'october' ); ?></a> 
-                                        </li>                                         
-                                        <li class="nav-item"> 
-                                            <a class="nav-link disabled" href="#"><?php _e( 'Disabled', 'october' ); ?></a> 
-                                        </li>                                         
-                                    </ul>                                     
+                                    <?php if ( has_nav_menu( 'social' ) ) : ?>
+                                        <?php wp_nav_menu( array(
+                                                'menu' => 'social',
+                                                'menu_class' => 'nav',
+                                                'container' => '',
+                                                'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                                'walker' => new wp_bootstrap4_navwalker()
+                                        ) ); ?>
+                                    <?php endif; ?> 
                                 </div>
                                 <div class="site-icons d-md-flex mt-3"> 
                                     <div class="col-md-3"> 
                                         <a href="#"> 
-                                            <img class="w-100 img-thumbnail" src="http://pinegrow.com/placeholders/img15.jpg" alt=""> 
+                                            <img class="w-100 img-thumbnail" src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icons', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                         </a>                                         
                                     </div>
                                     <div class="col-md-3"> 
