@@ -114,7 +114,7 @@ get_header(); ?>
                         </div>                         
                         <div class="row no-gutters" style="  ;">
                             <div class="col-sm-8 col-8 col-md-8"> 
-                                <div id="carousel2" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover">                                      
+                                <div id="carousel2" class="carousel slide carousel-fade mb-5" data-ride="carousel" data-pause="hover">                                      
 
                                     <div class="carousel-inner" style="height: 30em;"> 
                                         <?php
@@ -233,7 +233,7 @@ get_header(); ?>
                     <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
                         <div class="row"> 
                             <div class="col-md-12">
-                                <h3 class="text-center"><?php _e( 'About us', 'october' ); ?></h3> 
+                                <h3 class="text-center mt-2"><?php _e( 'About us', 'october' ); ?></h3> 
                             </div>
                         </div>                         
                         <div class="row">
