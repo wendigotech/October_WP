@@ -282,7 +282,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', null, null, true );
 
-    wp_enqueue_script( 'tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js', null, null, true );
+    wp_deregister_script( 'tweenmax' );
+    wp_register_script( 'tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js', null, null, true );
+    wp_enqueue_script( 'tweenmax' );
 
     wp_enqueue_script( 'jquery' );
 
