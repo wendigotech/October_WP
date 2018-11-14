@@ -114,8 +114,7 @@ get_header(); ?>
         </div>                         
         <div class="row no-gutters" style="  ;">
             <div class="col-sm-8 col-8 col-md-8"> 
-                <div id="carousel2" class="carousel slide carousel-fade mb-5" data-ride="carousel" data-pause="hover">                                      
-
+                <div id="carousel2" class="carousel slide carousel-fade mb-5" data-ride="carousel" data-pause="hover"> 
                     <div class="carousel-inner" style="height: 30em;"> 
                         <?php
                             $deposit_args = array(
@@ -140,7 +139,7 @@ get_header(); ?>
                                         </figcaption>                                                         
                                     </figure>
                                 <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>                                                  
+                                <?php wp_reset_postdata(); ?> 
                             </div>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
@@ -168,7 +167,7 @@ get_header(); ?>
                                         </figcaption>                                                         
                                     </figure>
                                 <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>                                                  
+                                <?php wp_reset_postdata(); ?> 
                             </div>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
@@ -196,13 +195,12 @@ get_header(); ?>
                                         </figcaption>                                                         
                                     </figure>
                                 <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>                                                  
+                                <?php wp_reset_postdata(); ?> 
                             </div>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                        <?php endif; ?>                                                                                   
-                    </div>                                                                                                               
-
+                        <?php endif; ?> 
+                    </div>                                     
                     <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-left: 1px; margin-right: 1px; margin-top: 23px;"> 
                         <a class="btn active carousel-indicators2" data-target="#carousel2" href="#" data-slide-to="0" data-toggle="button"><?php _e( '1st Deposit Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="1" class="btn"><?php _e( 'Welcome Bonus', 'october' ); ?></a>
@@ -248,7 +246,7 @@ get_header(); ?>
         </div>                         
         <div class="row">
             <div class="container py-3 col-lg-10 col-md-10">
-                <p><?php _e( 'ParagraphLorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.', 'october' ); ?></p>
+                <?php the_content(); ?>
             </div>
         </div>
     </div>                     
