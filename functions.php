@@ -286,6 +286,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_register_script( 'tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js', null, null, true );
     wp_enqueue_script( 'tweenmax' );
 
+    wp_deregister_script( 'tweenlite' );
+    wp_enqueue_script( 'tweenlite', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js', false, null, true);
+
     wp_enqueue_script( 'jquery' );
 
     /* Pinegrow generated Enqueue Scripts End */
