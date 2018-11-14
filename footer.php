@@ -22,21 +22,18 @@
                                         <li class="nav-item"> 
                                             <a class="nav-link active" href="#"><?php _e( 'Active', 'october' ); ?></a> 
                                         </li>                                         
-
                                         <li class="nav-item"> 
                                             <a class="nav-link" href="#"><?php _e( 'Longer nav link', 'october' ); ?></a> 
                                         </li>                                         
-
                                         <li class="nav-item"> 
                                             <a class="nav-link" href="#"><?php _e( 'Link', 'october' ); ?></a> 
                                         </li>                                         
-
                                         <li class="nav-item"> 
                                             <a class="nav-link disabled" href="#"><?php _e( 'Disabled', 'october' ); ?></a> 
                                         </li>                                         
                                     </ul>                                     
                                 </div>
-                                <div class="site-icons d-md-flex mt-3">                                      
+                                <div class="site-icons d-md-flex mt-3"> 
                                     <div class="col-md-3"> 
                                         <a href="#"> 
                                             <img class="w-100 img-thumbnail" src="http://pinegrow.com/placeholders/img15.jpg" alt=""> 
