@@ -210,8 +210,24 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="bonus-column col-sm-4 col-4 col-md-4 pl-2">                                  
+                            <?php
+                                $best_offer_args = array(
+                                    'category_name' => 'bonus',
+                                    'tag' => 'best-offer',
+                                    'order' => 'DESC'
+                                )
+                            ?>
+                            <?php $best_offer = new WP_Query( $best_offer_args ); ?>
+                            <?php if ( $best_offer->have_posts() ) : ?>
+                                <?php $best_offer_item_number = 0; ?>
+                                <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>
+                                    <div <?php post_class( 'bonus-column col-sm-4 col-4 col-md-4 pl-2' ); ?> id="post-<?php the_ID(); ?>">                                          
 </div>
+                                <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
+                            <?php else : ?>
+                                <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
