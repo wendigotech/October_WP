@@ -3,7 +3,7 @@
             <div class="wrapper" id="wrapper-footer">
                 <div class="container"> 
                     <div class="row"> 
-                        <div class="col-md-3 text-center" style="background-color: #e2e2eb;"> 
+                        <div class="col-md-3 text-center" style="background-color: #e2e2eb; border-radius: 4px;"> 
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
                                     <h4><?php echo get_theme_mod( 'footer_text', __( 'General info', 'october' ) ); ?></h4>

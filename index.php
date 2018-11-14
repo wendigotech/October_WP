@@ -219,9 +219,9 @@ get_header(); ?>
             ?>
             <?php $best_offer = new WP_Query( $best_offer_args ); ?>
             <?php if ( $best_offer->have_posts() ) : ?>
-                <?php $best_offer_item_number = 0; ?>
-                <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>
-                    <div <?php post_class( 'bonus-column col-sm-4 col-4 col-md-4 pl-2' ); ?> id="post-<?php the_ID(); ?>"> 
+                <div <?php post_class( 'bonus-column col-sm-4 col-4 col-md-4 pl-2' ); ?> id="post-<?php the_ID(); ?>"> 
+                    <?php $best_offer_item_number = 0; ?>
+                    <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>
                         <figure class="effect-ruby effect-ruby-1">
                             <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                             <figcaption>
@@ -231,10 +231,10 @@ get_header(); ?>
                                     <a class="btn btn-light" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
                                 </div>
                             </figcaption>                                             
-                        </figure>                                         
-                    </div>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
+                        </figure>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?> 
+                </div>
             <?php else : ?>
                 <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
             <?php endif; ?>
