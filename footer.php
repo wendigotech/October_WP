@@ -86,7 +86,7 @@ jQuery(document).ready(function () {
 });
 </script>
         <script>
-    /**
+/**
  * Canvas Experiment
  * Based on https://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html
  * Deps: GreenSocks TweenLite
@@ -127,8 +127,8 @@ Animate.prototype.init = function(){
   this.height = window.innerHeight;
   this.target = {
     position: {
-      x: this.width ,
-      y: this.height
+      x: this.width / 2,
+      y: this.height / 2
     }
   };
 
