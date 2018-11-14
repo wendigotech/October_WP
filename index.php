@@ -38,7 +38,7 @@ get_header(); ?>
                                                     </figure>
                                                 </div>
                                                 <div class="px-3 col-md-6 col-sm-6 col-6">
-                                                    <div class="card-block px-3">
+                                                    <div class="card-block px-3 ">
                                                         <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
                                                         <?php the_content(); ?>
                                                     </div>
