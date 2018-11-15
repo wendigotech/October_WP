@@ -505,6 +505,10 @@ div.card-block a {
     overflow: hidden;
     text-shadow: 1px 1px 3px rgba(56, 43, 73, 0.8);
     max-block-size: 10em;
+    display: inline-block;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 #wrapper-footer .nav-item a.nav-link {
