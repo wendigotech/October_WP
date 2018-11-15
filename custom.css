@@ -147,6 +147,8 @@ figure.snip0077 figcaption p {
     font-size: 0.9em;
     font-weight: 500;
     opacity: 0.65;
+    font-family: Roboto;
+    color: #382b49;
 }
 
 figure.snip0077:before,

@@ -118,7 +118,7 @@ get_header(); ?>
                     <div class="carousel-inner" style="height: 30em;"> 
                         <?php
                             $deposit_args = array(
-                                'category_name' => 'bonus',
+                                'category_name' => 'bonuses',
                                 'tag' => 'deposit',
                                 'order' => 'DESC'
                             )
@@ -210,7 +210,6 @@ get_header(); ?>
             </div>
             <?php
                 $best_offer_args = array(
-                    'category_name' => 'bonus',
                     'tag' => 'best-offer',
                     'order' => 'DESC'
                 )
