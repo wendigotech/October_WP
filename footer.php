@@ -31,7 +31,7 @@
                                         ) ); ?>
                                     <?php endif; ?> 
                                 </div>
-                                <row class="site-icons mt-3 d-flex flex-row"> 
+                                <row class="site-icons d-flex flex-row mt-5 pt-3"> 
                                     <div class="col-sm-2 col-md-2"> 
                                         <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                     </div>

@@ -148,7 +148,6 @@ figure.snip0077 figcaption p {
     font-weight: 500;
     opacity: 0.65;
     font-family: Roboto;
-    color: #382b49;
 }
 
 figure.snip0077:before,
@@ -516,6 +515,9 @@ div.card-block a {
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    line-clamp: 4;
 }
 
 #wrapper-footer .nav-item a.nav-link {
