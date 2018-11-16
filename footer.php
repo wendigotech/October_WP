@@ -3,7 +3,7 @@
             <div class="wrapper" id="wrapper-footer">
                 <button class="btn scroll-top float-right" data-scroll="up" type="button"></button>
                 <div class="container"> 
-                    <div class="row"> 
+                    <div class="row no-gutters"> 
                         <div class="col-md-3 text-center col-sm-12" style="background-color: #e2e2eb; border-radius: 4px; box-shadow: 1px 1px 4px;"> 
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info mt-2"> 

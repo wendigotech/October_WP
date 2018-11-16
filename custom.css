@@ -524,21 +524,18 @@ div.card-block a {
     margin-bottom: 0;
     overflow: hidden;
     text-shadow: 1px 1px 3px rgba(56, 43, 73, 0.8);
-    max-block-size: 10em;
+    max-block-size: 8em;
     display: inline-block;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    white-space: pre-wrap;
     text-overflow: ellipsis;
-    line-clamp: 4;
 }
 
 #wrapper-footer .nav-item a.nav-link {
     font-family: Roboto;
     color: #382b49;
     font-weight: bold;
-    text-shadow: 0px 1px 7px #382b49;
 }
 
 .scroll-top {
@@ -557,4 +554,12 @@ div.card-block a {
 a.btn-terms {
     color: #382b49;
     background-color: #c0b3a0;
+}
+
+footer h4 {
+    text-shadow: none;
+}
+
+footer p {
+    text-shadow: none;
 }

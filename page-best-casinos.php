@@ -79,7 +79,7 @@ get_header(); ?>
                                             <div class="d-flex col-md-12 justify-content-around">
                                                 <h3><?php _e( 'Column title', 'october' ); ?></h3>
                                                 <h3><?php _e( 'Column title', 'october' ); ?></h3>
-                                                <h3><?php _e( 'Column title', 'october' ); ?></h3>                                                                  
+                                                <h3><?php _e( 'Column title', 'october' ); ?></h3> 
                                             </div>
                                         </div>                                                         
                                     </div>                                                     
