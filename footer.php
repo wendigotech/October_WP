@@ -24,7 +24,7 @@
                                     <?php if ( has_nav_menu( 'social' ) ) : ?>
                                         <?php wp_nav_menu( array(
                                                 'menu' => 'social',
-                                                'menu_class' => 'nav',
+                                                'menu_class' => 'nav justify-content-around',
                                                 'container' => '',
                                                 'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                                 'walker' => new wp_bootstrap4_navwalker()
