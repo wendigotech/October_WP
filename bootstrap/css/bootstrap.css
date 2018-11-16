@@ -399,7 +399,7 @@ h6,
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
-    color: inherit;
+    color: #382B49;
 }
 
 h1,
@@ -9027,7 +9027,7 @@ button.close {
     padding: 0.5rem 0.75rem;
     margin-bottom: 0;
     font-size: 1rem;
-    color: inherit;
+    color: #382B49;
     background-color: #f7f7f7;
     border-bottom: 0px solid #ebebeb;
 }
