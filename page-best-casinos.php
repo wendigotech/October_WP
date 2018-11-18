@@ -30,7 +30,7 @@ get_header(); ?>
                                                             <?php while ( $best_casino->have_posts() && $best_casino_item_number++ < 4 ) : $best_casino->the_post(); ?>
                                                                 <figure class="effect-ruby effect-ruby-2">
                                                                     <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
-                                                                    <figcaption style="margin-top: 120px;">
+                                                                    <figcaption>
                                                                         <h2><?php the_excerpt( ); ?></h2>
                                                                         <div>
                                                                             <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
@@ -55,7 +55,7 @@ get_header(); ?>
                                                     <?php $random = new WP_Query( $random_args ); ?>
                                                     <?php if ( $random->have_posts() ) : ?>
                                                         <div class="entry-content d-flex"> 
-                                                            <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
+                                                            <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4" style="height: 200px;"> 
                                                                 <?php while ( $random->have_posts() ) : $random->the_post(); ?>
                                                                     <figure class="effect-ruby effect-ruby-1">
                                                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
