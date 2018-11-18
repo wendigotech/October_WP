@@ -86,7 +86,7 @@ get_header(); ?>
                                     </div>                                     
                                 </main>                                 
                             </div>
-                            <div role="complementary" id="right-sidebar" class="col-md-3 ml-5"> 
+                            <div role="complementary" id="right-sidebar" class="col-md-3 ml-5 sidebar"> 
                                 <figure class="effect-ruby effect-ruby-1" style="height: 15em;">
                                     <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                     <figcaption>

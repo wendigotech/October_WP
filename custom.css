@@ -563,11 +563,11 @@ footer p {
     text-shadow: none;
 }
 
-div#right-sidebar {
-    position: sticky;
+.sidebar {
     width: 100%;
-    left: 0;
-    top: 0;
     height: 100%;
     background-color: #e2e2eb;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
