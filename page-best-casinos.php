@@ -14,7 +14,7 @@ get_header(); ?>
                                         <h2><?php the_title(); ?></h2> 
                                     </header>                                                     
                                     <div class="entry-content"> 
-                                        <p><?php the_excerpt( ); ?></p> 
+                                        <p><?php echo get_post_meta( get_the_ID(), 'about', true ); ?></p> 
                                     </div>
                                     <?php
                                         $best_casino_args = array(
