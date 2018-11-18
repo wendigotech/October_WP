@@ -142,30 +142,6 @@ function st2_customize_register( $wp_customize ) {
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
-    $wp_customize->add_setting( 'show_left_sidebar', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'show_left_sidebar', array(
-        'label' => __( 'Show Left Sidebar', 'october' ),
-        'description' => __( 'Activate the Left Sidebar', 'october' ),
-        'type' => 'checkbox',
-        'section' => 'theme_settings'
-    ));
-
-    $wp_customize->add_setting( 'show_right_sidebar', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'show_right_sidebar', array(
-        'label' => __( 'Show Right Sidebar', 'october' ),
-        'description' => __( 'Activate the Right Sidebar', 'october' ),
-        'type' => 'checkbox',
-        'section' => 'theme_settings'
-    ));
-
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
         'default' => __( 'General info', 'october' ),
@@ -249,6 +225,30 @@ function st2_customize_register( $wp_customize ) {
         'mime_type' => 'image',
         'section' => 'footer_settings'
     ) ) );
+
+    $wp_customize->add_setting( 'show_left_sidebar', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'show_left_sidebar', array(
+        'label' => __( 'Show Left Sidebar', 'october' ),
+        'description' => __( 'Activate the Left Sidebar', 'october' ),
+        'type' => 'checkbox',
+        'section' => 'theme_settings'
+    ));
+
+    $wp_customize->add_setting( 'show_right_sidebar', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'show_right_sidebar', array(
+        'label' => __( 'Show Right Sidebar', 'october' ),
+        'description' => __( 'Activate the Right Sidebar', 'october' ),
+        'type' => 'checkbox',
+        'section' => 'theme_settings'
+    ));
 
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',

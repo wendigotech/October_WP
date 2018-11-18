@@ -52,7 +52,7 @@ figure.effect-ruby h2 {
     font-size: 1.2vw;
     font-weight: 900;
     text-align: center;
-    margin-top: -15rem;
+    margin-top: -16rem;
     width: 60%;
     text-shadow: 0px 1px 3px;
     padding: 5px;
@@ -479,7 +479,7 @@ div.grid2:hover {
 div.grid2 {
     display: grid;
     grid-template-columns: 4fr 1fr 2fr 4fr;
-    grid-template-rows: minmax(100px, auto) minmax(100px, auto);
+    grid-template-rows: .5fr .5fr;
     grid-gap: 10px;
     transition: all 1s ease;
 }
