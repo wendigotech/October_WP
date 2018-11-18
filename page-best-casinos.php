@@ -14,7 +14,7 @@ get_header(); ?>
                                         <h2><?php the_title(); ?></h2> 
                                     </header>                                                     
                                     <div class="entry-content"> 
-                                        <?php the_content(); ?> 
+                                        <p><?php the_content(); ?></p> 
                                     </div>
                                     <?php
                                         $best_casino_args = array(
@@ -45,7 +45,7 @@ get_header(); ?>
                                         <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                                     <?php endif; ?>
                                     <div class="entry-content"> 
-                                        <?php the_content(); ?> 
+                                        <h6><?php the_content(); ?></h6> 
                                     </div>
                                     <div class="entry-content"> 
                                         <?php
