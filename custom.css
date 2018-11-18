@@ -479,7 +479,7 @@ div.grid2:hover {
 div.grid2 {
     display: grid;
     grid-template-columns: 4fr 1fr 2fr 4fr;
-    grid-template-rows: fit-content(40%) fit-content(40%);
+    grid-template-rows: minmax(100px, .5fr) minmax(100px, .5fr);
     grid-gap: 10px;
     transition: all 1s ease;
 }
@@ -561,4 +561,13 @@ footer h4 {
 
 footer p {
     text-shadow: none;
+}
+
+div#right-sidebar {
+    position: sticky;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #e2e2eb;
 }
