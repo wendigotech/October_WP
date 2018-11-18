@@ -569,4 +569,5 @@ footer p {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    border-radius: 3px;
 }

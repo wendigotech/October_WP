@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area ml-3 col-md-8" id="primary" style="background-color: #e2e2eb;"> 
+            <div class="content-area col-md-8" id="primary" style="background-color: #e2e2eb; border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>
@@ -83,20 +83,35 @@ get_header(); ?>
                     </div>                                     
                 </main>                                 
             </div>
-            <div role="complementary" class="ml-5 col-lg-3"> 
+            <div role="complementary" class="col-lg-4"> 
                 <div class="sidebar">
                     <div class="col-md-12" style="height: 15em;">                                          
 
-                        <figure class="effect-ruby effect-ruby-1">
-                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'large' ); ?> </a>
-                            <figcaption>
-                                <h2 style="margin-top: -230px;"><?php the_excerpt( ); ?></h2>
-                                <div>
-                                    <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                    <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&amp;c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                </div>
-                            </figcaption>                                             
-                        </figure>
+                        <?php
+                            $best_offer_args = array(
+                                'tag' => 'best-offer',
+                                'order' => 'DESC'
+                            )
+                        ?>
+                        <?php $best_offer = new WP_Query( $best_offer_args ); ?>
+                        <?php if ( $best_offer->have_posts() ) : ?>
+                            <?php $best_offer_item_number = 0; ?>
+                            <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 1 ) : $best_offer->the_post(); ?>
+                                <figure <?php post_class( 'effect-ruby effect-ruby-1' ); ?> id="post-<?php the_ID(); ?>">
+                                    <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'large' ); ?> </a>
+                                    <figcaption>
+                                        <h2 style="margin-top: -230px;"><?php the_excerpt( ); ?></h2>
+                                        <div>
+                                            <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                            <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&amp;c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                        </div>
+                                    </figcaption>                                                     
+                                </figure>
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
+                        <?php else : ?>
+                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
+                        <?php endif; ?>
                     </div>
                     <div class="col-md-12">
                         <h3><?php _e( 'Information for you', 'october' ); ?></h3> 
