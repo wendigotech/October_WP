@@ -285,17 +285,17 @@ get_header(); ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                         <?php endif; ?>
                         <?php
-                            $bonus_args = array(
-                                'category_name' => 'bonus',
+                            $welcome_args = array(
+                                'category_name' => 'bonuses',
                                 'tag' => 'welcome',
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $bonus = new WP_Query( $bonus_args ); ?>
-                        <?php if ( $bonus->have_posts() ) : ?>
+                        <?php $welcome = new WP_Query( $welcome_args ); ?>
+                        <?php if ( $welcome->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $bonus_item_number = 0; ?>
-                                <?php while ( $bonus->have_posts() && $bonus_item_number++ < 1 ) : $bonus->the_post(); ?>
+                                <?php $welcome_item_number = 0; ?>
+                                <?php while ( $welcome->have_posts() && $welcome_item_number++ < 1 ) : $welcome->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
@@ -314,7 +314,7 @@ get_header(); ?>
                         <?php endif; ?>
                         <?php
                             $popular_args = array(
-                                'category_name' => 'bonus',
+                                'category_name' => 'bonuses',
                                 'tag' => 'popular',
                                 'order' => 'DESC'
                             )
