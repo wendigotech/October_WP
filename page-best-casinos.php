@@ -45,19 +45,16 @@ get_header(); ?>
                             <div class="entry-content"> 
                                 <p><?php the_content(); ?></p> 
                             </div>
-                            <div class="entry-content d-flex"> 
-                                <?php
-                                    $random_args = array(
-                                        'category_name' => 'casino, bonuses',
-                                        'order' => 'DESC',
-                                        'orderby' => 'rand'
-                                    )
-                                ?>
-                                <?php $random = new WP_Query( $random_args ); ?>
-                                <?php if ( $random->have_posts() ) : ?>
-                                    <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4" id="post-<?php the_ID(); ?>"> 
-                                        <?php $random_item_number = 0; ?>
-                                        <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
+                            <?php
+                                $random_args = array(
+                                    'category_name' => 'casino, bonuses'
+                                )
+                            ?>
+                            <?php $random = new WP_Query( $random_args ); ?>
+                            <?php if ( $random->have_posts() ) : ?>
+                                <div class="entry-content d-flex"> 
+                                    <?php while ( $random->have_posts() ) : $random->the_post(); ?>
+                                        <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
                                             <figure class="effect-ruby effect-ruby-1">
                                                 <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                                 <figcaption>
@@ -67,70 +64,14 @@ get_header(); ?>
                                                         <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&amp;c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
                                                     </div>
                                                 </figcaption>                                                                 
-                                            </figure>
-                                        <?php endwhile; ?>
-                                        <?php wp_reset_postdata(); ?> 
-                                    </div>
-                                <?php else : ?>
-                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                                <?php endif; ?>
-                                <?php
-                                    $random_args = array(
-                                        'category_name' => 'casino, bonuses',
-                                        'order' => 'DESC',
-                                        'orderby' => 'rand'
-                                    )
-                                ?>
-                                <?php $random = new WP_Query( $random_args ); ?>
-                                <?php if ( $random->have_posts() ) : ?>
-                                    <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4" id="post-<?php the_ID(); ?>"> 
-                                        <?php $random_item_number = 0; ?>
-                                        <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
-                                            <figure class="effect-ruby effect-ruby-1">
-                                                <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
-                                                <figcaption>
-                                                    <h2 class="pt-4"><?php the_excerpt( ); ?></h2>
-                                                    <div>
-                                                        <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                        <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&amp;c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                    </div>
-                                                </figcaption>                                                                 
-                                            </figure>
-                                        <?php endwhile; ?>
-                                        <?php wp_reset_postdata(); ?> 
-                                    </div>
-                                <?php else : ?>
-                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                                <?php endif; ?>
-                                <?php
-                                    $random_args = array(
-                                        'category_name' => 'casino, bonuses',
-                                        'order' => 'DESC',
-                                        'orderby' => 'rand'
-                                    )
-                                ?>
-                                <?php $random = new WP_Query( $random_args ); ?>
-                                <?php if ( $random->have_posts() ) : ?>
-                                    <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4" id="post-<?php the_ID(); ?>"> 
-                                        <?php $random_item_number = 0; ?>
-                                        <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
-                                            <figure class="effect-ruby effect-ruby-1">
-                                                <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
-                                                <figcaption>
-                                                    <h2 class="pt-4"><?php the_excerpt( ); ?></h2>
-                                                    <div>
-                                                        <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                        <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&amp;c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                    </div>
-                                                </figcaption>                                                                 
-                                            </figure>
-                                        <?php endwhile; ?>
-                                        <?php wp_reset_postdata(); ?> 
-                                    </div>
-                                <?php else : ?>
-                                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                                <?php endif; ?> 
-                            </div>                                             
+                                            </figure>                                                             
+                                        </div>
+                                    <?php endwhile; ?>
+                                    <?php wp_reset_postdata(); ?> 
+                                </div>
+                            <?php else : ?>
+                                <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
+                            <?php endif; ?> 
                         </article>
                     <?php endwhile; ?>
                 <?php else : ?>
