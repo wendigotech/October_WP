@@ -44,6 +44,6 @@
                             <?php endif; ?>
                         </div>
                     </nav>                     
-                </div>                                  
+                </div>                 
             </header>
             <div>
