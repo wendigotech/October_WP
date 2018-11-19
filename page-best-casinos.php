@@ -87,7 +87,7 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <div role="complementary" class="col-md-4 col-sm-12 col-12 sidebar col-lg-4"> 
+    <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3 mr-5"> 
         <div class="sidebar">
             <row>
                 <?php
