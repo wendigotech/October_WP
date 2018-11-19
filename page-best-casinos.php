@@ -119,8 +119,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-12 col-sm-10 col-12 ">
                     <div class="row pg-empty-placeholder">
-                        <div class="col-md-6">                                              
-
+                        <div class="col-md-6"> 
                             <h4 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h4>
                             <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
                             <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>

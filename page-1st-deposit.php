@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area ml-5 col-md-11" id="primary" style="background-color: #e2e2eb; border-radius: 3px;"> 
+            <div class="content-area col-md-12 " id="primary" style="background-color: #e2e2eb; border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>

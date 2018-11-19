@@ -517,7 +517,7 @@ div.grid3:hover {
 div.grid3 {
     display: grid;
     grid-template-columns: 4fr 1fr 2fr 4fr;
-    grid-template-rows: 150px 150px;
+    grid-template-rows: 150px 180px;
     grid-gap: 10px;
     transition: all 1s ease;
 }
