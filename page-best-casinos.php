@@ -119,9 +119,9 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-12 col-sm-10 col-12 ">
                     <div class="row pg-empty-placeholder">
-                        <div class="col-md-5">                                              
+                        <div class="col-md-6">                                              
 
-                            <h3 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h3>
+                            <h4 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h4>
                             <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
                             <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
                             <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
@@ -134,8 +134,8 @@ get_header(); ?>
                         ?>
                         <?php $best_offer = new WP_Query( $best_offer_args ); ?>
                         <?php if ( $best_offer->have_posts() ) : ?>
-                            <div <?php post_class( 'col-10 col-md-11 col-lg-7' ); ?> id="post-<?php the_ID(); ?>">
-                                <h3><?php _e( 'Best offer', 'october' ); ?></h3> 
+                            <div <?php post_class( 'col-10 col-md-11 col-lg-6' ); ?> id="post-<?php the_ID(); ?>">
+                                <h4><?php _e( 'Best offer', 'october' ); ?></h4> 
                                 <?php $best_offer_item_number = 0; ?>
                                 <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 5cm;">
