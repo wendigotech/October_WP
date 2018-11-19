@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area col-md-10" id="primary" style="background-color: #e2e2eb; border-radius: 3px;"> 
+            <div class="content-area col-md-10 ml-5 mr-5" id="primary" style="background-color: #e2e2eb; border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>
@@ -87,8 +87,8 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3 sticky-top sidebar h-50 w-auto justify-content-center align-self-baseline"> 
-        <div>
+    <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3 sidebar"> 
+        <div class="sidebar">
             <div>
                 <?php
                     $best_offer_args = array(
@@ -116,7 +116,7 @@ get_header(); ?>
                     <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                 <?php endif; ?>
                 <div class="row">
-                    <div class="col-md-12 col-sm-10 col-12">
+                    <div class="col-md-12 col-sm-10 col-12 ">
                         <h3 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h3>
                         <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
                         <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>

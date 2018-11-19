@@ -59,7 +59,7 @@ figure.effect-ruby h2 {
     font-weight: 900;
     text-align: center;
     width: 65%;
-    text-shadow: 1px 2px 10px #ffffff;
+    text-shadow: 1px 2px 5px #ffffff;
     padding: 5px;
     margin-top: -9rem;
     mix-blend-mode: difference;
@@ -580,4 +580,5 @@ footer p {
     top: 0;
     border-radius: 3px;
     background: #e2e2eb;
+    height: 20cm;
 }
