@@ -85,8 +85,8 @@ get_header(); ?>
                     </div>                                     
                 </main>                                 
             </div>
-            <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3 sidebar" style="height: 50%;" id="wrapper-sticky"> 
-                <div class="sticky-top">
+            <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3 sticky-top" style="height: 50%;"> 
+                <div>
                     <div>
                         <?php
                             $best_offer_args = array(
