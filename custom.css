@@ -76,7 +76,7 @@ figure.effect-ruby div {
     margin-top: 3em;
 }
 
-figure.effect-ruby:hover h2 {
+figure.effect-ruby:hover p {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }

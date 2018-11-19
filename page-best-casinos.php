@@ -55,22 +55,24 @@ get_header(); ?>
                                     <?php $random = new WP_Query( $random_args ); ?>
                                     <?php if ( $random->have_posts() ) : ?>
                                         <div class="entry-content d-flex"> 
-                                            <?php $random_item_number = 0; ?>
-                                            <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
-                                                <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
-                                                    <figure class="effect-ruby effect-ruby-1">
-                                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
-                                                        <figcaption>
-                                                            <h2 class=""><?php the_excerpt( ); ?></h2>
-                                                            <div>
-                                                                <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                                <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                            </div>
-                                                        </figcaption>                                                                         
-                                                    </figure>                                                                     
-                                                </div>
-                                            <?php endwhile; ?>
-                                            <?php wp_reset_postdata(); ?> 
+                                            <div class="row pg-empty-placeholder">
+                                                <?php $random_item_number = 0; ?>
+                                                <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
+                                                    <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
+                                                        <figure class="effect-ruby effect-ruby-1">
+                                                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
+                                                            <figcaption>
+                                                                <h2 class=""><?php the_excerpt( ); ?></h2>
+                                                                <div>
+                                                                    <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                                                    <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                                                </div>
+                                                            </figcaption>                                                                             
+                                                        </figure>                                                                         
+                                                    </div>
+                                                <?php endwhile; ?>
+                                                <?php wp_reset_postdata(); ?>
+                                            </div>                                                             
                                         </div>
                                     <?php else : ?>
                                         <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
@@ -83,7 +85,7 @@ get_header(); ?>
                     </div>                                     
                 </main>                                 
             </div>
-            <div role="complementary" class="col-lg-4 col-md-4 col-sm-12 mt-5 col-12"> 
+            <div role="complementary" class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3"> 
                 <div class="sidebar">
                     <?php
                         $best_offer_args = array(
@@ -98,7 +100,7 @@ get_header(); ?>
                             <figure <?php post_class( 'effect-ruby effect-ruby-1 ' ); ?> id="post-<?php the_ID(); ?>">
                                 <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'large' ); ?> </a>
                                 <figcaption style="height: 12rem;">
-                                    <h2 style="margin-top: -190px;"><?php the_excerpt( ); ?></h2>
+                                    <h2 style="margin-top: -190px;"><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                     <div>
                                         <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                         <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
@@ -112,10 +114,10 @@ get_header(); ?>
                     <?php endif; ?>
                     <div class="row">
                         <div class="col-md-12 col-sm-10 col-12">
-                            <h3><?php _e( 'Information for you', 'october' ); ?></h3>
-                            <p><?php _e( 'Cras justo odio', 'october' ); ?></p>
-                            <p><?php _e( 'Cras justo odio', 'october' ); ?></p>
-                            <p><?php _e( 'Cras justo odio', 'october' ); ?></p>                                              
+                            <h3 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h3>
+                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
+                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
+                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>                                              
                             <?php
                                 $best_offer_args = array(
                                     'tag' => 'best-offer',
