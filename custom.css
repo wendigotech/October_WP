@@ -19,17 +19,22 @@ figure.effect-ruby {
     overflow: hidden;
     border-radius: 4px;
     border: 3px solid #c0b3a0;
-    background-color: rgba(254, 254, 255, 0.82);
+    background-color: rgba(226, 226, 235, 0.82);
     height: 100%;
 }
 
+figure.effect-ruby:focus {
+    background-color: rgba(56, 43, 73, 0.67);
+    transition: 1s;
+}
+
 figure.effect-ruby:hover {
-    background-color: rgb(254, 254, 255);
+    background-color: rgba(56, 43, 73, 0.85);
     transition: 1s;
 }
 
 figure.effect-ruby img {
-    opacity: 0.9;
+    opacity: .9;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     width: 100%;
@@ -49,14 +54,15 @@ figure.effect-ruby h2 {
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,20px,0);
     font-family: Roboto;
-    color: #40324c;
-    font-size: 1.2vw;
+    color: white;
+    font-size: 1.5vmin;
     font-weight: 900;
     text-align: center;
     width: 65%;
-    text-shadow: 0px 1px 3px;
+    text-shadow: 1px 2px 10px #ffffff;
     padding: 5px;
-    margin-top: -10rem;
+    margin-top: -9rem;
+    mix-blend-mode: difference;
 }
 
 figure.effect-ruby div {
