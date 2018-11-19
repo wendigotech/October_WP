@@ -85,7 +85,7 @@ get_header(); ?>
                     </div>                                     
                 </main>                                 
             </div>
-            <div role="complementary" class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3"> 
+            <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3"> 
                 <div class="sidebar">
                     <?php
                         $best_offer_args = array(

@@ -571,9 +571,13 @@ footer p {
 }
 
 .sidebar {
-    background-color: #e2e2eb;
+    position: relative;
     position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
     position: sticky;
     top: 0;
     border-radius: 3px;
+    background: #e2e2eb;
 }
