@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area ml-5 mr-5 col-md-11" id="primary" style="background-color: #e2e2eb; border-radius: 3px;"> 
+            <div class="content-area ml-5 col-md-11" id="primary" style="background-color: #e2e2eb; border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>
@@ -87,7 +87,7 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3 mr-5"> 
+    <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3 mr-5 "> 
         <div class="sidebar">
             <row>
                 <?php
