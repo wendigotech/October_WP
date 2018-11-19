@@ -454,6 +454,22 @@ div#content figure.effect-ruby figcaption p {
     grid-column-end: span 3;
 }
 
+.effect-ruby-3:nth-of-type(1) {
+    grid-column-end: span 2;
+}
+
+.effect-ruby-3:nth-of-type(2) {
+    grid-column-end: span 2;
+}
+
+.effect-ruby-3:nth-of-type(5) {
+    grid-column-end: span 1;
+}
+
+.effect-ruby-3:nth-of-type(4) {
+    grid-column-end: span 2;
+}
+
 .card-block h6 {
     font-family: Playfair Display;
     font-size: 1.3vw;
@@ -484,6 +500,21 @@ div.grid2:hover {
 }
 
 div.grid2 {
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr 4fr;
+    grid-template-rows: 150px 150px;
+    grid-gap: 10px;
+    transition: all 1s ease;
+}
+
+div.grid3:hover {
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr 4fr;
+    grid-gap: 20px;
+    transition: all 1s ease;
+}
+
+div.grid3 {
     display: grid;
     grid-template-columns: 4fr 1fr 2fr 4fr;
     grid-template-rows: 150px 150px;
