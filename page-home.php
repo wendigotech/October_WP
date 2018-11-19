@@ -22,7 +22,7 @@ get_header(); ?>
                                     <figure class="effect-ruby effect-ruby-1">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
-                                            <h2><?php the_excerpt( ); ?></h2>
+                                            <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
                                                 <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                                 <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>

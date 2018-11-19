@@ -117,7 +117,7 @@ get_header(); ?>
                             <h3 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h3>
                             <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
                             <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
-                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>                                              
+                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p> 
                             <?php
                                 $best_offer_args = array(
                                     'tag' => 'best-offer',
