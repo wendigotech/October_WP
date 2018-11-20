@@ -428,14 +428,38 @@ div#content figure.effect-ruby figcaption p {
 
 .effect-ruby-1:nth-of-type(1) {
     grid-column: span 3;
+    transition: 1s;
+}
+
+.effect-ruby-1:nth-of-type(1):hover {
+    grid-column: span 3;
+    transition: 1s;
+    background-color: rgba(51, 108, 82, 0.8);
+    transition: 1s;
 }
 
 .effect-ruby-1:nth-of-type(3) {
     grid-column-end: span 2;
+    transition: 1s;
+}
+
+.effect-ruby-1:nth-of-type(3):hover {
+    grid-column-end: span 2;
+    transition: 1s;
+    background-color: rgba(159, 45, 45, 0.76);
+    transition: 1s;
 }
 
 .effect-ruby-1:nth-of-type(4) {
     grid-column-end: span 2;
+    transition: 1s;
+}
+
+.effect-ruby-1:nth-of-type(4):hover {
+    grid-column-end: span 2;
+    transition: 1s;
+    background-color: rgba(192, 179, 160, 0.77);
+    transition: 1s;
 }
 
 .effect-ruby-2:nth-of-type(1) {
