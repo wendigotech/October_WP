@@ -687,6 +687,10 @@ div#primary.content-area {
     border-radius: 3px;
 }
 
+.feedzy-rss ul:before,
+.feedzy-rss ul:after {
+}
+
 .feedzy-rss ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
