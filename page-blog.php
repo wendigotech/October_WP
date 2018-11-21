@@ -14,26 +14,22 @@ get_header(); ?>
                                         <h2><?php the_title(); ?></h2> 
                                     </header>                                                     
                                     <div class="entry-content"> 
-                                        <div id="carousel1" class="carousel slide" data-ride="carousel">                                                              
+                                        <div id="carousel1" class="carousel slide" data-ride="carousel"> 
                                             <div class="carousel-inner"> 
                                                 <div class="carousel-item active"> 
-                                                    <p class="mb-5"><?php echo get_post_meta( get_the_ID(), 'about', true ); ?></p>                                                                      
-                                                </div>
-                                                <div class="carousel-item"> 
-                                                    <p class="mb-5"><?php echo get_post_meta( get_the_ID(), 'about', true ); ?></p>                                                                      
-                                                </div>
-                                                <div class="carousel-item"> 
-                                                    <p class="mb-5"><?php echo get_post_meta( get_the_ID(), 'about', true ); ?></p>                                                                      
-                                                </div>                                                                                                                                                                                                   
+                                                    <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
+                                                        <?php dynamic_sidebar( 'blog1' ); ?>
+                                                    <?php endif; ?> 
+                                                </div>                                                                 
                                             </div>
                                             <ol class="carousel-indicators"> 
                                                 <li data-target="#carousel1" data-slide-to="0" class="active"></li>                                                                 
                                                 <li data-target="#carousel1" data-slide-to="1"></li>                                                                 
                                                 <li data-target="#carousel1" data-slide-to="2"></li>                                                                 
-                                            </ol>                                                                                                                                                                                       
+                                            </ol>                                                             
                                         </div>                                                         
                                     </div>
-                                    <div class="mt-5 mb-5 container" id="content" tabindex="-1"> 
+                                    <div class="mt-5 mb-5 container" id="content" tabindex="-1" style="background-color: rgba(191, 193, 203, 0);"> 
                                         <div class="row"> 
                                             <div class="col-md-12">
                                                 <h3 class="p-2"><?php _e( 'Usefull information', 'october' ); ?></h3> 
