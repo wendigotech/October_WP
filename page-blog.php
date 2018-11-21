@@ -24,16 +24,16 @@ get_header(); ?>
                                                     <?php endif; ?> 
                                                 </div>
                                                 <div class="carousel-item"> 
-                                                    <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
+                                                    <?php if ( is_active_sidebar( 'blog2' ) ) : ?>
                                                         <div class="row">
-                                                            <?php dynamic_sidebar( 'blog1' ); ?>
+                                                            <?php dynamic_sidebar( 'blog2' ); ?>
                                                         </div>
                                                     <?php endif; ?> 
                                                 </div>
                                                 <div class="carousel-item"> 
-                                                    <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
+                                                    <?php if ( is_active_sidebar( 'blog3' ) ) : ?>
                                                         <div class="row">
-                                                            <?php dynamic_sidebar( 'blog1' ); ?>
+                                                            <?php dynamic_sidebar( 'blog3' ); ?>
                                                         </div>
                                                     <?php endif; ?> 
                                                 </div>                                                                 
