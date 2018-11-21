@@ -688,5 +688,7 @@ div#primary.content-area {
 }
 
 .feedzy-rss ul {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: fit-content(40%);
 }
