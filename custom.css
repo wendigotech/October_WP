@@ -96,7 +96,7 @@ figure.snip0077 {
     position: relative;
     overflow: hidden;
     margin: 10px;
-    min-width: 142px;
+    min-width: 100px;
     max-width: 310px;
     max-height: 220px;
     width: 100%;

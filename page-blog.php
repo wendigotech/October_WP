@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area ml-5 col-md-11" id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
+            <div class="content-area col-12 ml-5 col-md-10 col-lg-11" id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>
@@ -49,8 +49,8 @@ get_header(); ?>
                                             <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
                                                 <?php $info_item_number = 0; ?>
                                                 <?php while ( $info->have_posts() && $info_item_number++ < 4 ) : $info->the_post(); ?>
-                                                    <div class="col-md-6 mb-2 col-lg-12 container d-flex">
-                                                        <div class="col-sm-6 col-6 col-md-4">
+                                                    <div class="mb-2 col-lg-12 container d-flex col-md-12">
+                                                        <div class="col-md-4 col-6 col-sm-6">
                                                             <figure class="snip0077 blue">
                                                                 <?php
                                                                     if ( has_post_thumbnail() ) {
@@ -66,7 +66,7 @@ get_header(); ?>
                                                                 </a>
                                                             </figure>
                                                         </div>
-                                                        <div class="px-3 col-sm-6 col-6 col-md-8">
+                                                        <div class="px-3 col-md-8 col-6 col-sm-6">
                                                             <div class="card-block px-3 ">
                                                                 <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
                                                                 <p><?php the_content(); ?></p>
@@ -90,7 +90,7 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3 mr-5 "> 
+    <div role="complementary" class="col-md-4 col-sm-12 col-lg-3 mr-5 d-none col-8 d-md-inline"> 
         <div class="sidebar">
             <row>
                 <?php
