@@ -4634,7 +4634,7 @@ input[type="button"].btn-block {
 .dropdown-item:focus {
     color: #c7505d;
     text-decoration: none;
-    background-color: rgba(239, 220, 220, 0.47);
+    background-color: rgba(251, 245, 245, 0.47);
 }
 
 .dropdown-item.active,
@@ -6230,6 +6230,8 @@ input[type="button"].btn-block {
 .navbar-nav .dropdown-menu {
     position: static;
     float: none;
+    width: -moz-available;
+    width: -webkit-fill-available;
 }
 
 .navbar-text {
@@ -12069,7 +12071,7 @@ a.skip-link {
 .navbar-dark .navbar-nav .dropdown-menu .nav-link:focus {
     color: #c7505d !important;
     text-decoration: none;
-    background-color: rgba(239, 220, 220, 0.47);
+    background-color: rgba(251, 245, 245, 0.47);
 }
 
 .navbar-dark .navbar-nav .dropdown-menu .nav-link.active,
