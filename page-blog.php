@@ -18,11 +18,13 @@ get_header(); ?>
                                             <div class="carousel-inner"> 
                                                 <div class="carousel-item active"> 
                                                     <div class="row">
-                                                        <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
-                                                            <div>
-                                                                <?php dynamic_sidebar( 'blog1' ); ?>
-                                                            </div>
-                                                        <?php endif; ?>
+                                                        <div>
+                                                            <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
+                                                                <div class="feedzy-rss">
+                                                                    <?php dynamic_sidebar( 'blog1' ); ?>
+                                                                </div>
+                                                            <?php endif; ?>
+                                                        </div>
                                                     </div>                                                                     
                                                 </div>                                                                 
                                             </div>
