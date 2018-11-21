@@ -698,3 +698,8 @@ div#primary.content-area {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: fit-content(40%);
 }
+
+.feedzy-rss a {
+    font-family: Roboto;
+    color: #382b49;
+}

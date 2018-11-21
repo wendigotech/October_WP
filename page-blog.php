@@ -22,6 +22,20 @@ get_header(); ?>
                                                             <?php dynamic_sidebar( 'blog1' ); ?>
                                                         </div>
                                                     <?php endif; ?> 
+                                                </div>
+                                                <div class="carousel-item"> 
+                                                    <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
+                                                        <div class="row">
+                                                            <?php dynamic_sidebar( 'blog1' ); ?>
+                                                        </div>
+                                                    <?php endif; ?> 
+                                                </div>
+                                                <div class="carousel-item"> 
+                                                    <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
+                                                        <div class="row">
+                                                            <?php dynamic_sidebar( 'blog1' ); ?>
+                                                        </div>
+                                                    <?php endif; ?> 
                                                 </div>                                                                 
                                             </div>
                                             <ol class="carousel-indicators"> 
