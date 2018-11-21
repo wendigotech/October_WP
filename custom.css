@@ -679,7 +679,7 @@ footer p {
     top: 0;
     border-radius: 3px;
     background: rgba(226, 226, 235, 0.74);
-    height: 15cm;
+    height: auto;
 }
 
 div#primary.content-area {
