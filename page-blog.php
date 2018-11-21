@@ -14,74 +14,25 @@ get_header(); ?>
                                         <h2><?php the_title(); ?></h2> 
                                     </header>                                                     
                                     <div class="entry-content"> 
-                                        <div id="carousel1" class="carousel slide" data-ride="carousel"> 
-                                            <ol class="carousel-indicators"> 
-                                                <li data-target="#carousel1" data-slide-to="0" class="active"></li>                                                                 
-
-                                                <li data-target="#carousel1" data-slide-to="1"></li>                                                                 
-
-                                                <li data-target="#carousel1" data-slide-to="2"></li>                                                                 
-                                            </ol>                                                             
-
+                                        <div id="carousel1" class="carousel slide" data-ride="carousel">                                                              
                                             <div class="carousel-inner"> 
                                                 <div class="carousel-item active"> 
-                                                    <img class="d-block w-100" src="http://pinegrow.com/placeholders/img11.jpg" alt="First slide"> 
-                                                    <div class="carousel-caption d-none d-md-block"> 
-                                                        <h3><?php _e( 'Slide label 1', 'october' ); ?></h3> 
-                                                        <p><?php _e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'october' ); ?></p> 
-                                                    </div>                                                                     
-                                                </div>                                                                 
-
+                                                    <p class="mb-5"><?php echo get_post_meta( get_the_ID(), 'about', true ); ?></p>                                                                      
+                                                </div>
                                                 <div class="carousel-item"> 
-                                                    <img class="d-block w-100" src="http://pinegrow.com/placeholders/img17.jpg" alt="Second slide"> 
-                                                    <div class="carousel-caption d-none d-md-block"> 
-                                                        <h3><?php _e( 'Slide label 2', 'october' ); ?></h3> 
-                                                        <p><?php _e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'october' ); ?></p> 
-                                                    </div>                                                                     
-                                                </div>                                                                 
-
+                                                    <p class="mb-5"><?php echo get_post_meta( get_the_ID(), 'about', true ); ?></p>                                                                      
+                                                </div>
                                                 <div class="carousel-item"> 
-                                                    <img class="d-block w-100" src="http://pinegrow.com/placeholders/img13.jpg" alt="Third slide"> 
-                                                    <div class="carousel-caption d-none d-md-block"> 
-                                                        <h3><?php _e( 'Slide label 3', 'october' ); ?></h3> 
-                                                        <p><?php _e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'october' ); ?></p> 
-                                                    </div>                                                                     
-                                                </div>                                                                 
-                                            </div>                                                             
-
-                                            <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'october' ); ?></span> </a> 
-                                            <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'october' ); ?></span> </a> 
-                                        </div>
-                                        <p class="mb-5"><?php echo get_post_meta( get_the_ID(), 'about', true ); ?></p> 
+                                                    <p class="mb-5"><?php echo get_post_meta( get_the_ID(), 'about', true ); ?></p>                                                                      
+                                                </div>                                                                                                                                                                                                   
+                                            </div>
+                                            <ol class="carousel-indicators"> 
+                                                <li data-target="#carousel1" data-slide-to="0" class="active"></li>                                                                 
+                                                <li data-target="#carousel1" data-slide-to="1"></li>                                                                 
+                                                <li data-target="#carousel1" data-slide-to="2"></li>                                                                 
+                                            </ol>                                                                                                                                                                                       
+                                        </div>                                                         
                                     </div>
-                                    <?php
-                                        $best_casino_args = array(
-                                            'category_name' => 'casino',
-                                            'tag' => 'best-casino',
-                                            'order' => 'DESC'
-                                        )
-                                    ?>
-                                    <?php $best_casino = new WP_Query( $best_casino_args ); ?>
-                                    <?php if ( $best_casino->have_posts() ) : ?>
-                                        <div class="grid2" id="post-<?php the_ID(); ?>">
-                                            <?php $best_casino_item_number = 0; ?>
-                                            <?php while ( $best_casino->have_posts() && $best_casino_item_number++ < 4 ) : $best_casino->the_post(); ?>
-                                                <figure class="effect-ruby effect-ruby-2">
-                                                    <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
-                                                    <figcaption>
-                                                        <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
-                                                        <div>
-                                                            <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                            <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                            <?php endwhile; ?>
-                                            <?php wp_reset_postdata(); ?>
-                                        </div>
-                                    <?php else : ?>
-                                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                                    <?php endif; ?>
                                     <div class="entry-content"> 
                                         <p class="mt-5"><?php the_content(); ?></p> 
                                     </div>
