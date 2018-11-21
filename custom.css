@@ -695,8 +695,9 @@ div#primary.content-area {
 
 .feedzy-rss ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: fit-content(40%) auto;
     grid-template-rows: fit-content(40%);
+    grid-gap: 10px;
 }
 
 .feedzy-rss a {
