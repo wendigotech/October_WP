@@ -112,10 +112,10 @@ function st2_widgets_init() {
     register_sidebar( array(
         'name' => __( 'Blog1', 'october' ),
         'id' => 'blog1',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>'
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h6 class="widgettitle">',
+        'after_title' => '</h6>'
     ) );
 
     /* Pinegrow generated Register Sidebars End */
