@@ -12,7 +12,7 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">                                     
         <?php wp_head(); ?>
     </head>     
-    <body style="margin-top: -65px; padding-top: 65px; background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/assets/rawpixel-1048286-unsplash2.jpg'); background-attachment: fixed; background-position: center center; background-size: cover; background-blend-mode: color-dodge;" class="<?php echo implode(' ', get_body_class()); ?>"> 
+    <body style="margin-top: -65px; padding-top: 65px; background-attachment: fixed; background-position: center center; background-size: cover; background-blend-mode: color-dodge; background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/assets/rawpixel-1048286-unsplash2.jpg');" class="<?php echo implode(' ', get_body_class()); ?>"> 
         <div class="hfeed site" id="page"> 
             <div id="container" style="position: absolute;">
                 <canvas id="canvas"></canvas>

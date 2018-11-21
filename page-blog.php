@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area ml-5 col-md-11" id="primary"> 
+            <div class="content-area ml-5 col-md-11" id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>
@@ -14,20 +14,58 @@ get_header(); ?>
                                         <h2><?php the_title(); ?></h2> 
                                     </header>                                                     
                                     <div class="entry-content"> 
+                                        <div id="carousel1" class="carousel slide" data-ride="carousel"> 
+                                            <ol class="carousel-indicators"> 
+                                                <li data-target="#carousel1" data-slide-to="0" class="active"></li>                                                                 
+
+                                                <li data-target="#carousel1" data-slide-to="1"></li>                                                                 
+
+                                                <li data-target="#carousel1" data-slide-to="2"></li>                                                                 
+                                            </ol>                                                             
+
+                                            <div class="carousel-inner"> 
+                                                <div class="carousel-item active"> 
+                                                    <img class="d-block w-100" src="http://pinegrow.com/placeholders/img11.jpg" alt="First slide"> 
+                                                    <div class="carousel-caption d-none d-md-block"> 
+                                                        <h3><?php _e( 'Slide label 1', 'october' ); ?></h3> 
+                                                        <p><?php _e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'october' ); ?></p> 
+                                                    </div>                                                                     
+                                                </div>                                                                 
+
+                                                <div class="carousel-item"> 
+                                                    <img class="d-block w-100" src="http://pinegrow.com/placeholders/img17.jpg" alt="Second slide"> 
+                                                    <div class="carousel-caption d-none d-md-block"> 
+                                                        <h3><?php _e( 'Slide label 2', 'october' ); ?></h3> 
+                                                        <p><?php _e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'october' ); ?></p> 
+                                                    </div>                                                                     
+                                                </div>                                                                 
+
+                                                <div class="carousel-item"> 
+                                                    <img class="d-block w-100" src="http://pinegrow.com/placeholders/img13.jpg" alt="Third slide"> 
+                                                    <div class="carousel-caption d-none d-md-block"> 
+                                                        <h3><?php _e( 'Slide label 3', 'october' ); ?></h3> 
+                                                        <p><?php _e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'october' ); ?></p> 
+                                                    </div>                                                                     
+                                                </div>                                                                 
+                                            </div>                                                             
+
+                                            <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Previous', 'october' ); ?></span> </a> 
+                                            <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'october' ); ?></span> </a> 
+                                        </div>
                                         <p class="mb-5"><?php echo get_post_meta( get_the_ID(), 'about', true ); ?></p> 
                                     </div>
                                     <?php
-                                        $most_visited_args = array(
+                                        $best_casino_args = array(
                                             'category_name' => 'casino',
-                                            'tag' => 'most-visited',
+                                            'tag' => 'best-casino',
                                             'order' => 'DESC'
                                         )
                                     ?>
-                                    <?php $most_visited = new WP_Query( $most_visited_args ); ?>
-                                    <?php if ( $most_visited->have_posts() ) : ?>
+                                    <?php $best_casino = new WP_Query( $best_casino_args ); ?>
+                                    <?php if ( $best_casino->have_posts() ) : ?>
                                         <div class="grid2" id="post-<?php the_ID(); ?>">
-                                            <?php $most_visited_item_number = 0; ?>
-                                            <?php while ( $most_visited->have_posts() && $most_visited_item_number++ < 4 ) : $most_visited->the_post(); ?>
+                                            <?php $best_casino_item_number = 0; ?>
+                                            <?php while ( $best_casino->have_posts() && $best_casino_item_number++ < 4 ) : $best_casino->the_post(); ?>
                                                 <figure class="effect-ruby effect-ruby-2">
                                                     <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
                                                     <figcaption>
