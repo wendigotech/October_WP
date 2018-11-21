@@ -19,9 +19,9 @@ get_header(); ?>
                                                 <div class="row">
                                                     <?php while ( have_posts() ) : the_post(); ?>
                                                         <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
-                                                            <div class="container col-lg-6 col-md-6 mb-2">
+                                                            <li class="col-md-6 mb-2 container col-lg-6">
                                                                 <?php dynamic_sidebar( 'blog1' ); ?>
-                                                            </div>
+                                                            </li>
                                                         <?php endif; ?>
                                                     <?php endwhile; ?>
                                                 </div>                                                                 

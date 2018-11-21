@@ -90,15 +90,6 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'Blog1', 'october' ),
-        'id' => 'blog1',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h6 class="widgettitle">',
-        'after_title' => '</h6>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Left Sidebar', 'october' ),
         'id' => 'left-sidebar',
         'description' => 'Left Sidebar widget area',
@@ -115,6 +106,15 @@ function st2_widgets_init() {
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Blog1', 'october' ),
+        'id' => 'blog1',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>'
     ) );
 
@@ -235,18 +235,6 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'footer_settings'
     ) ) );
 
-    $wp_customize->add_setting( 'footer_text', array(
-        'type' => 'theme_mod',
-        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Content', 'october' ),
-        'type' => 'textarea',
-        'section' => 'footer_settings'
-    ));
-
     $wp_customize->add_setting( 'show_left_sidebar', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
@@ -269,6 +257,18 @@ function st2_customize_register( $wp_customize ) {
         'description' => __( 'Activate the Right Sidebar', 'october' ),
         'type' => 'checkbox',
         'section' => 'theme_settings'
+    ));
+
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
+        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Content', 'october' ),
+        'type' => 'textarea',
+        'section' => 'footer_settings'
     ));
 
     /* Pinegrow generated Customizer Controls End */
