@@ -686,3 +686,7 @@ div#primary.content-area {
     background-color: rgba(226, 226, 235, 0.76);
     border-radius: 3px;
 }
+
+.feedzy-rss ul {
+    display: flex;
+}
