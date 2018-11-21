@@ -16,11 +16,15 @@ get_header(); ?>
                                     <div id="carousel1" class="carousel slide" data-ride="carousel"> 
                                         <div class="carousel-inner"> 
                                             <div class="carousel-item active"> 
-                                                <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
-                                                    <div class="row">
-                                                        <?php dynamic_sidebar( 'blog1' ); ?>
-                                                    </div>
-                                                <?php endif; ?> 
+                                                <div class="row">
+                                                    <?php while ( have_posts() ) : the_post(); ?>
+                                                        <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
+                                                            <div class="container col-lg-6 col-md-6 mb-2">
+                                                                <?php dynamic_sidebar( 'blog1' ); ?>
+                                                            </div>
+                                                        <?php endif; ?>
+                                                    <?php endwhile; ?>
+                                                </div>                                                                 
                                             </div>                                                             
                                         </div>
                                         <ol class="carousel-indicators"> 
