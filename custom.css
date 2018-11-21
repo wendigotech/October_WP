@@ -689,6 +689,8 @@ div#primary.content-area {
 
 .feedzy-rss ul:before,
 .feedzy-rss ul:after {
+    display: gr;
+    content: normal;
 }
 
 .feedzy-rss ul {
