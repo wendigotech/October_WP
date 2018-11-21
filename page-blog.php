@@ -17,15 +17,11 @@ get_header(); ?>
                                         <div id="carousel1" class="carousel slide" data-ride="carousel"> 
                                             <div class="carousel-inner"> 
                                                 <div class="carousel-item active"> 
-                                                    <div class="row">
-                                                        <div>
-                                                            <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
-                                                                <div class="feedzy-rss">
-                                                                    <?php dynamic_sidebar( 'blog1' ); ?>
-                                                                </div>
-                                                            <?php endif; ?>
+                                                    <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
+                                                        <div class="row">
+                                                            <?php dynamic_sidebar( 'blog1' ); ?>
                                                         </div>
-                                                    </div>                                                                     
+                                                    <?php endif; ?> 
                                                 </div>                                                                 
                                             </div>
                                             <ol class="carousel-indicators"> 
