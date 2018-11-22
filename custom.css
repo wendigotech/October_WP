@@ -122,23 +122,22 @@ figure.snip0077 img {
 
 figure.snip0077 figcaption {
     top: 50%;
-    left: 50px;
-    right: 50px;
     position: absolute;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 1;
+    width: 100%;
 }
 
 figure.snip0077 figcaption h2,
 figure.snip0077 figcaption p {
-    margin: 0;
     color: rgba(255, 255, 255, 0);
     text-shadow: 0 0 40px #ffffff;
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
+    margin: 0;
 }
 
 figure.snip0077 figcaption h2 {
@@ -252,7 +251,7 @@ div#content-columns {
 
 .card-transparent {
     background-color: transparent;
-    width: 80%;
+    width: 100%;
     padding-left: 0;
     padding-right: 0;
 }
