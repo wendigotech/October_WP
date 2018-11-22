@@ -632,7 +632,7 @@ div.card-block a {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    line-height: 16px;     /* fallback */
+    line-height: 23px;     /* fallback */
     max-height: 96px;      /* fallback */
 }
 
