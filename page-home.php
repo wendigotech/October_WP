@@ -340,12 +340,12 @@ get_header(); ?>
                         <?php else : ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                         <?php endif; ?> 
-                    </div>                                     
-                    <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-left: 1px; margin-right: 1px; margin-top: 23px;"> 
+                    </div>
+                    <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-right: 1px; margin-left: 1px;"> 
                         <a class="btn active carousel-indicators2" data-target="#carousel2" href="#" data-slide-to="0" data-toggle="button"><?php _e( '1st Deposit Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="1" class="btn"><?php _e( 'Welcome Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="2" class="btn carousel2-indicators"><?php _e( 'Popular Bonus', 'october' ); ?></a>
-                    </div>
+                    </div>                                     
                 </div>
             </div>
             <?php
@@ -362,7 +362,7 @@ get_header(); ?>
                         <figure class="effect-ruby effect-ruby-1">
                             <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                             <figcaption>
-                                <h2 class="pt-4"><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                                <h2 class="small"><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                 <div>
                                     <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                     <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
