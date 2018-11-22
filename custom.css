@@ -593,7 +593,7 @@ div.grid3 {
 
 div.card-block a {
     font-family: Playfair Display;
-    font-size: 1.2vw;
+    font-size: 2vw;
     color: #382b49;
     font-weight: normal;
     text-shadow: 0px 1px 3px rgba(56, 43, 73, 0.7);
@@ -621,7 +621,7 @@ div.card-block a {
 
 .card-block p {
     font-family: Roboto;
-    font-size: 1vw;
+    font-size: 1.5vw;
     color: #382b49;
     margin-top: 5px;
     margin-bottom: 0;
@@ -632,7 +632,8 @@ div.card-block a {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    line-height: normal;
+    line-height: 16px;     /* fallback */
+    max-height: 96px;      /* fallback */
 }
 
 #wrapper-footer .nav-item a.nav-link {
