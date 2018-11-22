@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area ml-5 col-md-11" id="primary"> 
+            <div class="content-area ml-md-5 col-sm-12 col-md-11" id="primary"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>
@@ -87,7 +87,7 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <div role="complementary" class="col-md-4 col-sm-12 col-12 col-lg-3 mr-5 "> 
+    <div role="complementary" class="col-md-4 col-sm-12 col-12 d-none d-md-inline col-lg-4 mr-5"> 
         <div class="sidebar">
             <row>
                 <?php
@@ -119,7 +119,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-12 col-sm-10 col-12 ">
                     <div class="row pg-empty-placeholder">
-                        <div class="col-md-6"> 
+                        <div class="col-md-12 col-lg-6"> 
                             <h4 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h4>
                             <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
                             <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>

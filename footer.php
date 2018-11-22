@@ -8,10 +8,15 @@
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info mt-2"> 
                                     <h4><?php echo get_theme_mod( 'footer_text', __( 'General info', 'october' ) ); ?></h4>
-                                    <div class="pg-empty-placeholder d-flex justify-content-between d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column justify-content-sm-between justify-content-md-between align-items-center align-items-sm-center align-items-md-center">
-                                        <a href=""><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
-                                        <a href=""><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
-                                        <a href=""><p><?php _e( 'Paragraph', 'october' ); ?></p></a>
+                                    <div class="d-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-sm-center align-items-md-center justify-content-sm-around justify-content-around justify-content-md-around">
+                                        <a href=""><?php if ( get_theme_mod( 'footer_link1' ) ) : ?><?php
+                                                    $footer_link1_query_args = array(
+                                                        'page_id' => get_theme_mod('footer_link1'),
+                                                        'posts_per_page' => '1'
+                                                    )
+                                                ?><?php $footer_link1_query = new WP_Query( $footer_link1_query_args ); ?><?php if ( $footer_link1_query->have_posts() ) : ?><?php while ( $footer_link1_query->have_posts() ) : $footer_link1_query->the_post(); ?><p><?php _e( 'Paragraph', 'october' ); ?></p><?php endwhile; ?><?php wp_reset_postdata(); ?><?php endif; ?><?php endif; ?></a>
+                                        <a href=""><p><?php echo get_theme_mod( 'footer_link2', __( 'Paragraph', 'october' ) ); ?></p></a>
+                                        <a href=""><p><?php echo get_theme_mod( 'footer_link3', __( 'Paragraph', 'october' ) ); ?></p></a>
                                     </div>
                                 </div>                                 
                                 <!-- .site-info -->                                 

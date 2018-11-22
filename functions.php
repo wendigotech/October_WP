@@ -181,6 +181,41 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'footer_settings'
     ));
 
+    $wp_customize->add_setting( 'footer_link1', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_link1', array(
+        'label' => __( 'Footer link1', 'october' ),
+        'type' => 'dropdown-pages',
+        'section' => 'footer_settings'
+    ));
+
+    $wp_customize->add_setting( 'footer_link2', array(
+        'type' => 'theme_mod',
+        'default' => __( 'Paragraph', 'october' ),
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_link2', array(
+        'label' => __( 'Footer link2', 'october' ),
+        'type' => 'text',
+        'section' => 'footer_settings'
+    ));
+
+    $wp_customize->add_setting( 'footer_link3', array(
+        'type' => 'theme_mod',
+        'default' => __( 'Paragraph', 'october' ),
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_link3', array(
+        'label' => __( 'Footer link3', 'october' ),
+        'type' => 'text',
+        'section' => 'footer_settings'
+    ));
+
     $wp_customize->add_setting( 'footer_icon1', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
