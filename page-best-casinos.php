@@ -58,7 +58,7 @@ get_header(); ?>
                                             <div class="row pg-empty-placeholder">
                                                 <?php $random_item_number = 0; ?>
                                                 <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
-                                                    <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
+                                                    <div class="bonus-column pl-2 d-flex flex-column col-6 col-sm-6 col-md-4"> 
                                                         <figure class="effect-ruby effect-ruby-1">
                                                             <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                                             <figcaption>

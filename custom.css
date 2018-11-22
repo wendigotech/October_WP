@@ -708,3 +708,7 @@ div#primary.content-area {
 
 .effect-ruby figcaption {
 }
+
+.rss_item {
+    padding: 0;
+}
