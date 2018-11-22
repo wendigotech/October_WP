@@ -196,7 +196,7 @@ get_header(); ?>
     <div class="mt-5 mb-5 container" id="content" tabindex="-1"> 
         <div class="row"> 
             <div class="col-md-12">
-                <h3 class="p-2"><?php _e( 'Payment methods', 'october' ); ?></h3> 
+                <h3 class="p-2 text-center"><?php _e( 'Payment methods', 'october' ); ?></h3> 
             </div>
         </div>                         
         <?php
@@ -246,7 +246,7 @@ get_header(); ?>
     <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
         <div class="row"> 
             <div class="col-md-8 col-8">
-                <h3 class="mt-2"><?php _e( 'Bonuses', 'october' ); ?></h3> 
+                <h3 class="mt-2 text-center"><?php _e( 'Bonuses', 'october' ); ?></h3> 
             </div>
             <div class="col-md-4 d-inline-flex justify-content-center align-items-end col-4">
                 <h4 class="text-center"><?php _e( 'Best offer', 'october' ); ?></h4>

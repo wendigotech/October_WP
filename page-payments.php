@@ -11,9 +11,9 @@ get_header(); ?>
                             <?php while ( have_posts() ) : the_post(); ?>
                                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>"> 
                                     <header class="entry-header"> 
-                                        <h2><?php the_title(); ?></h2> 
+                                        <h2 class="text-center"><?php the_title(); ?></h2> 
                                     </header>                                                     
-                                    <div class="entry-content">                                                          
+                                    <div class="entry-content"> 
                                         <?php the_content(); ?>
                                     </div>                                                     
                                     <?php
