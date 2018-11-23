@@ -229,7 +229,7 @@ get_header(); ?>
                                     </figure>
                                 </div>
                                 <div>
-                                    <div class="card-block px-3">
+                                    <div class="card-block px-3 pr-3 pl-3 pt-2">
                                         <?php the_content(); ?>
                                     </div>
                                 </div>
