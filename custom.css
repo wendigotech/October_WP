@@ -695,8 +695,8 @@ div#primary.content-area {
 
 .feedzy-rss ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
     grid-gap: 10px;
 }
 

@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area col-12 col-lg-12 col-md-12 ml-md-5 ml-0" id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
+            <div class="content-area col-12 col-md-12 ml-0 col-lg-11 ml-md-2" id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>
@@ -18,21 +18,21 @@ get_header(); ?>
                                             <div class="carousel-inner"> 
                                                 <div class="carousel-item active"> 
                                                     <?php if ( is_active_sidebar( 'blog1' ) ) : ?>
-                                                        <div class="row">
+                                                        <div class="row" style="margin-left: 0; margin-right: 0;">
                                                             <?php dynamic_sidebar( 'blog1' ); ?>
                                                         </div>
                                                     <?php endif; ?> 
                                                 </div>
                                                 <div class="carousel-item"> 
                                                     <?php if ( is_active_sidebar( 'blog2' ) ) : ?>
-                                                        <div class="row">
+                                                        <div class="row" style="margin-left: 0; margin-right: 0;">
                                                             <?php dynamic_sidebar( 'blog2' ); ?>
                                                         </div>
                                                     <?php endif; ?> 
                                                 </div>
                                                 <div class="carousel-item"> 
                                                     <?php if ( is_active_sidebar( 'blog3' ) ) : ?>
-                                                        <div class="row">
+                                                        <div class="row" style="margin-left: 0; margin-right: 0;">
                                                             <?php dynamic_sidebar( 'blog3' ); ?>
                                                         </div>
                                                     <?php endif; ?> 
@@ -102,7 +102,7 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <div role="complementary" class="col-md-4 col-sm-12 d-none col-8 d-md-inline col-lg-4 ml-5"> 
+    <div role="complementary" class="col-md-4 col-sm-12 d-none col-8 d-md-inline col-lg-4 mr-2 ml-2"> 
         <div class="sidebar">
             <row>
                 <?php
@@ -133,12 +133,14 @@ get_header(); ?>
             </row>
             <div class="row">
                 <div class="col-md-12 col-sm-10 col-12 ">
-                    <div class="row pg-empty-placeholder">
+                    <div class="row">
                         <div class="col-md-5"> 
                             <h4 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h4>
-                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
-                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
-                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
+                            <?php if ( is_active_sidebar( 'side-links' ) ) : ?>
+                                <ul class="list-unstyled text-center">
+                                    <?php dynamic_sidebar( 'side-links' ); ?>
+                                </ul>
+                            <?php endif; ?>
                         </div>
                         <?php
                             $best_offer_args = array(
