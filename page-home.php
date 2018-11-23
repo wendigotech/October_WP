@@ -145,7 +145,7 @@ get_header(); ?>
     <div class="mt-5 mb-5 container" id="content" tabindex="-1"> 
         <div class="row"> 
             <div class="col-md-12">
-                <h3 class="p-2"><?php _e( 'Usefull information', 'october' ); ?></h3> 
+                <h3 class="p-2 text-center"><?php _e( 'Usefull information', 'october' ); ?></h3> 
             </div>
         </div>                         
         <?php
@@ -206,13 +206,13 @@ get_header(); ?>
         ?>
         <?php $payment = new WP_Query( $payment_args ); ?>
         <?php if ( $payment->have_posts() ) : ?>
-            <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
+            <div <?php post_class( 'row payment' ); ?> id="post-<?php the_ID(); ?>">
                 <?php $payment_item_number = 0; ?>
                 <?php while ( $payment->have_posts() && $payment_item_number++ < 4 ) : $payment->the_post(); ?>
-                    <div class="container py-3 col-lg-3 col-md-3">
+                    <div class="container" style="grid-area: span 1;">
                         <div class="card card-transparent">
                             <div class="row d-flex d-sm-flex flex-sm-row d-md-flex flex-md-column flex-row">
-                                <div class="col-md-12 col-sm-6 col-6">
+                                <div>
                                     <figure class="snip0077 blue">
                                         <?php
                                             if ( has_post_thumbnail() ) {
@@ -228,7 +228,7 @@ get_header(); ?>
                                         </a>
                                     </figure>
                                 </div>
-                                <div class="px-3 col-md-12 col-sm-6 col-6">
+                                <div>
                                     <div class="card-block px-3">
                                         <?php the_content(); ?>
                                     </div>

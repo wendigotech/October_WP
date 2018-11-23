@@ -122,8 +122,8 @@ figure.snip0077 img {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     border-radius: 4px;
-    height: 100%;
     margin-bottom: 0px;
+    height: 100%;
 }
 
 figure.snip0077 figcaption {
@@ -715,4 +715,13 @@ div#primary.content-area {
 .small {
     font-family: Roboto;
     font-size: 2vw;
+}
+
+.payment {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
