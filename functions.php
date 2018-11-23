@@ -90,6 +90,15 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
+        'name' => __( 'Footer links', 'october' ),
+        'id' => 'footer-links',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
         'name' => __( 'Left Sidebar', 'october' ),
         'id' => 'left-sidebar',
         'description' => 'Left Sidebar widget area',
@@ -187,41 +196,6 @@ function st2_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'footer_text', array(
         'label' => __( 'Footer Content', 'october' ),
         'type' => 'textarea',
-        'section' => 'footer_settings'
-    ));
-
-    $wp_customize->add_setting( 'footer_link1', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_link1', array(
-        'label' => __( 'Footer link1', 'october' ),
-        'type' => 'dropdown-pages',
-        'section' => 'footer_settings'
-    ));
-
-    $wp_customize->add_setting( 'footer_link2', array(
-        'type' => 'theme_mod',
-        'default' => __( 'Paragraph', 'october' ),
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_link2', array(
-        'label' => __( 'Footer link2', 'october' ),
-        'type' => 'text',
-        'section' => 'footer_settings'
-    ));
-
-    $wp_customize->add_setting( 'footer_link3', array(
-        'type' => 'theme_mod',
-        'default' => __( 'Paragraph', 'october' ),
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_link3', array(
-        'label' => __( 'Footer link3', 'october' ),
-        'type' => 'text',
         'section' => 'footer_settings'
     ));
 
