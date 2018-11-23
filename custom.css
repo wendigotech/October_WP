@@ -55,7 +55,7 @@ figure.effect-ruby h2 {
     -webkit-transform: translate3d(0,20px,0);
     font-family: Roboto;
     color: white;
-    font-size: 2.3vmin;
+    font-size: 2.5vmin;
     font-weight: 900;
     text-align: center;
     width: 100%;
@@ -264,6 +264,7 @@ div#content-columns {
 div#wrapper-footer.wrapper {
     background-color: #c0b3a0;
     box-shadow: inset 0px 2px 8px 3px #c0b3a0;
+    margin-top: 25%;
 }
 
 div#content.container figure.effect-ruby {
@@ -581,7 +582,7 @@ div.grid3:hover {
 div.grid3 {
     display: grid;
     grid-template-columns: 4fr 1fr 2fr 4fr;
-    grid-template-rows: 150px 180px;
+    grid-template-rows: 200px 200px;
     grid-gap: 10px;
     transition: all 1s ease;
 }
