@@ -136,6 +136,15 @@ function st2_widgets_init() {
         'after_title' => '</h3>'
     ) );
 
+    register_sidebar( array(
+        'name' => __( 'Side-links', 'october' ),
+        'id' => 'side-links',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>'
+    ) );
+
     /* Pinegrow generated Register Sidebars End */
 }
 add_action( 'widgets_init', 'st2_widgets_init' );

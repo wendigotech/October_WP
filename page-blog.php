@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area col-12 col-md-12 ml-0 col-lg-11 ml-md-2" id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
+            <div class="content-area col-12 col-md-12 ml-0 col-lg-12 ml-md-3" id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>
@@ -106,16 +106,16 @@ get_header(); ?>
         <div class="sidebar">
             <row>
                 <?php
-                    $best_offer_args = array(
-                        'tag' => 'best-offer',
+                    $big_args = array(
+                        'tag' => 'big',
                         'order' => 'DESC'
                     )
                 ?>
-                <?php $best_offer = new WP_Query( $best_offer_args ); ?>
-                <?php if ( $best_offer->have_posts() ) : ?>
-                    <?php $best_offer_item_number = 0; ?>
-                    <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 1 ) : $best_offer->the_post(); ?>
-                        <figure style="height: 5cm;" <?php post_class( 'effect-ruby effect-ruby-1 ' ); ?> id="post-<?php the_ID(); ?>">
+                <?php $big = new WP_Query( $big_args ); ?>
+                <?php if ( $big->have_posts() ) : ?>
+                    <?php $big_item_number = 0; ?>
+                    <?php while ( $big->have_posts() && $big_item_number++ < 1 ) : $big->the_post(); ?>
+                        <figure style="height: 10cm;" <?php post_class( 'effect-ruby effect-ruby-1 ' ); ?> id="post-<?php the_ID(); ?>">
                             <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'large' ); ?> </a>
                             <figcaption style="height: 12rem;">
                                 <h2 style="margin-top: -190px;"><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
