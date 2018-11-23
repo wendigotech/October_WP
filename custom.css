@@ -258,8 +258,7 @@ div#content-columns {
 .card-transparent {
     background-color: transparent;
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 16px 0 15px;
 }
 
 div#wrapper-footer.wrapper {
