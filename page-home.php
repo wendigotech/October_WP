@@ -180,7 +180,7 @@ get_header(); ?>
                                 <div class="px-3 col-md-6 col-sm-6 col-6">
                                     <div class="card-block px-3 ">
                                         <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
-                                        <div class="pg-empty-placeholder">
+                                        <div class="pg-empty-placeholder" style="max-block-size: 8em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; text-overflow: ellipsis; line-height: 23px; max-height: 96px;">
                                             <?php the_content(); ?>
                                         </div>
                                     </div>
