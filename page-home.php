@@ -180,7 +180,7 @@ get_header(); ?>
                                 <div class="px-3 col-md-6 col-sm-6 col-6">
                                     <div class="card-block px-3 ">
                                         <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
-                                        <p><?php the_content(); ?></p>
+                                        <?php the_content(); ?>
                                     </div>
                                 </div>
                             </div>
@@ -259,7 +259,7 @@ get_header(); ?>
                         <?php
                             $deposit_args = array(
                                 'category_name' => 'bonuses',
-                                'tag' => 'deposit',
+                                'tag' => array( 'deposit', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
