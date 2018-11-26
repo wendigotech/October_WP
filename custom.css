@@ -724,3 +724,13 @@ div#primary.content-area {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.box {
+    max-block-size: 8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+    line-height: 23px;
+    max-height: 96px;
+}
