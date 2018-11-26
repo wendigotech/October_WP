@@ -4,7 +4,7 @@ get_header(); ?>
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
     <div class="container">
         <div class="row">
-            <div class="content-area col-12 col-md-12 ml-0 col-lg-12 ml-md-3 mr-md-3" id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
+            <div class="content-area col-12 ml-0 col-lg-11 ml-md-5 col-md-11" id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
                     <div> 
                         <?php if ( have_posts() ) : ?>
@@ -81,7 +81,9 @@ get_header(); ?>
                                                         <div class="px-3 col-md-8 col-6 col-sm-6">
                                                             <div class="card-block px-3 ">
                                                                 <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
-                                                                <p><?php the_content(); ?></p>
+                                                                <div class="pg-empty-placeholder box">
+                                                                    <?php the_content(); ?>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -102,7 +104,7 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <div role="complementary" class="col-md-4 col-sm-12 d-none col-8 d-md-inline col-lg-4 pl-4 ml-1 mr-1 pr-3 "> 
+    <div role="complementary" class="col-sm-12 d-none col-8 d-md-inline col-lg-3 mr-3 col-md-3 "> 
         <div class="sidebar">
             <row>
                 <?php
@@ -115,9 +117,9 @@ get_header(); ?>
                 <?php if ( $big->have_posts() ) : ?>
                     <?php $big_item_number = 0; ?>
                     <?php while ( $big->have_posts() && $big_item_number++ < 1 ) : $big->the_post(); ?>
-                        <figure style="height: 10cm;" <?php post_class( 'effect-ruby effect-ruby-1 ' ); ?> id="post-<?php the_ID(); ?>">
-                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'large' ); ?> </a>
-                            <figcaption style="height: 12rem;">
+                        <figure style="height: 8cm;" <?php post_class( 'effect-ruby effect-ruby-1 ' ); ?> id="post-<?php the_ID(); ?>">
+                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'large' ); ?> </a>
+                            <figcaption>
                                 <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                 <div>
                                     <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
@@ -155,9 +157,9 @@ get_header(); ?>
                                 <?php $best_offer_item_number = 0; ?>
                                 <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 5cm;">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
-                                        <figcaption style="height: 140px;">
-                                            <h2 class="small"><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
+                                        <figcaption>
+                                            <h3><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h3>
                                             <div>
                                                 <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                                 <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>

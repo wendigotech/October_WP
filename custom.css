@@ -48,13 +48,30 @@ figure.effect-ruby:hover img {
     transform: scale(1.05);
 }
 
+figure.effect-ruby h3 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    font-family: Roboto;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 900;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 2px 5px #ffffff;
+    padding: 5px;
+    mix-blend-mode: difference;
+    position: absolute;
+    bottom: 25%;
+}
+
 figure.effect-ruby h2 {
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,20px,0);
     font-family: Roboto;
     color: white;
-    font-size: 2.5vmin;
+    font-size: 2.5vw;
     font-weight: 900;
     text-align: center;
     width: 100%;
@@ -122,6 +139,7 @@ figure.snip0077 img {
     border-radius: 4px;
     margin-bottom: 0px;
     height: 100%;
+    box-shadow: 1px 3px 4px;
 }
 
 figure.snip0077 figcaption {
@@ -733,4 +751,9 @@ div#primary.content-area {
     text-overflow: ellipsis;
     line-height: 23px;
     max-height: 96px;
+}
+
+figure.effect-ruby a {
+    position: relative;
+    overflow: hidden;
 }

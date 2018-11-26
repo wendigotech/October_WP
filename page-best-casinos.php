@@ -29,7 +29,7 @@ get_header(); ?>
                                             <?php $best_casino_item_number = 0; ?>
                                             <?php while ( $best_casino->have_posts() && $best_casino_item_number++ < 4 ) : $best_casino->the_post(); ?>
                                                 <figure class="effect-ruby effect-ruby-2">
-                                                    <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
+                                                    <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
                                                     <figcaption>
                                                         <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                                         <div>
@@ -60,7 +60,7 @@ get_header(); ?>
                                                 <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
                                                     <div class="bonus-column pl-2 d-flex flex-column col-6 col-sm-6 col-md-4"> 
                                                         <figure class="effect-ruby effect-ruby-1">
-                                                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
+                                                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                                             <figcaption>
                                                                 <h2 class=""><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                                                 <div>
@@ -87,7 +87,7 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-    <div role="complementary" class="col-md-4 col-sm-12 col-12 mr-5 d-none d-md-inline col-lg-4"> 
+    <div role="complementary" class="col-md-4 col-sm-12 col-12 mr-5 d-none d-md-inline col-lg-3"> 
         <div class="sidebar">
             <row>
                 <?php
@@ -100,10 +100,10 @@ get_header(); ?>
                 <?php if ( $best_offer->have_posts() ) : ?>
                     <?php $best_offer_item_number = 0; ?>
                     <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 1 ) : $best_offer->the_post(); ?>
-                        <figure style="height: 5cm;" <?php post_class( 'effect-ruby effect-ruby-1 ' ); ?> id="post-<?php the_ID(); ?>">
-                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'large' ); ?> </a>
-                            <figcaption style="height: 12rem;">
-                                <h2 style="margin-top: -190px;"><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                        <figure style="height: 8cm;" <?php post_class( 'effect-ruby effect-ruby-1 ' ); ?> id="post-<?php the_ID(); ?>">
+                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'large' ); ?> </a>
+                            <figcaption>
+                                <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                 <div>
                                     <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                     <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
@@ -119,11 +119,13 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-12 col-sm-10 col-12 ">
                     <div class="row pg-empty-placeholder">
-                        <div class="col-md-12 col-lg-6"> 
+                        <div class="col-md-5"> 
                             <h4 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h4>
-                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
-                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
-                            <p class="text-center"><?php _e( 'Cras justo odio', 'october' ); ?></p>
+                            <?php if ( is_active_sidebar( 'side-links' ) ) : ?>
+                                <ul class="list-unstyled text-center">
+                                    <?php dynamic_sidebar( 'side-links' ); ?>
+                                </ul>
+                            <?php endif; ?>
                         </div>
                         <?php
                             $best_offer_args = array(
@@ -133,14 +135,14 @@ get_header(); ?>
                         ?>
                         <?php $best_offer = new WP_Query( $best_offer_args ); ?>
                         <?php if ( $best_offer->have_posts() ) : ?>
-                            <div <?php post_class( 'col-10 col-md-11 col-lg-6' ); ?> id="post-<?php the_ID(); ?>">
+                            <div <?php post_class( 'col-10 col-md-11 col-lg-7' ); ?> id="post-<?php the_ID(); ?>">
                                 <h4><?php _e( 'Best offer', 'october' ); ?></h4> 
                                 <?php $best_offer_item_number = 0; ?>
                                 <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 5cm;">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
-                                        <figcaption style="height: 140px;">
-                                            <h2 style="margin-top: -190px;"><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
+                                        <figcaption>
+                                            <h3><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h3>
                                             <div>
                                                 <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                                 <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>

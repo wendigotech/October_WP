@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-<div style="padding-top: 100px;"> 
+<div> 
     <div class="jumbotron">
         <div class="container mt-5">
             <div id="carousel1" class="carousel slide" data-ride="carousel" data-pause="hover"> 
@@ -20,7 +20,7 @@ get_header(); ?>
                                 <?php $best_bonus_item_number = 0; ?>
                                 <?php while ( $best_bonus->have_posts() && $best_bonus_item_number++ < 4 ) : $best_bonus->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
+                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
@@ -50,7 +50,7 @@ get_header(); ?>
                                 <?php $best_casino_item_number = 0; ?>
                                 <?php while ( $best_casino->have_posts() && $best_casino_item_number++ < 4 ) : $best_casino->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-2">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
+                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
@@ -80,7 +80,7 @@ get_header(); ?>
                                 <?php $new_casino_item_number = 0; ?>
                                 <?php while ( $new_casino->have_posts() && $new_casino_item_number++ < 4 ) : $new_casino->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
+                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
@@ -110,7 +110,7 @@ get_header(); ?>
                                 <?php $most_visited_item_number = 0; ?>
                                 <?php while ( $most_visited->have_posts() && $most_visited_item_number++ < 4 ) : $most_visited->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'thumbnail' ); ?> </a> 
+                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'thumbnail' ); ?> </a> 
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
@@ -269,7 +269,7 @@ get_header(); ?>
                                 <?php $deposit_item_number = 0; ?>
                                 <?php while ( $deposit->have_posts() && $deposit_item_number++ < 1 ) : $deposit->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
+                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
@@ -297,7 +297,7 @@ get_header(); ?>
                                 <?php $welcome_item_number = 0; ?>
                                 <?php while ( $welcome->have_posts() && $welcome_item_number++ < 1 ) : $welcome->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
+                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
@@ -325,7 +325,7 @@ get_header(); ?>
                                 <?php $popular_item_number = 0; ?>
                                 <?php while ( $popular->have_posts() && $popular_item_number++ < 1 ) : $popular->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
+                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
@@ -360,9 +360,9 @@ get_header(); ?>
                     <?php $best_offer_item_number = 0; ?>
                     <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>
                         <figure class="effect-ruby effect-ruby-1">
-                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
+                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                             <figcaption>
-                                <h2 class="small"><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                                <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                 <div>
                                     <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                     <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
