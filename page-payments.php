@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <div id="page-wrapper" class="wrapper mt-5 pt-5 mb-5 pb-5 d-flex"> 
-    <div class="container ml-5 mr-5">
+    <div class="container ">
         <div class="row">
             <div class="content-area col-12 ml-0 ml-sm-0 col-lg-12 col-md-12 " id="primary" style="background-color: rgba(226, 226, 235, 0.77); border-radius: 3px;"> 
                 <main class="site-main" id="main"> 
