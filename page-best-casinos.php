@@ -119,7 +119,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-12 col-sm-10 col-12 ">
                     <div class="row pg-empty-placeholder">
-                        <div class="col-md-5"> 
+                        <div class="col-md-12 col-lg-5"> 
                             <h4 class="text-center"><?php _e( 'Information for you', 'october' ); ?></h4>
                             <?php if ( is_active_sidebar( 'side-links' ) ) : ?>
                                 <ul class="list-unstyled text-center">
@@ -135,7 +135,7 @@ get_header(); ?>
                         ?>
                         <?php $best_offer = new WP_Query( $best_offer_args ); ?>
                         <?php if ( $best_offer->have_posts() ) : ?>
-                            <div <?php post_class( 'col-10 col-md-11 col-lg-7' ); ?> id="post-<?php the_ID(); ?>">
+                            <div <?php post_class( 'col-10 col-lg-7 col-md-12' ); ?> id="post-<?php the_ID(); ?>">
                                 <h4><?php _e( 'Best offer', 'october' ); ?></h4> 
                                 <?php $best_offer_item_number = 0; ?>
                                 <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>

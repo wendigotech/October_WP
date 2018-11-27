@@ -119,6 +119,15 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
+        'name' => __( 'Side-links', 'october' ),
+        'id' => 'side-links',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
         'name' => __( 'Blog1', 'october' ),
         'id' => 'blog1',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -141,15 +150,6 @@ function st2_widgets_init() {
         'id' => 'blog3',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Side-links', 'october' ),
-        'id' => 'side-links',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>'
     ) );

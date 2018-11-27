@@ -255,7 +255,7 @@ get_header(); ?>
         <div class="row no-gutters" style="  ;">
             <div class="col-sm-8 col-8 col-md-8"> 
                 <div id="carousel2" class="carousel slide carousel-fade mb-5" data-ride="carousel" data-pause="hover"> 
-                    <div class="carousel-inner" style="height: 30em;"> 
+                    <div class="carousel-inner" style="height: 35em;"> 
                         <?php
                             $deposit_args = array(
                                 'category_name' => 'bonuses',
@@ -268,7 +268,7 @@ get_header(); ?>
                             <div <?php post_class( 'carousel-item active' ); ?> id="post-<?php the_ID(); ?>"> 
                                 <?php $deposit_item_number = 0; ?>
                                 <?php while ( $deposit->have_posts() && $deposit_item_number++ < 1 ) : $deposit->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
+                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
@@ -287,7 +287,7 @@ get_header(); ?>
                         <?php
                             $welcome_args = array(
                                 'category_name' => 'bonuses',
-                                'tag' => 'welcome',
+                                'tag' => array( 'welcome', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
@@ -296,7 +296,7 @@ get_header(); ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
                                 <?php $welcome_item_number = 0; ?>
                                 <?php while ( $welcome->have_posts() && $welcome_item_number++ < 1 ) : $welcome->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
+                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
@@ -315,7 +315,7 @@ get_header(); ?>
                         <?php
                             $popular_args = array(
                                 'category_name' => 'bonuses',
-                                'tag' => 'popular',
+                                'tag' => array( 'popular', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
@@ -324,7 +324,7 @@ get_header(); ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
                                 <?php $popular_item_number = 0; ?>
                                 <?php while ( $popular->have_posts() && $popular_item_number++ < 1 ) : $popular->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
+                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
@@ -341,7 +341,7 @@ get_header(); ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                         <?php endif; ?> 
                     </div>
-                    <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-right: 1px; margin-left: 1px;"> 
+                    <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-right: 1px; margin-left: 1px; margin-top: 50px;"> 
                         <a class="btn active carousel-indicators2" data-target="#carousel2" href="#" data-slide-to="0" data-toggle="button"><?php _e( '1st Deposit Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="1" class="btn"><?php _e( 'Welcome Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="2" class="btn carousel2-indicators"><?php _e( 'Popular Bonus', 'october' ); ?></a>

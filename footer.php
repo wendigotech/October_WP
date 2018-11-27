@@ -9,7 +9,7 @@
                                 <div class="site-info mt-2"> 
                                     <h4><?php echo get_theme_mod( 'footer_text', __( 'General info', 'october' ) ); ?></h4>
                                     <?php if ( is_active_sidebar( 'footer-links' ) ) : ?>
-                                        <div class="d-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-sm-center align-items-md-center justify-content-sm-around justify-content-around justify-content-md-around">
+                                        <div class="d-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-md-center justify-content-sm-around align-items-sm-center">
                                             <?php dynamic_sidebar( 'footer-links' ); ?>
                                         </div>
                                     <?php endif; ?>
@@ -24,7 +24,7 @@
                                     <?php if ( has_nav_menu( 'social' ) ) : ?>
                                         <?php wp_nav_menu( array(
                                                 'menu' => 'social',
-                                                'menu_class' => 'nav justify-content-around',
+                                                'menu_class' => 'nav',
                                                 'container' => '',
                                                 'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                                 'walker' => new wp_bootstrap4_navwalker()
