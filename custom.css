@@ -747,10 +747,10 @@ div#primary.content-area {
     max-block-size: 8em;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     text-overflow: ellipsis;
     line-height: 23px;
-    max-height: 96px;
+    max-height: 73px;
 }
 
 figure.effect-ruby a {
