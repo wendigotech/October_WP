@@ -765,3 +765,7 @@ figure.effect-ruby a {
 .bonus-row {
     display: cotents;
 }
+
+.bonus-row {
+    width: -moz-available;
+}

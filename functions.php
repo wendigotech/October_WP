@@ -99,26 +99,6 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Left Sidebar', 'october' ),
-        'id' => 'left-sidebar',
-        'description' => 'Left Sidebar widget area',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Right Sidebar', 'october' ),
-        'id' => 'right-sidebar',
-        'description' => 'Right Sidebar widget area',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Side-links', 'october' ),
         'id' => 'side-links',
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
@@ -151,6 +131,26 @@ function st2_widgets_init() {
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Left Sidebar', 'october' ),
+        'id' => 'left-sidebar',
+        'description' => 'Left Sidebar widget area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Right Sidebar', 'october' ),
+        'id' => 'right-sidebar',
+        'description' => 'Right Sidebar widget area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>'
     ) );
 
