@@ -750,7 +750,7 @@ div#primary.content-area {
     -webkit-line-clamp: 3;
     text-overflow: ellipsis;
     line-height: 23px;
-    max-height: 73px;
+    max-height: 75px;
 }
 
 figure.effect-ruby a {
