@@ -57,7 +57,7 @@ get_header(); ?>
                                     <?php $random = new WP_Query( $random_args ); ?>
                                     <?php if ( $random->have_posts() ) : ?>
                                         <div class="entry-content d-flex"> 
-                                            <div class="row">
+                                            <div class="row random">
                                                 <?php $random_item_number = 0; ?>
                                                 <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
                                                     <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 

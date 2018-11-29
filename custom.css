@@ -1,3 +1,6 @@
+width: -moz-available;
+width: -moz-available;
+width: -moz-available;
 width: 75px;
 height: 75px;
 position: fixed;
@@ -767,5 +770,13 @@ figure.effect-ruby a {
 }
 
 .bonus-row {
+    width: -moz-available;
+}
+
+.random {
+    width: ;
+}
+
+.random {
     width: -moz-available;
 }
