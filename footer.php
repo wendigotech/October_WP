@@ -25,7 +25,9 @@
                                         <?php wp_nav_menu( array(
                                                 'menu' => 'social',
                                                 'menu_class' => 'nav',
-                                                'container' => ''
+                                                'container' => '',
+                                                'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                                'walker' => new wp_bootstrap4_navwalker()
                                         ) ); ?>
                                     <?php endif; ?> 
                                 </div>
