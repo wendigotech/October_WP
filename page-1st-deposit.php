@@ -49,13 +49,15 @@ get_header(); ?>
                                     </div>
                                     <?php
                                         $random_args = array(
-                                            'category_name' => 'casino, bonuses'
+                                            'category_name' => 'casino, bonuses',
+                                            'order' => 'DESC',
+                                            'orderby' => 'rand'
                                         )
                                     ?>
                                     <?php $random = new WP_Query( $random_args ); ?>
                                     <?php if ( $random->have_posts() ) : ?>
                                         <div class="entry-content d-flex"> 
-                                            <div class="row pg-empty-placeholder">
+                                            <div class="row">
                                                 <?php $random_item_number = 0; ?>
                                                 <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
                                                     <div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
@@ -68,7 +70,8 @@ get_header(); ?>
                                                                     <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
                                                                 </div>
                                                             </figcaption>                                                                             
-                                                        </figure>                                                                         
+                                                        </figure>
+                                                        <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see_more', true ); ?>"><?php _e( 'See more', 'october' ); ?></a> 
                                                     </div>
                                                 <?php endwhile; ?>
                                                 <?php wp_reset_postdata(); ?>
