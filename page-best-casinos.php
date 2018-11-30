@@ -56,7 +56,7 @@ get_header(); ?>
                                     ?>
                                     <?php $random = new WP_Query( $random_args ); ?>
                                     <?php if ( $random->have_posts() ) : ?>
-                                        <div class="entry-content d-flex"> 
+                                        <div class="entry-content"> 
                                             <div class="row random">
                                                 <?php $random_item_number = 0; ?>
                                                 <?php while ( $random->have_posts() && $random_item_number++ < 3 ) : $random->the_post(); ?>
@@ -70,8 +70,7 @@ get_header(); ?>
                                                                     <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
                                                                 </div>
                                                             </figcaption>                                                                             
-                                                        </figure>
-                                                        <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see_more', true ); ?>"><?php _e( 'See more', 'october' ); ?></a> 
+                                                        </figure>                                                                         
                                                     </div>
                                                 <?php endwhile; ?>
                                                 <?php wp_reset_postdata(); ?>
@@ -79,7 +78,18 @@ get_header(); ?>
                                         </div>
                                     <?php else : ?>
                                         <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                                    <?php endif; ?> 
+                                    <?php endif; ?>
+                                    <div class="row d-flex text-center" style="font-family: Roboto;">
+                                        <div class="col-md-4">
+                                            <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see1', true ); ?>"><?php _e( 'See more', 'october' ); ?></a> 
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see2', true ); ?>"><?php _e( 'See more', 'october' ); ?></a> 
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see3', true ); ?>"><?php _e( 'See more', 'october' ); ?></a> 
+                                        </div>
+                                    </div>                                                     
                                 </article>
                             <?php endwhile; ?>
                         <?php else : ?>
