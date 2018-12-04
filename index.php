@@ -259,7 +259,7 @@ get_header(); ?>
                         <?php
                             $deposit-big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag_slug__and' => array( 'deposit', 'big' ),
+                                'tag_slug__in' => array( 'deposit', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
@@ -287,7 +287,7 @@ get_header(); ?>
                         <?php
                             $welcome-big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag_slug__and' => array( 'welcome', 'big' ),
+                                'tag_slug__in' => array( 'welcome', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
@@ -315,7 +315,7 @@ get_header(); ?>
                         <?php
                             $popular-big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag_slug__and' => array( 'popular', 'big' ),
+                                'tag_slug__in' => array( 'popular', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
