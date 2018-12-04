@@ -90,15 +90,6 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'Footer links', 'october' ),
-        'id' => 'footer-links',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Left Sidebar', 'october' ),
         'id' => 'left-sidebar',
         'description' => 'Left Sidebar widget area',
@@ -119,10 +110,10 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Side-links', 'october' ),
-        'id' => 'side-links',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
+        'name' => __( 'Footer links', 'october' ),
+        'id' => 'footer-links',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>'
     ) );
@@ -150,6 +141,15 @@ function st2_widgets_init() {
         'id' => 'blog3',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Side-links', 'october' ),
+        'id' => 'side-links',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>'
     ) );
@@ -186,6 +186,30 @@ function st2_customize_register( $wp_customize ) {
         'priority' => '0'
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
+
+    $wp_customize->add_setting( 'show_left_sidebar', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'show_left_sidebar', array(
+        'label' => __( 'Show Left Sidebar', 'october' ),
+        'description' => __( 'Activate the Left Sidebar', 'october' ),
+        'type' => 'checkbox',
+        'section' => 'theme_settings'
+    ));
+
+    $wp_customize->add_setting( 'show_right_sidebar', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'show_right_sidebar', array(
+        'label' => __( 'Show Right Sidebar', 'october' ),
+        'description' => __( 'Activate the Right Sidebar', 'october' ),
+        'type' => 'checkbox',
+        'section' => 'theme_settings'
+    ));
 
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
@@ -270,30 +294,6 @@ function st2_customize_register( $wp_customize ) {
         'mime_type' => 'image',
         'section' => 'footer_settings'
     ) ) );
-
-    $wp_customize->add_setting( 'show_left_sidebar', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'show_left_sidebar', array(
-        'label' => __( 'Show Left Sidebar', 'october' ),
-        'description' => __( 'Activate the Left Sidebar', 'october' ),
-        'type' => 'checkbox',
-        'section' => 'theme_settings'
-    ));
-
-    $wp_customize->add_setting( 'show_right_sidebar', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'show_right_sidebar', array(
-        'label' => __( 'Show Right Sidebar', 'october' ),
-        'description' => __( 'Activate the Right Sidebar', 'october' ),
-        'type' => 'checkbox',
-        'section' => 'theme_settings'
-    ));
 
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',

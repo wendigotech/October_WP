@@ -258,7 +258,7 @@ get_header(); ?>
                     <div class="carousel-inner" style="height: 30em;"> 
                         <?php
                             $deposit-big_args = array(
-                                'category_name' => 'bonus',
+                                'category_name' => 'bonuses',
                                 'tag_slug__and' => array( 'deposit', 'big' ),
                                 'order' => 'DESC'
                             )
@@ -285,17 +285,17 @@ get_header(); ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                         <?php endif; ?>
                         <?php
-                            $bonus_args = array(
-                                'category_name' => 'bonus',
+                            $welcome-big_args = array(
+                                'category_name' => 'bonuses',
                                 'tag_slug__and' => array( 'welcome', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $bonus = new WP_Query( $bonus_args ); ?>
-                        <?php if ( $bonus->have_posts() ) : ?>
+                        <?php $welcome-big = new WP_Query( $welcome-big_args ); ?>
+                        <?php if ( $welcome-big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $bonus_item_number = 0; ?>
-                                <?php while ( $bonus->have_posts() && $bonus_item_number++ < 1 ) : $bonus->the_post(); ?>
+                                <?php $welcome-big_item_number = 0; ?>
+                                <?php while ( $welcome-big->have_posts() && $welcome-big_item_number++ < 1 ) : $welcome-big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
@@ -313,17 +313,17 @@ get_header(); ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                         <?php endif; ?>
                         <?php
-                            $popular_args = array(
-                                'category_name' => 'bonus',
-                                'tag' => array( 'popular', 'big' ),
+                            $popular-big_args = array(
+                                'category_name' => 'bonuses',
+                                'tag_slug__and' => array( 'popular', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $popular = new WP_Query( $popular_args ); ?>
-                        <?php if ( $popular->have_posts() ) : ?>
+                        <?php $popular-big = new WP_Query( $popular-big_args ); ?>
+                        <?php if ( $popular-big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $popular_item_number = 0; ?>
-                                <?php while ( $popular->have_posts() && $popular_item_number++ < 1 ) : $popular->the_post(); ?>
+                                <?php $popular-big_item_number = 0; ?>
+                                <?php while ( $popular-big->have_posts() && $popular-big_item_number++ < 1 ) : $popular-big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
