@@ -105,7 +105,7 @@ get_header(); ?>
             <row>
                 <?php
                     $best_offer_args = array(
-                        'tag' => 'best-offer',
+                        'tag_slug__and' => array( 'best-offer', 'big' ),
                         'order' => 'DESC'
                     )
                 ?>
