@@ -257,17 +257,17 @@ get_header(); ?>
                 <div id="carousel2" class="carousel slide carousel-fade mb-5" data-ride="carousel" data-pause="hover"> 
                     <div class="carousel-inner" style="height: 35em;"> 
                         <?php
-                            $deposit_args = array(
+                            $deposit-big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag' => array( 'deposit', 'big' ),
+                                'tag_slug__and' => array( 'deposit', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $deposit = new WP_Query( $deposit_args ); ?>
-                        <?php if ( $deposit->have_posts() ) : ?>
+                        <?php $deposit-big = new WP_Query( $deposit-big_args ); ?>
+                        <?php if ( $deposit-big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item active' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $deposit_item_number = 0; ?>
-                                <?php while ( $deposit->have_posts() && $deposit_item_number++ < 1 ) : $deposit->the_post(); ?>
+                                <?php $deposit-big_item_number = 0; ?>
+                                <?php while ( $deposit-big->have_posts() && $deposit-big_item_number++ < 1 ) : $deposit-big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
@@ -285,17 +285,17 @@ get_header(); ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                         <?php endif; ?>
                         <?php
-                            $welcome_args = array(
+                            $welcome-big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag' => array( 'welcome', 'big' ),
+                                'tag_slug__and' => array( 'welcome', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $welcome = new WP_Query( $welcome_args ); ?>
-                        <?php if ( $welcome->have_posts() ) : ?>
+                        <?php $welcome-big = new WP_Query( $welcome-big_args ); ?>
+                        <?php if ( $welcome-big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $welcome_item_number = 0; ?>
-                                <?php while ( $welcome->have_posts() && $welcome_item_number++ < 1 ) : $welcome->the_post(); ?>
+                                <?php $welcome-big_item_number = 0; ?>
+                                <?php while ( $welcome-big->have_posts() && $welcome-big_item_number++ < 1 ) : $welcome-big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
@@ -313,17 +313,17 @@ get_header(); ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                         <?php endif; ?>
                         <?php
-                            $popular_args = array(
+                            $popular-big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag' => array( 'popular', 'big' ),
+                                'tag_slug__and' => array( 'popular', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $popular = new WP_Query( $popular_args ); ?>
-                        <?php if ( $popular->have_posts() ) : ?>
+                        <?php $popular-big = new WP_Query( $popular-big_args ); ?>
+                        <?php if ( $popular-big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $popular_item_number = 0; ?>
-                                <?php while ( $popular->have_posts() && $popular_item_number++ < 1 ) : $popular->the_post(); ?>
+                                <?php $popular-big_item_number = 0; ?>
+                                <?php while ( $popular-big->have_posts() && $popular-big_item_number++ < 1 ) : $popular-big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
