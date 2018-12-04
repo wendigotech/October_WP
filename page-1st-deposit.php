@@ -81,13 +81,13 @@ get_header(); ?>
                                     <?php endif; ?>
                                     <div class="row d-flex text-center" style="font-family: Roboto;">
                                         <div class="col-md-4">
-                                            <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see1', true ); ?>"><?php _e( 'See more', 'october' ); ?></a>                                                              
+                                            <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see1', true ); ?>"><?php _e( 'See more', 'october' ); ?></a> 
                                         </div>
                                         <div class="col-md-4">
-                                            <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see2', true ); ?>"><?php _e( 'See more', 'october' ); ?></a>                                                              
+                                            <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see2', true ); ?>"><?php _e( 'See more', 'october' ); ?></a> 
                                         </div>
                                         <div class="col-md-4">
-                                            <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see3', true ); ?>"><?php _e( 'See more', 'october' ); ?></a>                                                              
+                                            <a class="text-center" href="<?php echo get_post_meta( get_the_ID(), 'see3', true ); ?>"><?php _e( 'See more', 'october' ); ?></a> 
                                         </div>
                                     </div>                                                     
                                 </article>

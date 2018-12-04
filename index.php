@@ -257,17 +257,17 @@ get_header(); ?>
                 <div id="carousel2" class="carousel slide carousel-fade mb-5" data-ride="carousel" data-pause="hover"> 
                     <div class="carousel-inner" style="height: 30em;"> 
                         <?php
-                            $deposit_args = array(
+                            $deposit-big_args = array(
                                 'category_name' => 'bonus',
-                                'tag' => 'deposit',
+                                'tag_slug__and' => array( 'deposit', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $deposit = new WP_Query( $deposit_args ); ?>
-                        <?php if ( $deposit->have_posts() ) : ?>
+                        <?php $deposit-big = new WP_Query( $deposit-big_args ); ?>
+                        <?php if ( $deposit-big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item active' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $deposit_item_number = 0; ?>
-                                <?php while ( $deposit->have_posts() && $deposit_item_number++ < 1 ) : $deposit->the_post(); ?>
+                                <?php $deposit-big_item_number = 0; ?>
+                                <?php while ( $deposit-big->have_posts() && $deposit-big_item_number++ < 1 ) : $deposit-big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
@@ -287,7 +287,7 @@ get_header(); ?>
                         <?php
                             $bonus_args = array(
                                 'category_name' => 'bonus',
-                                'tag' => 'welcome',
+                                'tag_slug__and' => array( 'welcome', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
@@ -315,7 +315,7 @@ get_header(); ?>
                         <?php
                             $popular_args = array(
                                 'category_name' => 'bonus',
-                                'tag' => 'popular',
+                                'tag' => array( 'popular', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
