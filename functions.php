@@ -90,15 +90,6 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'Footer links', 'october' ),
-        'id' => 'footer-links',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Left Sidebar', 'october' ),
         'id' => 'left-sidebar',
         'description' => 'Left Sidebar widget area',
@@ -270,6 +261,75 @@ function st2_customize_register( $wp_customize ) {
         'mime_type' => 'image',
         'section' => 'footer_settings'
     ) ) );
+
+    $wp_customize->add_setting( 'footer_icon7', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon7', array(
+        'label' => __( 'Footer Icons', 'october' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_icon7_link', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_icon7_link', array(
+        'label' => __( 'Footer icon links', 'october' ),
+        'type' => 'url',
+        'section' => 'footer_settings'
+    ));
+
+    $wp_customize->add_setting( 'footer_trademark', array(
+        'type' => 'theme_mod',
+        'default' => __( 'Paragraph', 'october' ),
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_trademark', array(
+        'label' => __( 'Footer trademark', 'october' ),
+        'type' => 'text',
+        'section' => 'footer_settings'
+    ));
+
+    $wp_customize->add_setting( 'footer_trademark_link', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_trademark_link', array(
+        'label' => __( 'Footer trademark link', 'october' ),
+        'type' => 'url',
+        'section' => 'footer_settings'
+    ));
+
+    $wp_customize->add_setting( 'footer_icon8', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon8', array(
+        'label' => __( 'Footer Icons', 'october' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_icon8_link', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_icon8_link', array(
+        'label' => __( 'Footer icon links', 'october' ),
+        'type' => 'url',
+        'section' => 'footer_settings'
+    ));
 
     $wp_customize->add_setting( 'show_left_sidebar', array(
         'type' => 'theme_mod',
