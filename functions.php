@@ -278,6 +278,17 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'footer_settings'
     ));
 
+    $wp_customize->add_setting( 'footer_icon8_link', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_icon8_link', array(
+        'label' => __( 'Footer Icon8 Link', 'october' ),
+        'type' => 'url',
+        'section' => 'footer_settings'
+    ));
+
     $wp_customize->add_setting( 'footer_icon8', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
@@ -289,17 +300,6 @@ function st2_customize_register( $wp_customize ) {
         'mime_type' => 'image',
         'section' => 'footer_settings'
     ) ) );
-
-    $wp_customize->add_setting( 'footer_icon8_link', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_icon8_link', array(
-        'label' => __( 'Footer icon8 link', 'october' ),
-        'type' => 'url',
-        'section' => 'footer_settings'
-    ));
 
     $wp_customize->add_setting( 'show_left_sidebar', array(
         'type' => 'theme_mod',

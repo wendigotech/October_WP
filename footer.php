@@ -66,8 +66,8 @@
                                         <p class="text-nowrap mt-2"><?php echo get_theme_mod( 'footer_trademark', __( '© gamblinghousetips.com 2018', 'october' ) ); ?></p>
                                     </div>
                                     <div class="col-sm-2 col-md-2 pb-3"> 
-                                        <a href="">
-                                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon8', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt="" href="<?php echo get_theme_mod( 'footer_icon8_link' ); ?>">
+                                        <a href="<?php echo get_theme_mod( 'footer_icon8_link', '#' ); ?>">
+                                            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon8', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt="">
                                         </a>                                         
                                     </div>
                                 </row>                                 
