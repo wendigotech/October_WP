@@ -29,6 +29,7 @@ function st2_setup() {
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'st2' ),
         'social'  => __( 'Social Links Menu', 'st2' ),
+        'footer1'  => __( 'Footer Links Menu', 'st2' ),
     ) );
 
     /*

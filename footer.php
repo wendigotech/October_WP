@@ -13,6 +13,7 @@
                                                 'menu' => 'footer1',
                                                 'menu_class' => 'd-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-md-center justify-content-sm-around align-items-sm-center',
                                                 'container' => '',
+                                                'theme_location' => 'footer1',
                                                 'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                                 'walker' => new wp_bootstrap4_navwalker()
                                         ) ); ?>
@@ -35,7 +36,7 @@
                                         ) ); ?>
                                     <?php endif; ?> 
                                 </div>
-                                <row class="site-icons d-flex flex-row "> 
+                                <row class="site-icons d-flex flex-row pt-2"> 
                                     <div class="col-sm-2 col-md-2"> 
                                         <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                     </div>
