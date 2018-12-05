@@ -4614,10 +4614,8 @@ input[type="button"].btn-block {
 }
 
 .dropdown-item {
-    display: table-cell;
     width: 100%;
     padding: 0.25rem 1.5rem;
-    clear: both;
     font-weight: 600;
     color: #40324C;
     text-align: inherit;
@@ -4627,13 +4625,14 @@ input[type="button"].btn-block {
     -webkit-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
+    display: block;
 }
 
 .dropdown-item:hover,
 .dropdown-item:focus {
     color: #c7505d;
     text-decoration: none;
-    background-color: rgba(251, 245, 245, 0.47);
+    background-color: rgba(251, 245, 245, 0);
 }
 
 .dropdown-item.active,
@@ -12070,7 +12069,7 @@ a.skip-link {
 .navbar-dark .navbar-nav .dropdown-menu .nav-link:focus {
     color: #c7505d !important;
     text-decoration: none;
-    background-color: rgba(251, 245, 245, 0.47);
+    background-color: rgba(251, 245, 245, 0);
 }
 
 .navbar-dark .navbar-nav .dropdown-menu .nav-link.active,
