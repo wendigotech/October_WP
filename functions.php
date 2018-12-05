@@ -111,15 +111,6 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Side-links', 'october' ),
-        'id' => 'side-links',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Blog1', 'october' ),
         'id' => 'blog1',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -269,22 +260,11 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon7', array(
-        'label' => __( 'Footer Icons', 'october' ),
+        'label' => __( 'Footer Icon7', 'october' ),
         'type' => 'media',
         'mime_type' => 'image',
         'section' => 'footer_settings'
     ) ) );
-
-    $wp_customize->add_setting( 'footer_icon7_link', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_icon7_link', array(
-        'label' => __( 'Footer icon links', 'october' ),
-        'type' => 'url',
-        'section' => 'footer_settings'
-    ));
 
     $wp_customize->add_setting( 'footer_trademark', array(
         'type' => 'theme_mod',
@@ -315,7 +295,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_icon8', array(
-        'label' => __( 'Footer Icons', 'october' ),
+        'label' => __( 'Footer Icon8', 'october' ),
         'type' => 'media',
         'mime_type' => 'image',
         'section' => 'footer_settings'
@@ -327,7 +307,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( 'footer_icon8_link', array(
-        'label' => __( 'Footer icon links', 'october' ),
+        'label' => __( 'Footer icon8 link', 'october' ),
         'type' => 'url',
         'section' => 'footer_settings'
     ));

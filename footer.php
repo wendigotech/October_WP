@@ -9,14 +9,16 @@
                                 <div class="site-info mt-2"> 
                                     <h4><?php echo get_theme_mod( 'footer_text', __( 'General info', 'october' ) ); ?></h4>
                                     <?php if ( has_nav_menu( 'footer1' ) ) : ?>
-                                        <?php wp_nav_menu( array(
-                                                'menu' => 'footer1',
-                                                'menu_class' => 'd-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-md-center justify-content-sm-around align-items-sm-center',
-                                                'container' => '',
-                                                'theme_location' => 'footer1',
-                                                'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
-                                                'walker' => new wp_bootstrap4_navwalker()
-                                        ) ); ?>
+                                        <div class="d-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-md-center justify-content-sm-around align-items-sm-center">
+                                            <?php wp_nav_menu( array(
+                                                    'menu' => 'footer1',
+                                                    'menu_class' => 'd-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-md-center justify-content-sm-around align-items-sm-center',
+                                                    'container' => '',
+                                                    'theme_location' => 'footer1',
+                                                    'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                                    'walker' => new wp_bootstrap4_navwalker()
+                                            ) ); ?>
+                                        </div>
                                     <?php endif; ?>
                                 </div>                                 
                                 <!-- .site-info -->                                 
@@ -57,13 +59,13 @@
                                     </div>
                                 </row>
                                 <row class="site-icons d-flex flex-row justify-content-around mt-2"> 
-                                    <div class="col-sm-2 col-md-2"> 
-                                        <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon7', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt="" href="<?php echo get_theme_mod( 'footer_icon7_link' ); ?>"> 
+                                    <div class="col-sm-2 col-md-3"> 
+                                        <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon7', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                     </div>
-                                    <div class="col-sm-2 col-md-2">                                          
-                                        <p href="<?php echo get_theme_mod( 'footer_trademark_link' ); ?>"><?php echo get_theme_mod( 'footer_trademark', __( 'Paragraph', 'october' ) ); ?></p>
+                                    <div class="col-sm-2 col-md-3">                                          
+                                        <p class="text-center" href="<?php echo get_theme_mod( 'footer_trademark_link' ); ?>"><?php echo get_theme_mod( 'footer_trademark', __( 'Paragraph', 'october' ) ); ?></p>
                                     </div>
-                                    <div class="col-sm-2 col-md-2"> 
+                                    <div class="col-sm-2 col-md-3"> 
                                         <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon8', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt="" href="<?php echo get_theme_mod( 'footer_icon8_link' ); ?>"> 
                                     </div>
                                 </row>                                 
