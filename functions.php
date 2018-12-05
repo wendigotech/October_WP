@@ -268,7 +268,7 @@ function st2_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'footer_trademark', array(
         'type' => 'theme_mod',
-        'default' => __( 'Paragraph', 'october' ),
+        'default' => __( '© gamblinghousetips.com 2018', 'october' ),
         'sanitize_callback' => $pgwp_sanitize
     ));
 
