@@ -278,17 +278,6 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'footer_settings'
     ));
 
-    $wp_customize->add_setting( 'footer_trademark_link', array(
-        'type' => 'theme_mod',
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_trademark_link', array(
-        'label' => __( 'Footer trademark link', 'october' ),
-        'type' => 'url',
-        'section' => 'footer_settings'
-    ));
-
     $wp_customize->add_setting( 'footer_icon8', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize

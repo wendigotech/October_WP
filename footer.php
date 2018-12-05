@@ -58,14 +58,14 @@
                                         <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon6', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                     </div>
                                 </row>
-                                <row class="site-icons d-flex flex-row justify-content-around mt-3 align-items-center"> 
-                                    <div class="col-sm-2 col-md-2"> 
+                                <row class="site-icons d-flex flex-row justify-content-around mt-3 align-items-end"> 
+                                    <div class="col-sm-2 col-md-2 pb-3"> 
                                         <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon7', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt=""> 
                                     </div>
-                                    <div class="col-sm-2 col-md-4">                                          
-                                        <p class="text-nowrap" href="<?php echo get_theme_mod( 'footer_trademark_link' ); ?>"><?php echo get_theme_mod( 'footer_trademark', __( '© gamblinghousetips.com 2018', 'october' ) ); ?></p>
+                                    <div class="col-sm-2 col-md-4 text-center">                                          
+                                        <p class="text-nowrap mt-2"><?php echo get_theme_mod( 'footer_trademark', __( '© gamblinghousetips.com 2018', 'october' ) ); ?></p>
                                     </div>
-                                    <div class="col-sm-2 col-md-2"> 
+                                    <div class="col-sm-2 col-md-2 pb-3"> 
                                         <img src="<?php echo wp_get_attachment_image_url( get_theme_mod( 'footer_icon8', 'http://pinegrow.com/placeholders/img15.jpg' ), 'normal' ) ?>" alt="" href="<?php echo get_theme_mod( 'footer_icon8_link' ); ?>"> 
                                     </div>
                                 </row>                                 
