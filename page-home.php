@@ -259,7 +259,7 @@ get_header(); ?>
                         <?php
                             $exclusive_big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag_slug__and' => array( 'deposit', 'big' ),
+                                'tag_slug__and' => array( 'exclusive', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
