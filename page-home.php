@@ -257,17 +257,17 @@ get_header(); ?>
                 <div id="carousel2" class="carousel slide carousel-fade mb-5" data-ride="carousel" data-pause="hover"> 
                     <div class="carousel-inner" style="height: 35em;"> 
                         <?php
-                            $deposit_big_args = array(
+                            $exclusive_big_args = array(
                                 'category_name' => 'bonuses',
                                 'tag_slug__and' => array( 'deposit', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $deposit_big = new WP_Query( $deposit_big_args ); ?>
-                        <?php if ( $deposit_big->have_posts() ) : ?>
+                        <?php $exclusive_big = new WP_Query( $exclusive_big_args ); ?>
+                        <?php if ( $exclusive_big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item active' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $deposit_big_item_number = 0; ?>
-                                <?php while ( $deposit_big->have_posts() && $deposit_big_item_number++ < 1 ) : $deposit_big->the_post(); ?>
+                                <?php $exclusive_big_item_number = 0; ?>
+                                <?php while ( $exclusive_big->have_posts() && $exclusive_big_item_number++ < 1 ) : $exclusive_big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
@@ -342,7 +342,7 @@ get_header(); ?>
                         <?php endif; ?> 
                     </div>
                     <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-right: 1px; margin-left: 1px; margin-top: 50px;"> 
-                        <a class="btn active carousel-indicators2" data-target="#carousel2" href="#" data-slide-to="0" data-toggle="button"><?php _e( '1st Deposit Bonus', 'october' ); ?></a>
+                        <a class="btn active carousel-indicators2" data-target="#carousel2" href="#" data-slide-to="0" data-toggle="button"><?php _e( 'Exclusive Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="1" class="btn"><?php _e( 'Welcome Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="2" class="btn carousel2-indicators"><?php _e( 'Popular Bonus', 'october' ); ?></a>
                     </div>                                     
