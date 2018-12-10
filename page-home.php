@@ -313,17 +313,17 @@ get_header(); ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                         <?php endif; ?>
                         <?php
-                            $best-bonus_big_args = array(
+                            $best_bonus_big_args = array(
                                 'category_name' => 'bonuses',
                                 'tag_slug__and' => array( 'best-bonus', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $best-bonus_big = new WP_Query( $best-bonus_big_args ); ?>
-                        <?php if ( $best-bonus_big->have_posts() ) : ?>
+                        <?php $best_bonus_big = new WP_Query( $best_bonus_big_args ); ?>
+                        <?php if ( $best_bonus_big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $best-bonus_big_item_number = 0; ?>
-                                <?php while ( $best-bonus_big->have_posts() && $best-bonus_big_item_number++ < 1 ) : $best-bonus_big->the_post(); ?>
+                                <?php $best_bonus_big_item_number = 0; ?>
+                                <?php while ( $best_bonus_big->have_posts() && $best_bonus_big_item_number++ < 1 ) : $best_bonus_big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
