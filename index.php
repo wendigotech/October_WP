@@ -257,17 +257,17 @@ get_header(); ?>
                 <div id="carousel2" class="carousel slide carousel-fade mb-5" data-ride="carousel" data-pause="hover"> 
                     <div class="carousel-inner" style="height: 30em;"> 
                         <?php
-                            $deposit-big_args = array(
+                            $exclusive-big_args = array(
                                 'category_name' => 'bonuses',
                                 'tag_slug__in' => array( 'deposit', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $deposit-big = new WP_Query( $deposit-big_args ); ?>
-                        <?php if ( $deposit-big->have_posts() ) : ?>
+                        <?php $exclusive-big = new WP_Query( $exclusive-big_args ); ?>
+                        <?php if ( $exclusive-big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item active' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $deposit-big_item_number = 0; ?>
-                                <?php while ( $deposit-big->have_posts() && $deposit-big_item_number++ < 1 ) : $deposit-big->the_post(); ?>
+                                <?php $exclusive-big_item_number = 0; ?>
+                                <?php while ( $exclusive-big->have_posts() && $exclusive-big_item_number++ < 1 ) : $exclusive-big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 30em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>" style="position: relative; overflow: hidden;"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
@@ -342,7 +342,7 @@ get_header(); ?>
                         <?php endif; ?> 
                     </div>                                     
                     <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-left: 1px; margin-right: 1px; margin-top: 23px;"> 
-                        <a class="btn active carousel-indicators2" data-target="#carousel2" href="#" data-slide-to="0" data-toggle="button"><?php _e( '1st Deposit Bonus', 'october' ); ?></a>
+                        <a class="btn active carousel-indicators2" data-target="#carousel2" href="#" data-slide-to="0" data-toggle="button"><?php _e( 'Exclusive Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="1" class="btn"><?php _e( 'Welcome Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="2" class="btn carousel2-indicators"><?php _e( 'Popular Bonus', 'october' ); ?></a>
                     </div>
