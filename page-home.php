@@ -259,7 +259,7 @@ get_header(); ?>
                         <?php
                             $exclusive_big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag_slug__and' => array( 'exclusive', 'big' ),
+                                'tag' => 'exclusive-big',
                                 'order' => 'DESC'
                             )
                         ?>
@@ -268,10 +268,9 @@ get_header(); ?>
                             <div <?php post_class( 'carousel-item active' ); ?> id="post-<?php the_ID(); ?>"> 
                                 <?php $exclusive_big_item_number = 0; ?>
                                 <?php while ( $exclusive_big->have_posts() && $exclusive_big_item_number++ < 1 ) : $exclusive_big->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
+                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0);">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
-                                            <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
                                                 <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                                 <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
@@ -287,7 +286,7 @@ get_header(); ?>
                         <?php
                             $welcome_big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag_slug__and' => array( 'welcome', 'big' ),
+                                'tag' => 'welcome-big',
                                 'order' => 'DESC'
                             )
                         ?>
@@ -296,10 +295,9 @@ get_header(); ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
                                 <?php $welcome_big_item_number = 0; ?>
                                 <?php while ( $welcome_big->have_posts() && $welcome_big_item_number++ < 1 ) : $welcome_big->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
+                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0);">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
-                                            <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
                                                 <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                                 <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
@@ -315,7 +313,7 @@ get_header(); ?>
                         <?php
                             $best_bonus_big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag_slug__and' => array( 'best-bonus', 'big' ),
+                                'tag' => 'best-big',
                                 'order' => 'DESC'
                             )
                         ?>
@@ -324,10 +322,9 @@ get_header(); ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
                                 <?php $best_bonus_big_item_number = 0; ?>
                                 <?php while ( $best_bonus_big->have_posts() && $best_bonus_big_item_number++ < 1 ) : $best_bonus_big->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
+                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0);">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
-                                            <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
                                                 <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
                                                 <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
