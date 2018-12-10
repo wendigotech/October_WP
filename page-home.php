@@ -268,7 +268,7 @@ get_header(); ?>
                             <div <?php post_class( 'carousel-item active' ); ?> id="post-<?php the_ID(); ?>"> 
                                 <?php $exclusive_big_item_number = 0; ?>
                                 <?php while ( $exclusive_big->have_posts() && $exclusive_big_item_number++ < 1 ) : $exclusive_big->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0);">
+                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0); border: 0px;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <div>
@@ -295,7 +295,7 @@ get_header(); ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
                                 <?php $welcome_big_item_number = 0; ?>
                                 <?php while ( $welcome_big->have_posts() && $welcome_big_item_number++ < 1 ) : $welcome_big->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0);">
+                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0); border: 0px;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <div>
@@ -322,7 +322,7 @@ get_header(); ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
                                 <?php $best_bonus_big_item_number = 0; ?>
                                 <?php while ( $best_bonus_big->have_posts() && $best_bonus_big_item_number++ < 1 ) : $best_bonus_big->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0);">
+                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0); border: 0px;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
                                             <div>
