@@ -84,8 +84,8 @@ get_header(); ?>
                                         <figcaption>
                                             <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
                                             <div>
-                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'Link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'Link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 'T&C\'s', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                                <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
                                             </div>
                                         </figcaption>
                                     </figure>
@@ -313,17 +313,17 @@ get_header(); ?>
                             <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
                         <?php endif; ?>
                         <?php
-                            $popular_big_args = array(
+                            $best-bonus_big_args = array(
                                 'category_name' => 'bonuses',
-                                'tag_slug__and' => array( 'popular', 'big' ),
+                                'tag_slug__and' => array( 'best-bonus', 'big' ),
                                 'order' => 'DESC'
                             )
                         ?>
-                        <?php $popular_big = new WP_Query( $popular_big_args ); ?>
-                        <?php if ( $popular_big->have_posts() ) : ?>
+                        <?php $best-bonus_big = new WP_Query( $best-bonus_big_args ); ?>
+                        <?php if ( $best-bonus_big->have_posts() ) : ?>
                             <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $popular_big_item_number = 0; ?>
-                                <?php while ( $popular_big->have_posts() && $popular_big_item_number++ < 1 ) : $popular_big->the_post(); ?>
+                                <?php $best-bonus_big_item_number = 0; ?>
+                                <?php while ( $best-bonus_big->have_posts() && $best-bonus_big_item_number++ < 1 ) : $best-bonus_big->the_post(); ?>
                                     <figure class="effect-ruby effect-ruby-1" style="height: 35em;">
                                         <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
                                         <figcaption>
@@ -344,7 +344,7 @@ get_header(); ?>
                     <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-right: 1px; margin-left: 1px; margin-top: 50px;"> 
                         <a class="btn active carousel-indicators2" data-target="#carousel2" href="#" data-slide-to="0" data-toggle="button"><?php _e( 'Exclusive Bonus', 'october' ); ?></a>
                         <a data-target="#carousel2" href="#" data-slide-to="1" class="btn"><?php _e( 'Welcome Bonus', 'october' ); ?></a>
-                        <a data-target="#carousel2" href="#" data-slide-to="2" class="btn carousel2-indicators"><?php _e( 'Popular Bonus', 'october' ); ?></a>
+                        <a data-target="#carousel2" href="#" data-slide-to="2" class="btn carousel2-indicators"><?php _e( 'Best Bonus', 'october' ); ?></a>
                     </div>                                     
                 </div>
             </div>
