@@ -1,5 +1,4 @@
-
-            </div>             
+</div>             
             <div class="wrapper" id="wrapper-footer">
                 <button class="btn scroll-top float-right" data-scroll="up" type="button"></button>
                 <div class="container"> 
@@ -8,18 +7,14 @@
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info mt-2"> 
                                     <h4><?php echo get_theme_mod( 'footer_text', __( 'General info', 'october' ) ); ?></h4>
-                                    <?php if ( has_nav_menu( 'footer1' ) ) : ?>
-                                        <ul class="d-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-md-center justify-content-sm-around align-items-sm-center list-unstyled">
-                                            <?php wp_nav_menu( array(
+                                    <?php if ( has_nav_menu( 'footer1' ) ) : ?><ul class="d-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-md-center justify-content-sm-around align-items-sm-center list-unstyled"><?php wp_nav_menu( array(
                                                     'menu' => 'footer1',
                                                     'menu_class' => 'd-flex d-sm-flex d-md-flex flex-row flex-sm-row flex-md-column align-items-center align-items-md-center justify-content-sm-around align-items-sm-center list-unstyled',
                                                     'container' => '',
                                                     'theme_location' => 'footer1',
                                                     'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                                     'walker' => new wp_bootstrap4_navwalker()
-                                            ) ); ?>
-                                        </ul>
-                                    <?php endif; ?>
+                                            ) ); ?></ul><?php endif; ?>
                                 </div>                                 
                                 <!-- .site-info -->                                 
                             </footer>                             
@@ -28,15 +23,13 @@
                         <div class="col-md-9"> 
                             <footer class="site-footer" id="colophon"> 
                                 <div class="site-info"> 
-                                    <?php if ( has_nav_menu( 'social' ) ) : ?>
-                                        <?php wp_nav_menu( array(
+                                    <?php if ( has_nav_menu( 'social' ) ) : ?><?php wp_nav_menu( array(
                                                 'menu' => 'social',
                                                 'menu_class' => 'nav',
                                                 'container' => '',
                                                 'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                                 'walker' => new wp_bootstrap4_navwalker()
-                                        ) ); ?>
-                                    <?php endif; ?> 
+                                        ) ); ?><?php endif; ?>                                     
                                 </div>
                                 <row class="site-icons d-flex flex-row pt-2"> 
                                     <div class="col-sm-2 col-md-2"> 
@@ -80,7 +73,12 @@
                 </div>                 
                 <!-- container end -->
             </div>             
-        </div>                                             
+        </div>         
+                 
+                 
+                 
+        
+                 
         <script>
     jQuery(function() {
     jQuery('[data-toggle="tooltip"]').tooltip();
@@ -437,6 +435,5 @@ function defaults(object, src) {
   return object;
 }
 </script>
-        <?php wp_footer(); ?>
-    </body>     
+    <?php wp_footer(); ?></body>     
 </html>

@@ -13,25 +13,23 @@ get_header(); ?>
                         <!-- .page-header -->                                         
                         <div class="page-content"> 
                             <p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'october' ); ?></p> 
-                            <?php get_search_form( true ); ?> 
+                            <?php get_search_form( true ); ?>                                             
                             <div class="mt-4 mb-2"></div>                                             
                             <?php the_widget( 'WP_Widget_Recent_Posts', array(
                                     'number' => '5'
-                            ) ); ?> 
+                            ) ); ?>                                             
                             <div class="mt-4 mb-2"></div>                                             
                             <h2 class="widget-title"><?php _e( 'Most Used Categories', 'october' ); ?></h2> 
                             <div class="widget widget_categories"> 
-                                <ul>
-                                    <?php wp_list_categories( array(
+                                <ul><?php wp_list_categories( array(
                                             'orderby' => 'count',
                                             'order' => 'DESC',
                                             'show_count' => true,
                                             'title_li' => ''
-                                    ) ); ?>
-                                </ul>                                                 
+                                    ) ); ?></ul>                                                 
                             </div>                                             
                             <div class="mt-4 mb-2"></div>                                             
-                            <?php the_widget( 'WP_Widget_Tag_Cloud' ); ?> 
+                            <?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>                                             
                             <!-- .widget -->                                             
                         </div>                                         
                         <!-- .page-content -->                                         
@@ -41,6 +39,7 @@ get_header(); ?>
             </div>                             
         </div>                         
     </div>                     
-</div>                                 
+</div>                 
+
 
 <?php get_footer(); ?>

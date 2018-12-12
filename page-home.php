@@ -13,28 +13,23 @@ get_header(); ?>
                                 'tag' => 'best-bonus',
                                 'order' => 'DESC'
                             )
-                        ?>
-                        <?php $best_bonus = new WP_Query( $best_bonus_args ); ?>
-                        <?php if ( $best_bonus->have_posts() ) : ?>
-                            <div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
-                                <?php $best_bonus_item_number = 0; ?>
-                                <?php while ( $best_bonus->have_posts() && $best_bonus_item_number++ < 4 ) : $best_bonus->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
-                                        <figcaption>
-                                            <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
-                                            <div>
-                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                            </div>
-                                        </figcaption>                                                         
-                                    </figure>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>
-                            </div>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                        <?php endif; ?> 
+                        ?><?php $best_bonus = new WP_Query( $best_bonus_args ); ?><?php if ( $best_bonus->have_posts() ) : ?><div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
+                            <?php $best_bonus_item_number = 0; ?><?php while ( $best_bonus->have_posts() && $best_bonus_item_number++ < 4 ) : $best_bonus->the_post(); ?><figure class="effect-ruby effect-ruby-1">
+                                <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>">
+                                    <?php the_post_thumbnail( 'normal' ); ?>
+                                </a>
+                                <figcaption>
+                                    <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                                    <div>
+                                        <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                        <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                    </div>
+                                </figcaption>                                                 
+                            </figure><?php endwhile; ?><?php wp_reset_postdata(); ?>
+
+
+
+                        </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>                                         
                     </div>
                     <div class="carousel-item">
                         <?php
@@ -43,28 +38,23 @@ get_header(); ?>
                                 'tag' => 'best-casino',
                                 'order' => 'DESC'
                             )
-                        ?>
-                        <?php $best_casino = new WP_Query( $best_casino_args ); ?>
-                        <?php if ( $best_casino->have_posts() ) : ?>
-                            <div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
-                                <?php $best_casino_item_number = 0; ?>
-                                <?php while ( $best_casino->have_posts() && $best_casino_item_number++ < 4 ) : $best_casino->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-2">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
-                                        <figcaption>
-                                            <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
-                                            <div>
-                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>
-                            </div>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                        <?php endif; ?> 
+                        ?><?php $best_casino = new WP_Query( $best_casino_args ); ?><?php if ( $best_casino->have_posts() ) : ?><div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
+                            <?php $best_casino_item_number = 0; ?><?php while ( $best_casino->have_posts() && $best_casino_item_number++ < 4 ) : $best_casino->the_post(); ?><figure class="effect-ruby effect-ruby-2">
+                                <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>">
+                                    <?php the_post_thumbnail( 'normal' ); ?>
+                                </a>                                                 
+                                <figcaption>
+                                    <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                                    <div>
+                                        <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                        <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                    </div>
+                                </figcaption>
+                            </figure><?php endwhile; ?><?php wp_reset_postdata(); ?>
+
+
+
+                        </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>                                         
                     </div>
                     <div class="carousel-item">
                         <?php
@@ -73,28 +63,23 @@ get_header(); ?>
                                 'tag' => 'new-casino',
                                 'order' => 'DESC'
                             )
-                        ?>
-                        <?php $new_casino = new WP_Query( $new_casino_args ); ?>
-                        <?php if ( $new_casino->have_posts() ) : ?>
-                            <div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
-                                <?php $new_casino_item_number = 0; ?>
-                                <?php while ( $new_casino->have_posts() && $new_casino_item_number++ < 4 ) : $new_casino->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a> 
-                                        <figcaption>
-                                            <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
-                                            <div>
-                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>
-                            </div>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                        <?php endif; ?> 
+                        ?><?php $new_casino = new WP_Query( $new_casino_args ); ?><?php if ( $new_casino->have_posts() ) : ?><div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
+                            <?php $new_casino_item_number = 0; ?><?php while ( $new_casino->have_posts() && $new_casino_item_number++ < 4 ) : $new_casino->the_post(); ?><figure class="effect-ruby effect-ruby-1">
+                                <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>">
+                                    <?php the_post_thumbnail( 'normal' ); ?>
+                                </a>                                                 
+                                <figcaption>
+                                    <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                                    <div>
+                                        <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                        <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                    </div>
+                                </figcaption>
+                            </figure><?php endwhile; ?><?php wp_reset_postdata(); ?>
+
+
+
+                        </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>                                         
                     </div>
                     <div class="carousel-item">
                         <?php
@@ -103,28 +88,23 @@ get_header(); ?>
                                 'tag' => 'most-visited',
                                 'order' => 'DESC'
                             )
-                        ?>
-                        <?php $most_visited = new WP_Query( $most_visited_args ); ?>
-                        <?php if ( $most_visited->have_posts() ) : ?>
-                            <div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
-                                <?php $most_visited_item_number = 0; ?>
-                                <?php while ( $most_visited->have_posts() && $most_visited_item_number++ < 4 ) : $most_visited->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'thumbnail' ); ?> </a> 
-                                        <figcaption>
-                                            <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
-                                            <div>
-                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?>
-                            </div>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                        <?php endif; ?> 
+                        ?><?php $most_visited = new WP_Query( $most_visited_args ); ?><?php if ( $most_visited->have_posts() ) : ?><div <?php post_class( 'grid' ); ?> id="post-<?php the_ID(); ?>">
+                            <?php $most_visited_item_number = 0; ?><?php while ( $most_visited->have_posts() && $most_visited_item_number++ < 4 ) : $most_visited->the_post(); ?><figure class="effect-ruby effect-ruby-1">
+                                <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>">
+                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                </a>                                                 
+                                <figcaption>
+                                    <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                                    <div>
+                                        <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                        <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                    </div>
+                                </figcaption>
+                            </figure><?php endwhile; ?><?php wp_reset_postdata(); ?>
+
+
+
+                        </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>                                         
                     </div>                                     
                 </div>                                 
             </div>
@@ -152,48 +132,41 @@ get_header(); ?>
             $info_args = array(
                 'category_name' => 'info'
             )
-        ?>
-        <?php $info = new WP_Query( $info_args ); ?>
-        <?php if ( $info->have_posts() ) : ?>
-            <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
-                <?php $info_item_number = 0; ?>
-                <?php while ( $info->have_posts() && $info_item_number++ < 4 ) : $info->the_post(); ?>
-                    <div class="container col-lg-6 col-md-6 mb-2">
-                        <div class="card card-transparent">
-                            <div class="row ">
-                                <div class="col-md-6 col-sm-6 col-6">
-                                    <figure class="snip0077 blue">
-                                        <?php
+        ?><?php $info = new WP_Query( $info_args ); ?><?php if ( $info->have_posts() ) : ?><div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
+            <?php $info_item_number = 0; ?><?php while ( $info->have_posts() && $info_item_number++ < 4 ) : $info->the_post(); ?><div class="container col-lg-6 col-md-6 mb-2">
+                <div class="card card-transparent">
+                    <div class="row ">
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <figure class="snip0077 blue">
+                                <?php
                                             if ( has_post_thumbnail() ) {
                                                 the_post_thumbnail( 'normal', array(
                                                 'class' => 'snip0077'
                                             ) );
                                             }
                                          ?>
-                                        <a href="<?php echo esc_url( get_permalink() ); ?>">
-                                            <figcaption class="snip0077">
-                                                <p><?php _e( 'Read more', 'october' ); ?></p>
-                                            </figcaption>
-                                        </a>
-                                    </figure>
-                                </div>
-                                <div class="px-3 col-md-6 col-sm-6 col-6">
-                                    <div class="card-block px-3 ">
-                                        <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
-                                        <div class="pg-empty-placeholder box">
-                                            <?php the_content(); ?>
-                                        </div>
-                                    </div>
+                                <a href="<?php echo esc_url( get_permalink() ); ?>">
+                                    <figcaption class="snip0077">
+                                        <p><?php _e( 'Read more', 'october' ); ?></p>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="px-3 col-md-6 col-sm-6 col-6">
+                            <div class="card-block px-3 ">
+                                <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+                                <div class="pg-empty-placeholder box">
+                                    <?php the_content(); ?>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-            </div>
-        <?php else : ?>
-            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-        <?php endif; ?>
+                </div>
+            </div><?php endwhile; ?><?php wp_reset_postdata(); ?>
+
+
+
+        </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>
     </div>
     <div class="mt-5 mb-5 container" id="content" tabindex="-1"> 
         <div class="row"> 
@@ -205,43 +178,36 @@ get_header(); ?>
             $payment_args = array(
                 'category_name' => 'payment'
             )
-        ?>
-        <?php $payment = new WP_Query( $payment_args ); ?>
-        <?php if ( $payment->have_posts() ) : ?>
-            <div <?php post_class( 'row payment' ); ?> id="post-<?php the_ID(); ?>">
-                <?php $payment_item_number = 0; ?>
-                <?php while ( $payment->have_posts() && $payment_item_number++ < 4 ) : $payment->the_post(); ?>
-                    <div class="container" style="grid-area: span 1;">
-                        <div class="card card-transparent">
-                            <div class="row d-flex d-sm-flex flex-sm-row d-md-flex flex-md-column flex-row">
-                                <div>
-                                    <figure class="snip0077 blue">
-                                        <?php
+        ?><?php $payment = new WP_Query( $payment_args ); ?><?php if ( $payment->have_posts() ) : ?><div <?php post_class( 'row payment' ); ?> id="post-<?php the_ID(); ?>">
+            <?php $payment_item_number = 0; ?><?php while ( $payment->have_posts() && $payment_item_number++ < 4 ) : $payment->the_post(); ?><div class="container" style="grid-area: span 1;">
+                <div class="card card-transparent">
+                    <div class="row d-flex d-sm-flex flex-sm-row d-md-flex flex-md-column flex-row">
+                        <div>
+                            <figure class="snip0077 blue">
+                                <?php
                                             if ( has_post_thumbnail() ) {
                                                 the_post_thumbnail( 'normal', array(
                                                 'class' => 'snip0077'
                                             ) );
                                             }
                                          ?>
-                                        <a href="<?php echo esc_url( get_permalink() ); ?>">
-                                            <figcaption class="snip0077">
-                                                <p><?php _e( 'Read more', 'october' ); ?></p>
-                                            </figcaption>
-                                        </a>
-                                    </figure>
-                                </div>
-                                <div class="pg-empty-placeholder box p-2">
-                                    <?php the_content(); ?>
-                                </div>
-                            </div>
+                                <a href="<?php echo esc_url( get_permalink() ); ?>">
+                                    <figcaption class="snip0077">
+                                        <p><?php _e( 'Read more', 'october' ); ?></p>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="pg-empty-placeholder box p-2">
+                            <?php the_content(); ?>
                         </div>
                     </div>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-            </div>
-        <?php else : ?>
-            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-        <?php endif; ?>
+                </div>
+            </div><?php endwhile; ?><?php wp_reset_postdata(); ?>
+
+
+
+        </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>
     </div>
     <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
         <div class="row"> 
@@ -262,81 +228,57 @@ get_header(); ?>
                                 'tag' => 'exclusive-big',
                                 'order' => 'DESC'
                             )
-                        ?>
-                        <?php $exclusive_big = new WP_Query( $exclusive_big_args ); ?>
-                        <?php if ( $exclusive_big->have_posts() ) : ?>
-                            <div <?php post_class( 'carousel-item active' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $exclusive_big_item_number = 0; ?>
-                                <?php while ( $exclusive_big->have_posts() && $exclusive_big_item_number++ < 1 ) : $exclusive_big->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0); border: 0px;">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
-                                        <figcaption>
-                                            <div>
-                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                            </div>
-                                        </figcaption>                                                         
-                                    </figure>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?> 
-                            </div>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                        <?php endif; ?>
+                        ?><?php $exclusive_big = new WP_Query( $exclusive_big_args ); ?><?php if ( $exclusive_big->have_posts() ) : ?><div <?php post_class( 'carousel-item active' ); ?> id="post-<?php the_ID(); ?>"> 
+                            <?php $exclusive_big_item_number = 0; ?><?php while ( $exclusive_big->have_posts() && $exclusive_big_item_number++ < 1 ) : $exclusive_big->the_post(); ?><figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0); border: 0px;">
+                                <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>">
+                                    <?php the_post_thumbnail( 'normal' ); ?>
+                                </a>
+                                <figcaption>
+                                    <div>
+                                        <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                        <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                    </div>
+                                </figcaption>                                                 
+                            </figure><?php endwhile; ?><?php wp_reset_postdata(); ?>                                             
+                        </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>
                         <?php
                             $welcome_big_args = array(
                                 'category_name' => 'bonuses',
                                 'tag' => 'welcome-big',
                                 'order' => 'DESC'
                             )
-                        ?>
-                        <?php $welcome_big = new WP_Query( $welcome_big_args ); ?>
-                        <?php if ( $welcome_big->have_posts() ) : ?>
-                            <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $welcome_big_item_number = 0; ?>
-                                <?php while ( $welcome_big->have_posts() && $welcome_big_item_number++ < 1 ) : $welcome_big->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0); border: 0px;">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
-                                        <figcaption>
-                                            <div>
-                                                <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                            </div>
-                                        </figcaption>                                                         
-                                    </figure>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?> 
-                            </div>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                        <?php endif; ?>
+                        ?><?php $welcome_big = new WP_Query( $welcome_big_args ); ?><?php if ( $welcome_big->have_posts() ) : ?><div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
+                            <?php $welcome_big_item_number = 0; ?><?php while ( $welcome_big->have_posts() && $welcome_big_item_number++ < 1 ) : $welcome_big->the_post(); ?><figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0); border: 0px;">
+                                <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>">
+                                    <?php the_post_thumbnail( 'normal' ); ?>
+                                </a>
+                                <figcaption>
+                                    <div>
+                                        <a class="btn btn-light btn-visit" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                        <a class="btn btn-light btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                    </div>
+                                </figcaption>                                                 
+                            </figure><?php endwhile; ?><?php wp_reset_postdata(); ?>                                             
+                        </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>
                         <?php
                             $best_bonus_big_args = array(
                                 'category_name' => 'bonuses',
                                 'tag' => 'best-big',
                                 'order' => 'DESC'
                             )
-                        ?>
-                        <?php $best_bonus_big = new WP_Query( $best_bonus_big_args ); ?>
-                        <?php if ( $best_bonus_big->have_posts() ) : ?>
-                            <div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
-                                <?php $best_bonus_big_item_number = 0; ?>
-                                <?php while ( $best_bonus_big->have_posts() && $best_bonus_big_item_number++ < 1 ) : $best_bonus_big->the_post(); ?>
-                                    <figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0); border: 0px;">
-                                        <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
-                                        <figcaption>
-                                            <div>
-                                                <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                                <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                            </div>
-                                        </figcaption>                                                         
-                                    </figure>
-                                <?php endwhile; ?>
-                                <?php wp_reset_postdata(); ?> 
-                            </div>
-                        <?php else : ?>
-                            <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-                        <?php endif; ?> 
+                        ?><?php $best_bonus_big = new WP_Query( $best_bonus_big_args ); ?><?php if ( $best_bonus_big->have_posts() ) : ?><div <?php post_class( 'carousel-item' ); ?> id="post-<?php the_ID(); ?>"> 
+                            <?php $best_bonus_big_item_number = 0; ?><?php while ( $best_bonus_big->have_posts() && $best_bonus_big_item_number++ < 1 ) : $best_bonus_big->the_post(); ?><figure class="effect-ruby effect-ruby-1" style="height: 35em; background-color: rgba(164, 94, 94, 0); border: 0px;">
+                                <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>">
+                                    <?php the_post_thumbnail( 'normal' ); ?>
+                                </a>
+                                <figcaption>
+                                    <div>
+                                        <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                                        <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                                    </div>
+                                </figcaption>                                                 
+                            </figure><?php endwhile; ?><?php wp_reset_postdata(); ?>                                             
+                        </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>                                         
                     </div>
                     <div class="col-md-12 carousel-indicators d-flex flex-row align-items-center justify-content-around" style="margin-right: 1px; margin-left: 1px; margin-top: 50px;"> 
                         <a class="btn active carousel-indicators2" data-target="#carousel2" href="#" data-slide-to="0" data-toggle="button"><?php _e( 'Exclusive Bonus', 'october' ); ?></a>
@@ -350,28 +292,22 @@ get_header(); ?>
                     'tag' => 'best-offer',
                     'order' => 'DESC'
                 )
-            ?>
-            <?php $best_offer = new WP_Query( $best_offer_args ); ?>
-            <?php if ( $best_offer->have_posts() ) : ?>
-                <div <?php post_class( 'bonus-column col-sm-4 col-4 col-md-4 pl-2' ); ?> id="post-<?php the_ID(); ?>"> 
-                    <?php $best_offer_item_number = 0; ?>
-                    <?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?>
-                        <figure class="effect-ruby effect-ruby-1">
-                            <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"> <?php the_post_thumbnail( 'normal' ); ?> </a>
-                            <figcaption>
-                                <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
-                                <div>
-                                    <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
-                                    <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
-                                </div>
-                            </figcaption>                                             
-                        </figure>
-                    <?php endwhile; ?>
-                    <?php wp_reset_postdata(); ?> 
-                </div>
-            <?php else : ?>
-                <p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p>
-            <?php endif; ?>
+            ?><?php $best_offer = new WP_Query( $best_offer_args ); ?><?php if ( $best_offer->have_posts() ) : ?><div <?php post_class( 'bonus-column col-sm-4 col-4 col-md-4 pl-2' ); ?> id="post-<?php the_ID(); ?>"> 
+                <?php $best_offer_item_number = 0; ?><?php while ( $best_offer->have_posts() && $best_offer_item_number++ < 3 ) : $best_offer->the_post(); ?><figure class="effect-ruby effect-ruby-1">
+                    <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>">
+                        <?php the_post_thumbnail( 'normal' ); ?>
+                    </a>
+                    <figcaption>
+                        <h2><?php echo get_post_meta( get_the_ID(), 'offer', true ); ?></h2>
+                        <div>
+                            <a class="btn btn-light btn-visit btn-sm" href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>"><?php _e( 'Visit Casino', 'october' ); ?></a>
+                            <a class="btn btn-light btn-sm btn-terms" href="<?php echo get_post_meta( get_the_ID(), 'link2', true ); ?>" data-toggle="tooltip" data-placement="bottom" title="<?php echo get_post_meta( get_the_ID(), 't&c', true ); ?>"><?php _e( 'T&amp;C\'s Apply', 'october' ); ?></a>
+                        </div>
+                    </figcaption>                                     
+                </figure><?php endwhile; ?><?php wp_reset_postdata(); ?>
+
+
+            </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>
         </div>
     </div>
     <div class="container mt-5 mb-5" id="content" tabindex="-1"> 
@@ -386,6 +322,7 @@ get_header(); ?>
             </div>
         </div>
     </div>                     
-</div>                                 
+</div>                 
+
 
 <?php get_footer(); ?>

@@ -1,6 +1,9 @@
-
-            </div>             
-        </div>                                                      
-        <?php wp_footer(); ?>
-    </body>     
+</div>             
+        </div>         
+                 
+                 
+                 
+                 
+                 
+    <?php wp_footer(); ?></body>     
 </html>

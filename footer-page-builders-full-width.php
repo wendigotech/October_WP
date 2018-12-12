@@ -1,5 +1,4 @@
-
-            </div>             
+</div>             
             <div class="wrapper" id="wrapper-footer"> 
                 <div class="container"> 
                     <div class="row"> 
@@ -17,7 +16,11 @@
                 </div>                 
                 <!-- container end -->                 
             </div>             
-        </div>                                                      
-        <?php wp_footer(); ?>
-    </body>     
+        </div>         
+                 
+                 
+                 
+                 
+                 
+    <?php wp_footer(); ?></body>     
 </html>
