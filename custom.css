@@ -283,7 +283,12 @@ div#content-columns {
 div#wrapper-footer.wrapper {
     background-color: #c0b3a0;
     box-shadow: inset 0px 2px 8px 3px #c0b3a0;
-    margin-top: 15%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
 
 div#content.container figure.effect-ruby {
