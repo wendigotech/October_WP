@@ -21,7 +21,7 @@ get_header(); ?>
                                 'order' => 'DESC',
                                 'orderby' => 'rand'
                             )
-                        ?><?php $random_payments = new WP_Query( $random_payments_args ); ?><?php if ( $random_payments->have_posts() ) : ?><div class="entry-content"> 
+                        ?><?php $random_payments = new WP_Query( $random_payments_args ); ?><?php if ( $random_payments->have_posts() ) : ?><div class="entry-content mt-5"> 
                                 <div class="row random">
                                     <?php $random_payments_item_number = 0; ?><?php while ( $random_payments->have_posts() && $random_payments_item_number++ < 3 ) : $random_payments->the_post(); ?><div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
                                         <figure class="effect-ruby effect-ruby-1">
