@@ -17,7 +17,7 @@ get_header(); ?>
                         </article><?php endwhile; ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?><?php
                             $random_payments_args = array(
                                 'category_name' => 'casino, bonuses',
-                                'tag_id' => $tags = wp_get_post_tags($post->ID),
+                                'tag' => $tags,
                                 'order' => 'DESC'
                             )
                         ?><?php $random_payments = new WP_Query( $random_payments_args ); ?><?php if ( $random_payments->have_posts() ) : ?><div class="entry-content mt-5"> 
