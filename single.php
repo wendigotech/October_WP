@@ -13,16 +13,17 @@ get_header(); ?>
                             </header>                                             
                             <div class="entry-content"> 
                                 <p class="mt-5"><?php the_content(); ?></p> 
-                            </div><?php
-                                        $random-payments_args = array(
-                                            'category_name' => 'casino, bonuses',
-                                            'tag' => array( 'visa', 'skrill', 'trust', 'master', 'paypal', 'netel' ),
-                                            'order' => 'DESC',
-                                            'orderby' => 'rand'
-                                        )
-                                    ?><?php $random-payments = new WP_Query( $random-payments_args ); ?><?php if ( $random-payments->have_posts() ) : ?><div class="entry-content"> 
+                            </div>                                             
+                        </article><?php endwhile; ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?><?php
+                            $random_payments_args = array(
+                                'category_name' => 'casino, bonuses',
+                                'tag' => array( 'visa', 'skrill', 'trust', 'master', 'paypal', 'netel' ),
+                                'order' => 'DESC',
+                                'orderby' => 'rand'
+                            )
+                        ?><?php $random_payments = new WP_Query( $random_payments_args ); ?><?php if ( $random_payments->have_posts() ) : ?><div class="entry-content"> 
                                 <div class="row random">
-                                    <?php $random-payments_item_number = 0; ?><?php while ( $random-payments->have_posts() && $random-payments_item_number++ < 3 ) : $random-payments->the_post(); ?><div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
+                                    <?php $random_payments_item_number = 0; ?><?php while ( $random_payments->have_posts() && $random_payments_item_number++ < 3 ) : $random_payments->the_post(); ?><div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
                                         <figure class="effect-ruby effect-ruby-1">
                                             <a href="<?php echo get_post_meta( get_the_ID(), 'link1', true ); ?>">
                                                 <?php the_post_thumbnail( 'normal' ); ?>
@@ -39,8 +40,7 @@ get_header(); ?>
 
 
                                 </div>                                                 
-                            </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>                                             
-                        </article><?php endwhile; ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>                                         
+                            </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>                                         
                     </div>                                     
                 </main>                                 
             </div>
