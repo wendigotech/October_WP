@@ -14,13 +14,13 @@ get_header(); ?>
                             <div class="entry-content"> 
                                 <p class="mt-5"><?php the_content(); ?></p> 
                             </div>                                             
-                        </article><?php endwhile; ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?><?php if ( get_post_meta( get_the_ID(), 'tag1', true ) ) : ?><?php
-                                $random_payments_args = array(
-                                    'category_name' => 'casino, bonuses',
-                                    'tag' => 'tag1',
-                                    'order' => 'DESC'
-                                )
-                            ?><?php $random_payments = new WP_Query( $random_payments_args ); ?><?php if ( $random_payments->have_posts() ) : ?><div class="entry-content mt-5"> 
+                        </article><?php endwhile; ?><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?><?php
+                            $random_payments_args = array(
+                                'category_name' => 'casino, bonuses',
+                                'tag_id' => $tags = wp_get_post_tags($post->ID),
+                                'order' => 'DESC'
+                            )
+                        ?><?php $random_payments = new WP_Query( $random_payments_args ); ?><?php if ( $random_payments->have_posts() ) : ?><div class="entry-content mt-5"> 
                                 <div class="row random">
                                     <?php $random_payments_item_number = 0; ?><?php while ( $random_payments->have_posts() && $random_payments_item_number++ < 3 ) : $random_payments->the_post(); ?><div class="bonus-column col-sm-4 col-4 pl-2 d-flex flex-column col-md-4"> 
                                         <figure class="effect-ruby effect-ruby-1">
@@ -39,7 +39,7 @@ get_header(); ?>
 
 
                                 </div>                                                 
-                            </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?><?php endif; ?>                                         
+                            </div><?php else : ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'october' ); ?></p><?php endif; ?>                                         
                     </div>                                     
                 </main>                                 
             </div>
