@@ -1,7 +1,7 @@
 <?php
 /*
  Template Name: Neteller
- Template Post Type: neteller
+ Template Post Type: post
 */
 ?>
 <?php
