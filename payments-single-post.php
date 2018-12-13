@@ -20,7 +20,7 @@ get_header(); ?>
                             </div><?php
                                         $random-payments_args = array(
                                             'category_name' => 'casino, bonuses',
-                                            'tag' => array( 'visa', 'skrill', 'trust' ),
+                                            'tag' => array( 'visa', 'skrill', 'trust', 'master', 'paypal', 'netel' ),
                                             'order' => 'DESC',
                                             'orderby' => 'rand'
                                         )
